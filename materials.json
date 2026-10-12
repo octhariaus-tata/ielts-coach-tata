@@ -4,7 +4,7 @@
   "timezone": "Asia/Jakarta",
   "default_session_minutes": 20,
   "default_next_task_id": "listening-packham-form",
-  "default_next_task_fallback_id": "listening-library-guide",
+  "default_next_task_fallback_id": "listening-social-contact-short-answer",
   "feature_status_values": [
     "verified",
     "not_checked",
@@ -14,70 +14,83 @@
   "verification_limits": "Resource availability is verified only as described. Current laptop/browser attempt results and audio playback require session checks. No learner attempt occurred while preparing this catalog.",
   "tasks": [
     {
-      "id": "listening-library-guide",
+      "id": "listening-social-contact-short-answer",
       "skill": "Listening",
       "role": "backup",
       "provider": "IELTS.org (official IELTS Partners sample)",
       "source_label": "official",
-      "title": "Guide to a Library — multiple choice, more than one answer",
-      "question_type": "multiple_choice_multiple_answers",
-      "source_version": "Computer-delivered sample, Inspera assessmentRunId=189696950",
-      "source_pages": null,
+      "title": "Making Social Contact in the UK — short-answer questions",
+      "question_type": "short_answer_questions",
+      "source_version": "IELTS Sample Tasks 2023; isolated prompt excerpt",
+      "source_pages": [
+        11
+      ],
       "question_numbers": [
-        "1",
-        "2",
-        "3"
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
       ],
       "urls": {
-        "task": "https://ielts.inspera.com/player/?assessmentRunId=189696950&context=exam",
-        "prompt": "https://ielts.inspera.com/player/?assessmentRunId=189696950&context=exam",
-        "source": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+        "task": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf#page=11",
+        "prompt": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf#page=11",
+        "source": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf",
         "index": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
-        "key": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-multiple-choice-more-than-one-answer-answer-key.pdf",
-        "transcript": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-multiple-choice-more-than-one-answer-transcript.pdf",
-        "audio": null,
+        "key": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf#page=13",
+        "transcript": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf#page=12",
+        "audio": "https://ielts.org/cdn/Sample-tests/Listening/ielts-listening-sample-task-3-short-answer-questions.mp3",
         "reference": null
       },
       "local": {
-        "prompt": null,
-        "audio": null
+        "prompt": "materials/listening-social-contact-short-answer.pdf",
+        "audio": "materials/listening-social-contact-short-answer.mp3",
+        "prompt_sha256": "2d35e526aae3ca180daa5663b52641f2dbec43f975ab6e833967b9ca1c344401"
       },
       "verification": {
         "date": "2026-10-12",
         "timezone": "Asia/Jakarta",
-        "method": "Official index/key/transcript fetched; current CUA confirms launch page and audio control only. Static fetch 403; question prompt and results still unavailable before Play.",
-        "official_task_link": "verified",
-        "prompt_ui": "not_checked",
+        "method": "Exact official PDF checksum matched source version; prompt p11, transcript p12 and key p13 read; prompt excerpt reopened and visually rendered; no answer pages copied.",
+        "source_pdf": "verified",
+        "prompt_file": "verified",
         "key": "verified",
         "transcript": "verified",
-        "audio": "not_checked",
+        "audio": "verified",
         "audio_playback": "not_checked",
         "browser_attempt_results": "not_checked",
-        "auto_score": "not_checked",
+        "auto_score": "not_applicable",
         "recording_capture": "not_applicable",
-        "audio_controls": "verified",
-        "current_ui_gate": "Root CUA on 2026-10-12 renders title Sample - L - 5-opt MC and Play button. Instructions prohibit pause/rewind. Full question prompt gated by Play; no Play pressed; no selections/results available."
+        "audio_verification": "Official recording link inspected in exact source PDF p12; official CDN HTTP 200 audio/mpeg; downloaded ID3+MP3 parsed by afinfo without playback",
+        "audio_duration_seconds": 92.592
       },
+      "key_pages": [
+        13
+      ],
+      "reference_pages": null,
       "freshness": {
         "status": "no_attempt_in_local_history",
-        "basis": "PROFILE.md, PROGRESS.md and AUDIT.md read; library guide not listed as attempted",
+        "basis": "PROFILE.md, PROGRESS.md and AUDIT.md read on 2026-10-12; no recorded attempt/exposure for this task. Confirm learner has not seen key at session start.",
         "eligible_for_new_attempt": true
       },
-      "delivery": "Backup with preflight gate: launch page and Play control verified on this laptop only. Tata presses Play herself; coach never tests playback. Only assign if current launch/control accessible, and warn that prompt opens after Play. Screenshot selections after attempt; no key/transcript before done.",
+      "delivery": "Give local prompt-only PDF and local audio; Tata presses Play herself. Withhold full source PDF, key and transcript until done. Check playback support on the learning laptop without starting recording for Tata.",
       "result_collection": {
-        "primary": "read current visible numbered selections only if browser access verified in this session",
-        "fallback": "screenshot showing numbered selections and task title",
+        "primary": "At initial attempt, learner answers directly in chat numbered 11–16, or writes on paper and sends a photo/screenshot. Never ask to retype all answers after done.",
+        "fallback": "screenshot of handwritten/typed numbered answers",
         "current_browser_access": "not_checked"
-      },
-      "suggested_session": {
-        "minutes": 20,
-        "type": "new official short exercise/pilot",
-        "coach_timing_estimate": "2 minutes instruction, 8 minutes attempt and answer capture, 7 minutes feedback, 3 minutes next action; audio duration not yet checked",
-        "score_policy": "Report correct slots/3 only; no IELTS band."
       },
       "difficulty": {
         "status": "not_estimated",
-        "note": "No official band or difficulty assigned."
+        "note": "No official band or difficulty assigned to this extract."
+      },
+      "transcript_pages": [
+        12
+      ],
+      "suggested_session": {
+        "minutes": 20,
+        "type": "new official short exercise/pilot",
+        "coach_timing_estimate": "2 minutes instructions, 1 minute scan, about 1 minute 33 seconds one play, 2 minutes finish/capture, 10 minutes feedback and one correction, remainder next action",
+        "score_policy": "Report /6 only; no IELTS band. Respect order-independent pairs exactly as key p13 permits; count play from learner report, coach never starts it."
       },
       "fallback_id": null
     },
@@ -164,7 +177,7 @@
         "coach_timing_estimate": "2 minutes read instruction, 1 minute scan form, about 2 minutes 35 seconds single play, 2 minutes finish/capture, 9 minutes feedback, remainder next action",
         "score_policy": "Report /8 only; no IELTS band. Count audio play from learner report; coach never starts it."
       },
-      "fallback_id": "listening-library-guide"
+      "fallback_id": "listening-social-contact-short-answer"
     },
     {
       "id": "reading-marie-curie-tfng",
@@ -615,6 +628,77 @@
       "skill": "Listening",
       "reason": "Key exposed in historical attempt; conditions unclear; retake is review only.",
       "source": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test"
+    }
+  ],
+  "optional_online_references": [
+    {
+      "id": "listening-library-guide",
+      "skill": "Listening",
+      "role": "optional_online_reference",
+      "provider": "IELTS.org (official IELTS Partners sample)",
+      "source_label": "official",
+      "title": "Guide to a Library — multiple choice, more than one answer",
+      "question_type": "multiple_choice_multiple_answers",
+      "source_version": "Computer-delivered sample, Inspera assessmentRunId=189696950",
+      "source_pages": null,
+      "question_numbers": [
+        "1",
+        "2",
+        "3"
+      ],
+      "urls": {
+        "task": "https://ielts.inspera.com/player/?assessmentRunId=189696950&context=exam",
+        "prompt": "https://ielts.inspera.com/player/?assessmentRunId=189696950&context=exam",
+        "source": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+        "index": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+        "key": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-multiple-choice-more-than-one-answer-answer-key.pdf",
+        "transcript": "https://ielts.org/cdn/computer-delivered-sample-tests-listening/ielts-listening-computer-delivered-multiple-choice-more-than-one-answer-transcript.pdf",
+        "audio": null,
+        "reference": null
+      },
+      "local": {
+        "prompt": null,
+        "audio": null
+      },
+      "verification": {
+        "date": "2026-10-12",
+        "timezone": "Asia/Jakarta",
+        "method": "Official index/key/transcript fetched; current CUA confirms launch page and audio control only. Static fetch 403; question prompt and results still unavailable before Play.",
+        "official_task_link": "verified",
+        "prompt_ui": "not_checked",
+        "key": "verified",
+        "transcript": "verified",
+        "audio": "not_checked",
+        "audio_playback": "not_checked",
+        "browser_attempt_results": "not_checked",
+        "auto_score": "not_checked",
+        "recording_capture": "not_applicable",
+        "audio_controls": "verified",
+        "current_ui_gate": "Root CUA on 2026-10-12 renders title Sample - L - 5-opt MC and Play button. Instructions prohibit pause/rewind. Full question prompt gated by Play; no Play pressed; no selections/results available."
+      },
+      "freshness": {
+        "status": "no_attempt_in_local_history",
+        "basis": "PROFILE.md, PROGRESS.md and AUDIT.md read; library guide not listed as attempted",
+        "eligible_for_new_attempt": true
+      },
+      "delivery": "Backup with preflight gate: launch page and Play control verified on this laptop only. Tata presses Play herself; coach never tests playback. Only assign if current launch/control accessible, and warn that prompt opens after Play. Screenshot selections after attempt; no key/transcript before done.",
+      "result_collection": {
+        "primary": "read current visible numbered selections only if browser access verified in this session",
+        "fallback": "screenshot showing numbered selections and task title",
+        "current_browser_access": "not_checked"
+      },
+      "suggested_session": {
+        "minutes": 20,
+        "type": "new official short exercise/pilot",
+        "coach_timing_estimate": "2 minutes instruction, 8 minutes attempt and answer capture, 7 minutes feedback, 3 minutes next action; audio duration not yet checked",
+        "score_policy": "Report correct slots/3 only; no IELTS band."
+      },
+      "difficulty": {
+        "status": "not_estimated",
+        "note": "No official band or difficulty assigned."
+      },
+      "fallback_id": null,
+      "readiness": "conditional_not_ready_for_offline_backup"
     }
   ]
 }

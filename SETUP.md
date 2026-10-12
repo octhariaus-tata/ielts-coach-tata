@@ -78,6 +78,15 @@ Setelah pemeriksaan berhasil, Tata cukup mengatakan **“Mulai”**. Laptop Tata
 
 ## Jika koneksi terputus
 
+Pada komputer asal, push paket binary sempat menemui HTTP400. Pengiriman berhasil setelah pengaturan **repo lokal saja** berikut; gunakan sebagai pemeriksaan bila error yang sama terjadi pada jaringan laptop baru, bukan mengubah Git global:
+
+```sh
+git config --local http.version HTTP/1.1
+git config --local http.postBuffer 52428800
+```
+
+Pengaturan ini memakai buffer maksimal 50 MiB untuk menghindari pengiriman chunked pada jalur yang bermasalah; verifikasi TLS tetap aktif. Setelah retry, pastikan status remote benar-benar synced sebelum pindah perangkat.
+
 Coach menyimpan hasil pada laptop yang sama, membaca ulang, dan menandai **belum tersinkron**. Lanjutkan attempt dengan **“Lanjut”** pada perangkat itu. Saat koneksi kembali, coach menyinkronkan dan memastikan push berhasil sebelum Tata pindah laptop. Jika akses GitHub ditolak, jelaskan kendala autentikasi atau izin yang benar-benar terlihat; jangan menganggap akun Codex memberi akses GitHub otomatis.
 
 Jangan mengedit folder mirror `.codex/.chatgpt-projects/`, sumber sinkron lain, pengaturan akun atau permissions. Jangan memasang layanan, membuat automasi atau mengirim pesan sebagai bagian setup ini.

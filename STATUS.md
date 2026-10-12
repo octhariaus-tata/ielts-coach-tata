@@ -7,7 +7,7 @@ Diperbarui: 12 Oktober 2026, Asia/Jakarta. Kesiapan lokal telah diuji; pemeriksa
 | Repo bersama | Repo privat `octhariaus-tata/ielts-coach-tata`, branch `main`; dokumen utama sudah terbit, paket lengkap sedang diterbitkan melalui Git |
 | Sinkronisasi | Login CLI berhasil sebagai octhariaus-tata setelah otorisasi pengguna; uji round-trip GitHub sedang dijalankan. Cek status aktual dengan scripts/sync.py |
 | Sistem pencatatan | Selesai; 16 tes sesi lulus. Riwayat lama dipertahankan; belum ada latihan baru Tata |
-| Bank tugas | 8 tugas resmi; 7 PDF soal tanpa key + MP3 Packham 154,57 detik tersedia lokal. Playback oleh Tata belum diperiksa |
+| Bank tugas | 8 tugas resmi; 8 PDF soal tanpa key + MP3 Packham 154,57 detik dan Social Contact 92,59 detik tersedia lokal. Playback oleh Tata belum diperiksa |
 | Pengujian sinkronisasi | 14 tes integrasi lulus dengan bare remote sementara dan dua salinan pada komputer ini; PDF/MP3/PNG identik. Ini belum membuktikan GitHub auth atau laptop lain |
 | Sesi dan ID aktif | Lihat bagian Keadaan sesi di bawah; dikelola dari sessions/ |
 | Baseline kemampuan terkini | Belum tersedia; trial tiga soal adalah tes sistem |
@@ -16,7 +16,7 @@ Diperbarui: 12 Oktober 2026, Asia/Jakarta. Kesiapan lokal telah diuji; pemeriksa
 
 ## Tugas berikutnya
 
-Saat belum ada sesi belajar selesai: Listening Packham, soal 1–8, maksimum 20 menit termasuk feedback. Berikan `materials/listening-packham-form.pdf` dan audio lokal; Tata menekan Play sendiri, lalu mengirim jawaban awal langsung di chat atau foto/screenshot lembar jawabannya, diakhiri done. Library guide menjadi cadangan bersyarat: halaman Play terverifikasi di komputer ini, prompt/hasil belum diperiksa. Setelah sesi selesai, ikuti tugas berikutnya pada bagian Keadaan sesi. Judy dan furnitur hanya untuk review.
+Saat belum ada sesi belajar selesai: Listening Packham, soal 1–8, maksimum 20 menit termasuk feedback. Berikan `materials/listening-packham-form.pdf` dan audio lokal; Tata menekan Play sendiri, lalu mengirim jawaban awal langsung di chat atau foto/screenshot lembar jawabannya, diakhiri done. Cadangan siap lokal: Making Social Contact in the UK, soal 11–16, `materials/listening-social-contact-short-answer.pdf` beserta audio. Library guide hanya referensi online opsional. Setelah sesi selesai, ikuti tugas berikutnya pada bagian Keadaan sesi. Judy dan furnitur hanya untuk review.
 
 ## Cara memperbarui
 

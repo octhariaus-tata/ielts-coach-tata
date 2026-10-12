@@ -105,16 +105,36 @@
       "verification": "HTTP 200 audio/mpeg; ID3 header and afinfo MP3 parse; playback not performed",
       "pdf_audio_link": "https://s3.eu-west-2.amazonaws.com/ielts-web-static/production/Sample-tests/Listening/ielts-listening-sample-task-1-form-completion.mp3",
       "pdf_audio_link_status": "403 when fetched; working official IELTS CDN path downloaded"
+    },
+    "listening-social-contact-short-answer": {
+      "file": "materials/listening-social-contact-short-answer.pdf",
+      "source": "listening",
+      "pages": [
+        11
+      ],
+      "sha256": "2d35e526aae3ca180daa5663b52641f2dbec43f975ab6e833967b9ca1c344401",
+      "extraction": "Whole official prompt page only; transcript p12 and key p13 omitted."
+    },
+    "listening-social-contact-short-answer-audio": {
+      "file": "materials/listening-social-contact-short-answer.mp3",
+      "url": "https://ielts.org/cdn/Sample-tests/Listening/ielts-listening-sample-task-3-short-answer-questions.mp3",
+      "sha256": "a8749520b67a91baf0998f360ce5753b4470c9fbd56134c65f51997d27906770",
+      "bytes": 578288,
+      "content_type": "audio/mpeg",
+      "duration_seconds": 92.592,
+      "verification": "HTTP 200 audio/mpeg; ID3 header and afinfo MP3 parse; playback not performed",
+      "pdf_audio_link": "https://s3.eu-west-2.amazonaws.com/ielts-web-static/production/Sample-tests/Listening/ielts-listening-sample-task-3-short-answer-questions.mp3",
+      "source_audio_link_verified": "Exact recording link target read from official source PDF p12; audio retrieved via official IELTS CDN."
     }
   },
   "answer_content_policy": "Only prompt excerpts and audio are stored. Full source PDFs, keys and transcripts are not stored in this folder.",
   "qa": {
     "verified_date": "2026-10-12",
-    "prompt_pdf_count": 7,
-    "prompt_page_count": 9,
-    "visual_inspection": "All nine delivered prompt pages rendered and inspected; no clipping, key pages or sample transcript included. Speaking Part 2 restored cue rendered and re-inspected.",
+    "prompt_pdf_count": 8,
+    "prompt_page_count": 10,
+    "visual_inspection": "All ten delivered prompt pages rendered and inspected; no clipping, key pages or sample transcript included. Speaking Part 2 cue restored and re-inspected; Social Contact p11 rendered and inspected on 2026-10-12.",
     "text_checks": "Reopened delivered PDFs; no answer/sample transcript headings or candidate sample text; both Speaking PDFs only raster prompt + provenance note.",
-    "audio_inspection": "afinfo parses MP3; estimated 154.566531 seconds. Playback not performed.",
+    "audio_inspection": "Packham MP3 parses with afinfo, estimated 154.566531 seconds; Social Contact MP3 parses with afinfo, estimated 92.592 seconds. Both HTTP 200 audio/mpeg and ID3 headers verified. Neither played.",
     "full_sources_in_project": false
   }
 }
