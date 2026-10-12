@@ -1,0 +1,13 @@
+.local/
+__pycache__/
+*.pyc
+*.tmp
+.DS_Store
+Thumbs.db
+.env
+.env.*
+*.pem
+*.key
+*.zip
+tests/fixtures/output/
+
