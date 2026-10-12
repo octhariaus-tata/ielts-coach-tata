@@ -1,11 +1,11 @@
 # Status IELTS Coach Tata
 
-Diperbarui: 12 Oktober 2026, Asia/Jakarta. v1.1, adaptasi v1.2 dan autosync selesai di file lokal. Pengguna mengizinkan backup milestone serta tiap satu jam; sinkronisasi pertama berhasil pada commit b755d41eb7e303e201cb4c4d0dd0bf42eda52a16; salinan kedua sedang diperiksa. Screenshot dan rekaman rehearsal tetap menunggu, tanpa menghalangi backup.
+Diperbarui: 12 Oktober 2026, Asia/Jakarta. v1.1, adaptasi v1.2 dan autosync selesai di file lokal. Pengguna mengizinkan backup milestone serta tiap satu jam; sinkronisasi pertama berhasil pada commit b755d41eb7e303e201cb4c4d0dd0bf42eda52a16; 75 file pada salinan kedua cocok byte dengan milestone tersebut. Screenshot dan rekaman rehearsal tetap menunggu, tanpa menghalangi backup.
 
 | Komponen | Status saat ini |
 | --- | --- |
 | Repo bersama | v1.2 beserta skill/jadwal autosync terbit di repo privat `octhariaus-tata/ielts-coach-tata`, branch `main`; status Git aktual diperiksa setiap run |
-| Sinkronisasi | Round-trip GitHub berhasil pada komputer ini, 12 Oktober 2026; 34 file identik pada salinan kedua, marker kembali ke folder utama. Cek status aktual tiap sesi dengan scripts/sync.py |
+| Sinkronisasi | Milestone v1.2/autosync berhasil dipush dan diambil salinan kedua; 75 file commit b755d41 cocok SHA256. Dua clone pada laptop ini. Status aktual diperiksa setiap run |
 | Sistem pencatatan | v1.1: checkpoint sebelum penilaian, respons/revisi terpisah, fase menunggu, retry tanpa menilai ulang. Riwayat lama dipertahankan; belum ada latihan baru Tata |
 | Bank tugas | 8 tugas resmi; 8 PDF soal tanpa key + MP3 Packham 154,57 detik dan Social Contact 92,59 detik tersedia lokal. Playback oleh Tata belum diperiksa |
 | Pengujian sinkronisasi | 18 tes integrasi lulus, termasuk whitelist feedback/ledger/skill. Round-trip GitHub produksi v1 sebelumnya terverifikasi; milestone baru sudah dipush dan verified remote, commit b755d41. Dua salinan berada pada satu komputer, bukan dua laptop |
