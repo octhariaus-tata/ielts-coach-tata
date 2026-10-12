@@ -31,6 +31,8 @@ Pada komputer asal, repo mungkin sedang disiapkan oleh coach. Periksa `STATUS.md
 
 Tambahkan folder hasil clone sebagai local project di Codex. Buka chat di project itu dan gunakan prompt awal di `README.md`. Coach membaca `AGENTS.md` dari folder project; instruksi project tidak dipindahkan lewat login akun saja. [Project OpenAI](https://learn.chatgpt.com/docs/projects), [AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md).
 
+Dua skill project berada di `.agents/skills/ielts-coach/SKILL.md` dan `.agents/skills/ielts-github-sync/SKILL.md`, dengan metadata opsional `agents/openai.yaml` masing-masing. Skill ikut repo dan merujuk aturan/alat lokal; tidak perlu menyalin ke folder skill pribadi atau mengubah pengaturan akun. Periksa keduanya pada project/laptop ini; keberadaan file tidak membuktikan katalog aplikasi saat itu telah memuatnya. Jika tidak ditemukan, laporkan dan gunakan AGENTS serta CLI yang tersedia sambil memperbaiki pemeriksaan discovery. Lokasi repo-local tersebut didukung [panduan skills OpenAI](https://learn.chatgpt.com/docs/build-skills).
+
 ## 3. Periksa alat dan versi
 
 Dari folder repo, buka bantuan script:
@@ -38,6 +40,14 @@ Dari folder repo, buka bantuan script:
 ```sh
 python3 scripts/sync.py --help
 python3 scripts/session.py --help
+python3 scripts/coach.py --help
+python3 scripts/coach.py prepare --help
+python3 scripts/coach.py checkpoint --help
+python3 scripts/coach.py complete --help
+python3 scripts/coach.py status --help
+python3 scripts/coach.py feedback --help
+python3 scripts/adaptation.py --help
+python3 scripts/hourly_sync.py --help
 ```
 
 Di Windows, ganti awalan `python3` dengan `py -3` bila itu interpreter yang sudah diperiksa. Coach menggunakan:
@@ -50,31 +60,44 @@ python3 scripts/sync.py push --message "Simpan sesi IELTS"
 
 Sinkronisasi memeriksa remote aktual. Nyatakan tersinkron hanya bila hasil menunjukkan `status: synced` serta `remote_verified: true`; exit code nol sendiri belum cukup karena repo tanpa remote dapat berstatus `unpublished`. Informasi pemeriksaan lokal tersimpan dalam `.local/sync.json` yang tidak ikut Git.
 
-Alat sesi memakai ID materi yang dipilih coach dari `materials.json`:
+Coach memakai operasi wrapper: `prepare` untuk pemeriksaan awal/resume, `checkpoint` untuk respons dan bukti yang baru diterima, `complete` untuk hasil review yang sudah memenuhi syarat, `status` untuk keadaan sesi/kesiapan, dan `feedback` untuk masukan mentah beserta asalnya. `prepare`, `status` dan `complete` juga memberikan konteks adaptasi untuk diperiksa coach. Bentuk argumen dan JSON ada pada bantuan subcommand serta [panduan alat coach](scripts/README.md). ID materi dipilih coach dari `materials.json`; pemilihan tugas dan penilaian tetap dilakukan coach. Perintah ini tidak menjalankan audio atau latihan.
 
-```sh
-python3 scripts/session.py start --task TASK_ID --skill Listening --kind pilot --minutes 20
-python3 scripts/session.py status
-python3 scripts/session.py finalize --id SESSION_ID --result .local/result.json
-python3 scripts/session.py rebuild
-```
+Checkpoint disimpan dan dibaca ulang sebelum penilaian, lengkap dengan asal dan waktu bukti, lalu dicoba sinkronkan. Respons awal dan revisi setelah feedback tetap terpisah. Fase menunggu bukti/review memakai ID semula; skor kosong atau input `unverified` tidak menutup sesi. Jika record tersimpan tetapi ringkasan gagal ditulis, jangan push ringkasan lama: retry memulihkan ringkasan dan menyinkronkan tanpa penilaian ulang. Wrapper memakai modul sesi/sinkronisasi yang tersedia; `scripts/session.py` tetap dapat dipakai untuk operasi dasar, pemeriksaan record dan pemulihan ringkasan. `rebuild` mempertahankan riwayat lama serta catatan kesiapan manual. Record sesi lama tetap terbaca.
 
-`TASK_ID` dan `SESSION_ID` adalah placeholder yang harus diganti dengan nilai yang tersedia; perintah ini tidak menjalankan audio atau latihan. Coach menyiapkan JSON hasil sesuai [panduan alat sesi](scripts/README.md). Sesi yang belum cukup bukti tetap aktif; jangan memanggil `finalize` untuk mengarang kelengkapannya. `start` dan “done” berulang memakai record yang sudah ada. `rebuild` memperbarui hanya bagian ringkasan yang dikelola script dalam `PROGRESS.md` dan `STATUS.md`, mempertahankan riwayat lama dan catatan kesiapan manual.
-
-Sebelum sesi, coach memeriksa Git lalu mengambil versi terbaru secara aman. Jika perubahan lokal atau versi bercabang menghalangi pull, simpan seluruh record/bukti dan rekonsiliasi dulu. Jangan menjalankan reset atau force-push. Ringkasan baru dapat dibangun kembali dari record sesi; riwayat lama tetap dipertahankan.
+Sebelum sesi, coach memeriksa Git lalu mengambil versi terbaru secara aman. Attempt aktif beserta respons lokal tetap dapat dilanjutkan meskipun pull terhalang, dengan batas versi bersama disebutkan. Jika perubahan lokal dan remote lebih baru, atau versi bercabang, simpan seluruh record/bukti dan rekonsiliasi dulu; jangan mengulang push/pull tanpa menangani perbedaan. Jangan menjalankan reset atau force-push. Ringkasan baru dapat dibangun kembali dari record sesi; riwayat lama tetap dipertahankan.
 
 ## 4. Uji kesiapan laptop yang akan dipakai
 
 Kirim **“Kesiapan”** di chat dan minta coach melakukan pemeriksaan berikut:
 
-1. Baca profil, plan, progres dan status dari salinan terbaru; pastikan tidak ada dua laptop menjalankan sesi aktif bersamaan.
+1. Baca profil, plan, progres dan status dari salinan terbaru yang dapat diverifikasi; pastikan tidak ada dua laptop menjalankan sesi aktif bersamaan.
 2. Pastikan file dapat disimpan lalu dibaca ulang. Gunakan data tes sistem yang terpisah dari kemajuan Tata.
 3. Uji satu perubahan tes sistem tersinkron dan terlihat pada salinan kedua, lalu bersihkan data tes dari alur belajar. Jangan mengklaim uji lintas laptop bila kedua salinan masih berada pada satu komputer.
-4. Periksa link tugas pertama, jenis soal, key dan transcript/audio jika relevan. Akses browser dan hasil harus diuji di laptop ini. Jangan memulai rekaman satu kali putar untuk Tata.
+4. Periksa prompt, jenis soal, audio jika relevan, dan cache key/transcript yang sesuai versi/checksum untuk tugas pertama dan cadangannya. Jangan membagikan `coach_refs/` atau bundled PDF sumber sebelum selesai. Akses browser dan hasil harus diuji di laptop ini. Jangan memulai rekaman satu kali putar untuk Tata.
 5. Pastikan screenshot nomor soal/jawaban dapat dikirim dan bukti yang tersedia dapat disimpan. Rekaman Speaking diuji sebelum digunakan; transcript saja tidak cukup untuk menilai pronunciation.
-6. Catat hasil pemeriksaan dan yang masih belum diuji di `STATUS.md`, lalu sinkronkan.
+6. Simpan pemeriksaan per perangkat di `.local/readiness.json`: setiap fitur `passed`, `failed`, atau `not_tested`, waktu lokal serta asal bukti. ID perangkat dan lokasi folder mencegah cache dari salinan lain dianggap pemeriksaan laptop ini. Observasi pengguna perlu sumber dan waktu; tes kode/file saja tidak membuktikan playback, pengiriman screenshot, atau rekaman. Ringkas batas pemeriksaan di `STATUS.md` bila perlu; `.local/` tidak ikut Git.
+
+Sesudah kesiapan teknis, periksa kecukupan bukti belajar secara terpisah: perlu diagnostik baru keempat skill dan waktu sesi panjang yang dikonfirmasi. Trial/rehearsal tidak menjadi baseline. Data feedback dan analisis (`feedback/`, `learning/`) ikut repo privat; kesiapan perangkat serta credential tetap lokal. Uji adaptasi dengan data `system_test` tanpa menciptakan preferensi atau progres Tata. [Desain keseluruhan](SYSTEM.md), [aturan adaptasi](ADAPTATION.md).
+
+Laporkan terpisah **siap Listening lokal** (`ready_local_listening`), **kontrol pemutar teruji** (`player_controls_verified`), **Speaking dengan audio terverifikasi** (`speaking_verified`), serta **aman pindah laptop** (`safe_switch_laptop`). Listening lokal memerlukan file/cache utuh, screenshot teruji, dan playback audio resmi tugas yang dipilih; sukses suara sintetis hanya menguji kontrol. Untuk pindah, remote terkini harus terverifikasi, checkpoint/hasil tersinkron, serta tidak ada perubahan lokal yang tertinggal. Browser hasil boleh belum tersedia bila jalur screenshot yang relevan telah diuji; jelaskan jalur yang benar-benar dapat dipakai. Playback Listening dan rekaman Speaking memerlukan pemeriksaan langsung pada perangkat ini.
+
+Rehearsal memakai **tes sistem**, bukan attempt belajar atau soal baru untuk diagnostik. Pengguna menekan Play sendiri pada contoh audio, mengirim screenshot contoh dan rekaman singkat. Coach menyimpan checkpoint, membaca ulang, lalu menguji resume pada chat baru dengan “lanjut”. Jangan menyebut rehearsal pengguna, audio atau rekaman berhasil jika belum dilakukan; tandai `not_tested` sampai ada bukti. Hasilnya dikecualikan dari progres Tata.
 
 Setelah pemeriksaan berhasil, Tata cukup mengatakan **“Mulai”**. Laptop Tata belum diuji sampai pemeriksaan pada perangkat itu benar-benar dilakukan.
+
+## 5. Backup otomatis yang diizinkan
+
+Pengguna telah meminta autosync pada milestone dan heartbeat backup **setiap 1 jam**. Coach otomatis mencoba push sesudah checkpoint/hasil/feedback tersimpan serta dibaca ulang dan sesudah materi/pembaruan sistem diverifikasi; tidak perlu meminta persetujuan baru pada setiap push ke repo privat yang sama setelah autentikasi tersedia. Backup/publikasi dapat dilanjutkan meskipun screenshot/rekaman rehearsal masih menunggu. Tetap catat fitur itu sebagai belum diuji; backup berhasil tidak membuktikan kesiapan belajar.
+
+Heartbeat dikelola dalam Codex pada laptop aktif ketika aplikasi tersedia, menggunakan runner berikut. Contoh ini untuk coach; Tata tidak perlu menjalankannya:
+
+```sh
+python3 scripts/hourly_sync.py --message "Backup IELTS Coach Tata"
+```
+
+Untuk folder lain gunakan `--root PATH`. Runner memeriksa sesi, feedback serta referensi koreksi, lalu memakai sinkronisasi Git yang aman. Writer lokal yang sibuk dapat menunda run; retry berikutnya mempertahankan ID/hasil. Git lock menserialkan backup milestone dan hourly. Status run ada pada `.local/scheduled-sync.json`; cache lokal ini tidak ikut clone/Git dan tidak menggantikan pemeriksaan remote aktual. Run rutin sukses/tanpa perubahan atau writer sibuk tetap diam; kegagalan atau kebutuhan tindakan yang baru/berubah diberi tahu tanpa notifikasi berulang untuk keadaan sama.
+
+Clone baru tidak otomatis membuktikan credential, kesiapan, atau eksekusi jadwal pada laptop itu. Sebelum pindah, pastikan laptop asal telah tersinkron; hanya satu perangkat belajar aktif. Laptop tidur, Codex tidak tersedia, jaringan offline atau credential gagal dapat menunda backup. Bila ganti laptop, periksa tujuan folder heartbeat pada perangkat aktif; jangan menyalakan dua salinan sebagai perangkat belajar bersamaan. Jangan menyalin credential atau menambah automasi lain sebagai jalan pintas.
 
 ## Jika koneksi terputus
 
@@ -87,6 +110,6 @@ git config --local http.postBuffer 52428800
 
 Pengaturan ini memakai buffer maksimal 50 MiB untuk menghindari pengiriman chunked pada jalur yang bermasalah; verifikasi TLS tetap aktif. Setelah retry, pastikan status remote benar-benar synced sebelum pindah perangkat.
 
-Coach menyimpan hasil pada laptop yang sama, membaca ulang, dan menandai **belum tersinkron**. Lanjutkan attempt dengan **“Lanjut”** pada perangkat itu. Saat koneksi kembali, coach menyinkronkan dan memastikan push berhasil sebelum Tata pindah laptop. Jika akses GitHub ditolak, jelaskan kendala autentikasi atau izin yang benar-benar terlihat; jangan menganggap akun Codex memberi akses GitHub otomatis.
+Coach menyimpan checkpoint/hasil pada laptop yang sama, membaca ulang, dan menandai **belum tersinkron**. Hasil tersimpan tetap sah sebagai catatan lokal meski push gagal; retry hanya menjalankan sinkronisasi, bukan menilai ulang. Lanjutkan attempt dengan **“Lanjut”** pada perangkat itu. Latihan lokal dapat dilanjutkan saat offline bila semua bahan yang diperlukan lengkap; cache koreksi yang tidak cocok/tidak lengkap membuat review menunggu. Saat koneksi kembali, coach menyinkronkan dan memastikan push berhasil sebelum Tata pindah laptop. Jika akses GitHub ditolak, jelaskan kendala autentikasi atau izin yang benar-benar terlihat; jangan menganggap akun Codex memberi akses GitHub otomatis.
 
-Jangan mengedit folder mirror `.codex/.chatgpt-projects/`, sumber sinkron lain, pengaturan akun atau permissions. Jangan memasang layanan, membuat automasi atau mengirim pesan sebagai bagian setup ini.
+Jangan mengedit folder mirror `.codex/.chatgpt-projects/`, sumber sinkron lain, pengaturan akun atau permissions. Izin automasi berlaku pada heartbeat backup per jam yang diminta; jangan memasang layanan, membuat automasi lain atau mengirim pesan sebagai bagian setup ini.

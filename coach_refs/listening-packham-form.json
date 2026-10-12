@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "task_id": "listening-packham-form",
+  "skill": "Listening",
+  "visibility": "coach_only_after_done",
+  "source_version": "IELTS Sample Tasks 2023; isolated prompt excerpt",
+  "verified_date": "2026-10-12",
+  "timezone": "Asia/Jakarta",
+  "question_numbers": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8"
+  ],
+  "source": {
+    "url": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf",
+    "sha256": "5bd770e58157ca70ee394822a46d29082cd298ac4a3a053e1278e08ceddd6724",
+    "pages": 33
+  },
+  "prompt": {
+    "path": "materials/listening-packham-form.pdf",
+    "sha256": "d25c8a054dcb4b77335ae55c2e6854559c0f2f5e73a52fc0cd68b9e4c9b011c1",
+    "source_pages": [
+      3
+    ]
+  },
+  "key": {
+    "url": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf#page=7",
+    "source_pages": [
+      7
+    ],
+    "page_texts": [
+      {
+        "page": 7,
+        "text": "Listening Sample Task – Form Completion (Answers)\n1 Mkere\n2 Westall\n3 BS8 9PU\n4 0.75 m/metre(s)/meter(s) (wide) / three(-)quarter(s) (of) (a) metre/meter (wide)\n/¾ m (wide) / 75 cm(s) (wide)\n5 0.5 m/metre(s)/meter(s) (high/deep) / (a) half (a) metre/meter (high/deep) /\n½ m (high/deep) / 50 cm(s) (high/deep)\n6 & 7 in either order\n(some) books\n(some) toys\n8 1,700\nWords in brackets are optional - they are correct, but not necessary. Alternative answers are\nseparated by a slash (/).\nPage 7 of 33 IELTS.org"
+      }
+    ],
+    "entries": [
+      {
+        "question_numbers": [
+          "1"
+        ],
+        "source_page": 7,
+        "order": "fixed",
+        "answer_lines": [
+          "Mkere"
+        ]
+      },
+      {
+        "question_numbers": [
+          "2"
+        ],
+        "source_page": 7,
+        "order": "fixed",
+        "answer_lines": [
+          "Westall"
+        ]
+      },
+      {
+        "question_numbers": [
+          "3"
+        ],
+        "source_page": 7,
+        "order": "fixed",
+        "answer_lines": [
+          "BS8 9PU"
+        ]
+      },
+      {
+        "question_numbers": [
+          "4"
+        ],
+        "source_page": 7,
+        "order": "fixed",
+        "answer_lines": [
+          "0.75 m/metre(s)/meter(s) (wide) / three(-)quarter(s) (of) (a) metre/meter (wide)",
+          "/¾ m (wide) / 75 cm(s) (wide)"
+        ]
+      },
+      {
+        "question_numbers": [
+          "5"
+        ],
+        "source_page": 7,
+        "order": "fixed",
+        "answer_lines": [
+          "0.5 m/metre(s)/meter(s) (high/deep) / (a) half (a) metre/meter (high/deep) /",
+          "½ m (high/deep) / 50 cm(s) (high/deep)"
+        ]
+      },
+      {
+        "question_numbers": [
+          "6",
+          "7"
+        ],
+        "source_page": 7,
+        "order": "any",
+        "answer_lines": [
+          "(some) books",
+          "(some) toys"
+        ]
+      },
+      {
+        "question_numbers": [
+          "8"
+        ],
+        "source_page": 7,
+        "order": "fixed",
+        "answer_lines": [
+          "1,700"
+        ]
+      }
+    ],
+    "optional_words_and_alternatives_policy": "Words in brackets are optional - they are correct, but not necessary. Alternative answers are separated by a slash (/). Page 7 of 33 IELTS.org",
+    "coach_policy": "Use exact printed variants and optional words; do not invent alternatives. Count order-independent groups without awarding the same answer twice."
+  },
+  "transcript": {
+    "url": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf#page=4",
+    "source_pages": [
+      4,
+      5,
+      6
+    ],
+    "page_texts": [
+      {
+        "page": 4,
+        "text": "Listening Sample Task – Form Completion\n(Recording and Tapescript)\nLink to Recording\nTapescript\nYou will hear a telephone conversation between a customer and an agent at a\ncompany which ships large boxes overseas.\nA Good morning. Packham’s Shipping Agents. Can I help you?\nB Oh yes, I’m ringing to make enquiries about sending a large box, a container,\nback home to Kenya from the UK.\nA Yes, of course. Would you like me to try and find some quotations for you?\nB Yes, that’d be great. Thank you.\nA Well first of all, I need a few details from you.\nB Fine.\nA Can I take your name?\nB It’s Jacob Mkere.\nA Can you spell your surname, please?\nB Yes, it’s M-K-E-R-E.\nA Is that ‘M’ for mother?\nB Yes.\nA Thank you, and you say that you will be sending the box to Kenya?\nB That’s right.\nA And where would you like the box picked up from?\nB From college, if possible.\nPage 4 of 33 IELTS.org"
+      },
+      {
+        "page": 5,
+        "text": "A Yes, of course. I’ll take down the address now.\nB It’s Westall College.\nA Is that W-E-S-T-A-L-L?\nB Yes, ... college.\nA Westall College. And where’s that?\nB It’s Downlands Road, in Bristol.\nA Oh yes, I know it. And the postcode?\nB It’s BS8 9PU.\nA Right ... and I need to know the size.\nB Yes, I’ve measured it carefully and it’s 1.5m long ...\nA Right.\nB 0.75m wide ...\nA OK.\nB And it’s 0.5m high or deep.\nA Great. So I’ll calculate the volume in a moment and get some quotes for that.\nBut first can you tell me, you know, very generally, what will be in the box?\nB Yes there’s mostly clothes.\nA OK. [writing down]\nB And there’s some books.\nA OK. Good. Um ... Anything else?\nB Yes, there’s also some toys.\nA OK and what is the total value, do you think, of the contents?\nPage 5 of 33 IELTS.org"
+      },
+      {
+        "page": 6,
+        "text": "B Well the main costs are the clothes and the books – they’ll be about £1500 but\nthen the toys are about another two hundred – so I’d put down £1700.\nPage 6 of 33 IELTS.org"
+      }
+    ],
+    "timestamps_available": false,
+    "coach_policy": "Cite page and supporting source words after done. No timestamps supplied by this PDF; do not fabricate them."
+  },
+  "reading_text": null,
+  "verification": {
+    "status": "verified_from_official_source",
+    "method": "Official IELTS PDF fetched from exact catalog source URL; full-PDF SHA256 matches original materials/PROVENANCE.json. Prompt pages rendered and inspected; relevant key/transcript/passage pages extracted with pdfplumber. Key entries parsed from the original answer pages and asserted against exact task question range. Source page excerpts retained verbatim for coach verification.",
+    "prompt_visual_qa": "Relevant original question page rendered and inspected; source title/type/range matches learner prompt excerpt.",
+    "full_source_stored_in_repo": false,
+    "runtime_limits": "Checksum/task alignment checks do not establish learner response, playback, browser access or IELTS band."
+  },
+  "answer_instruction": {
+    "source_page": 3,
+    "text": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+    "max_words": 3,
+    "allow_number": true
+  }
+}

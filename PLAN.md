@@ -19,10 +19,10 @@ Urutan sesi fleksibel; hari dan jam belum dipilih.
 | A | 20 menit | Listening: tugas resmi pendek + review kesalahan |
 | B | 20 menit | Reading: satu cuplikan resmi + bukti jawaban dalam teks |
 | C | 20 menit | Speaking: jawaban singkat atau Part 2 + satu perbaikan |
-| D | 20 menit | Listening fokus kelemahan; dapat dialihkan ke skill yang paling tertinggal setelah diagnostik |
-| E | Lebih panjang | Writing utuh atau tes satu skill, disertai review mingguan |
+| D | 20 menit | Writing micro-task: posisi + paragraf Task 2, atau introduction + overview Task 1; feedback aspek yang terlihat, tanpa band utuh |
+| E | Lebih panjang, durasi belum dikonfirmasi | Tambahan Listening/Reading lengkap atau Writing utuh, disertai review mingguan setelah waktu tersedia dikonfirmasi |
 
-Gunakan sebagian sesi B/C/D untuk Writing micro-task ketika diperlukan agar Writing tidak hanya muncul sesekali. Rotasikan tugas E supaya setiap dua minggu ada latihan Writing utuh serta pengukuran Listening/Reading lengkap. Review 5–10 menit dapat masuk akhir sesi E.
+Rotasi empat sesi pendek sementara adalah **Listening → Reading → Speaking → Writing**; jangan menggantungkan Writing pada sesi panjang yang belum dikonfirmasi. Setelah waktu sesi E diketahui, rotasikan tambahan Listening serta Writing utuh/pengukuran Reading lengkap. Target frekuensi sesi utuh ditentukan dari waktu nyata yang tersedia; jangan menganggapnya sudah dijalankan atau disepakati. Review 5–10 menit dapat masuk akhir sesi E bila muat.
 
 Dalam sesi 20 menit, coach menyiapkan satu tugas: sekitar 2 menit pengarahan, 8–10 menit attempt, 5–7 menit review, lalu satu tindakan perbaikan. Pilih tugas yang muat; jangan memaksa tes penuh masuk sesi pendek.
 
@@ -43,12 +43,12 @@ Mock lengkap memerlukan blok waktu khusus di luar sesi 20 menit. Jadwal tersebut
 - Skor tanpa jawaban per soal boleh dipakai sebagai tren umum; jangan menebak pola kesalahannya.
 - Dua kesalahan sejenis dalam beberapa attempt baru memberi alasan untuk drill khusus. Satu trial kecil menghasilkan hipotesis, belum kelemahan yang mapan.
 - Setelah drill, cek transfer dengan materi baru; retake materi lama hanya untuk review.
-- Jika suatu skill tetap di bawah target pada checkpoint, pindahkan sesi D ke skill itu. Bila hasil tetap belum mendekati target pada minggu 4/8, bahas penambahan waktu, feedback tutor, atau penyesuaian tanggal tes berdasarkan bukti.
+- Jika suatu skill tetap di bawah target pada checkpoint, gunakan sesi tambahan yang tersedia atau sesuaikan porsi berdasarkan bukti dengan tetap memberi keempat skill slot rutin. Bila hasil tetap belum mendekati target pada minggu 4/8, bahas penambahan waktu, feedback tutor, atau penyesuaian tanggal tes berdasarkan bukti.
 - Jika Tata hanya punya 10 menit, berikan satu micro-task. Jika sesi terlewat, lanjutkan sesi berikutnya tanpa menumpuk tugas.
 - Voice buatan AI boleh dipakai untuk drill pendek; checkpoint Listening tetap menggunakan materi resmi dengan audio dan kondisi yang tercatat.
 
 ## Pemeriksaan pertama
 
-Paket sistem v1 selesai 12 Oktober 2026; ini bukan awal minggu belajar atau diagnostik. Saat laptop Tata tersedia, ikuti SETUP.md dan periksa STATUS.md. Tugas pertama yang disiapkan adalah Packham form completion; cadangan lokal Social Contact. Pilih berikutnya mengikuti rotasi dari TASK_BANK.md, dengan riwayat sessions/ sebagai bukti paparan materi. Hasil baru dicatat melalui alat sesi; tes sistem dikecualikan dari kemajuan Tata.
+Paket sistem v1 disiapkan 12 Oktober 2026; v1.1 memperkuat checkpoint, batas penilaian dan kesiapan per perangkat. Ini bukan awal minggu belajar atau diagnostik. Ikuti SETUP.md dan periksa STATUS.md pada laptop yang sedang dipakai. Tugas pertama yang disiapkan adalah Packham form completion; cadangan lokal Social Contact. Sesudahnya, antrean awal menuju Reading Marie Curie dengan cadangan Rockets, kemudian Speaking dan Writing sesuai rotasi. Coach memperbarui satu tugas berikutnya dan satu cadangan dari TASK_BANK.md berdasarkan riwayat sessions/, paparan key dan akses saat itu. Hasil baru dicatat melalui alat sesi; tes sistem dikecualikan dari kemajuan Tata.
 
 Coach membaca profil/log, memilih satu tugas resmi yang belum pernah dikerjakan, memverifikasi bahan dan akses sebelum attempt, lalu menguji alur **mulai → kerjakan → done → feedback → log**. Pilot berhasil jika ada bukti hasil, feedback yang didukung key, dan log tersimpan. Screenshot adalah fallback yang sah bila browser tidak dapat diakses.

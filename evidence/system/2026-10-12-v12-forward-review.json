@@ -1,0 +1,29 @@
+{
+  "evaluation_only": true,
+  "rule_version": "adaptation-1.2",
+  "chosen_task": "reading-marie-curie-tfng",
+  "session_id": "2026-10-12-reading-9b1655371979",
+  "minutes": 10,
+  "new_feedback_id": "TEST-forward-request-preference",
+  "session_sources": [
+    "2026-10-12-listening-b5c92c449514",
+    "2026-10-12-listening-c9442d28faf7",
+    "2026-10-12-listening-fc3a893f0d1d"
+  ],
+  "feedback_sources": [
+    "TEST-learner-time",
+    "TEST-dispute",
+    "TEST-owner"
+  ],
+  "no_score_changed": true,
+  "no_audio_played": true,
+  "no_network": true,
+  "original_summary_backup": ".local/forward-originals",
+  "response": "Skor 1/2 yang disengketakan tetap menunggu pemeriksaan sumber dan tidak dipakai untuk menilai perkembangan. Retake juga tidak menjadi bukti peningkatan; belum ada baseline keempat skill.\n\nTugas sekarang: Reading — [Marie Curie, Q1–3](/private/var/folders/n5/vgkxqs311xb7cm8nqkkyws3m0000gn/T/ielts-v12-forward-mcxckldi/materials/reading-marie-curie-tfng.pdf), 10 menit. Read the passage and answer questions 1–3 with TRUE, FALSE or NOT GIVEN. Use 6 minutes to answer and 4 minutes for review. Kirim jawaban awal bernomor di chat, lalu done.\n\nPrompt dan cache koreksi lokal tersedia. Akses screenshot belum diuji; tidak ada hasil baru. Catatan tersimpan lokal, belum tersinkron.",
+  "coach_backup_task": "reading-rockets-features",
+  "source_guard_note": "Existing TEST-learner-time says today but declares global; preserved as supplied. New request is recorded session-scoped.",
+  "kind": "system_evaluation",
+  "learner_progress": false,
+  "method": "independent Astra forward test on isolated fictional fixtures",
+  "fixture_root": "/var/folders/n5/vgkxqs311xb7cm8nqkkyws3m0000gn/T/ielts-v12-forward-mcxckldi"
+}

@@ -2,6 +2,7 @@
 """Sinkronisasi data coach yang aman; Python 3.8+, Git, tanpa paket tambahan."""
 
 import argparse
+from contextlib import contextmanager
 import datetime
 import json
 import os
@@ -16,9 +17,15 @@ from urllib.parse import urlparse
 TOP_LEVEL = frozenset({
     "AGENTS.md", "PROFILE.md", "PLAN.md", "PROGRESS.md", "AUDIT.md",
     "README.md", "STATUS.md", "TASK_BANK.md", "SETUP.md",
-    "IMPLEMENTATION_REPORT.md", "materials.json", ".gitignore", ".gitattributes",
+    "IMPLEMENTATION_REPORT.md", "SYSTEM.md", "ADAPTATION.md", "materials.json", ".gitignore", ".gitattributes",
 })
-DIRECTORIES = frozenset({"sessions", "evidence", "materials", "scripts", "tests"})
+DIRECTORIES = frozenset({"sessions", "evidence", "materials", "coach_refs", "feedback", "learning", "scripts", "tests"})
+SKILL_FILES = frozenset({
+    ".agents/skills/ielts-coach/SKILL.md",
+    ".agents/skills/ielts-coach/agents/openai.yaml",
+    ".agents/skills/ielts-github-sync/SKILL.md",
+    ".agents/skills/ielts-github-sync/agents/openai.yaml",
+})
 AUTHORIZED_REPOSITORY = "https://github.com/octhariaus-tata/ielts-coach-tata.git"
 SENSITIVE_SUFFIXES = (".pem", ".key", ".p12", ".pfx", ".keystore")
 SENSITIVE_NAMES = frozenset({
@@ -48,7 +55,7 @@ def allowed_path(path):
     parts = PurePosixPath(path).parts
     if not parts or PurePosixPath(path).is_absolute() or ".." in parts:
         return False
-    if path in TOP_LEVEL:
+    if path in TOP_LEVEL or path in SKILL_FILES:
         return True
     if parts[0] not in DIRECTORIES or len(parts) < 2:
         return False
@@ -289,7 +296,56 @@ def save_status(root, result):
         result["cache_saved"] = True
 
 
+@contextmanager
+def sync_lock(root):
+    """Serialize Git operations from coaching and hourly runs on this clone."""
+    local = root / '.local'
+    path = local / 'sync.lock'
+    if local.is_symlink() or path.is_symlink():
+        raise SyncError('unsafe_lock_path', 'Path lock Git tidak aman; sinkronisasi dihentikan.')
+    local.mkdir(exist_ok=True)
+    with path.open('a+b') as handle:
+        if os.name == 'nt':
+            import msvcrt
+            if handle.tell() == 0:
+                handle.write(b'0')
+                handle.flush()
+            handle.seek(0)
+            try:
+                msvcrt.locking(handle.fileno(), msvcrt.LK_NBLCK, 1)
+            except OSError:
+                raise SyncError('sync_busy', 'Operasi Git lain sedang berjalan; coba pada jadwal berikutnya.', 'busy')
+            try:
+                yield
+            finally:
+                handle.seek(0)
+                msvcrt.locking(handle.fileno(), msvcrt.LK_UNLCK, 1)
+        else:
+            import fcntl
+            try:
+                fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+            except OSError:
+                raise SyncError('sync_busy', 'Operasi Git lain sedang berjalan; coba pada jadwal berikutnya.', 'busy')
+            try:
+                yield
+            finally:
+                fcntl.flock(handle.fileno(), fcntl.LOCK_UN)
+
+
 def synchronize(root, action, message, expected_origin=AUTHORIZED_REPOSITORY):
+    root = Path(root).resolve()
+    try:
+        with sync_lock(root):
+            return _synchronize(root, action, message, expected_origin)
+    except SyncError as error:
+        return {'action': action, 'status': error.status, 'error': error.code,
+                'message': error.message, 'remote_verified': False}, 1
+    except OSError:
+        return {'action': action, 'status': 'error', 'error': 'sync_lock_io',
+                'message': 'Lock Git tidak dapat disimpan; data lokal dipertahankan.', 'remote_verified': False}, 1
+
+
+def _synchronize(root, action, message, expected_origin=AUTHORIZED_REPOSITORY):
     root = Path(root).resolve()
     git = Git(root)
     result = {"action": action, "status": "error", "remote_verified": False}
@@ -310,7 +366,14 @@ def synchronize(root, action, message, expected_origin=AUTHORIZED_REPOSITORY):
             raise SyncError("diverged", "Riwayat berbeda; pertahankan kedua catatan dan selesaikan konflik dahulu.", "conflict")
         if action == "pull":
             if result["pending_files"] or result["staged_foreign_files"]:
-                raise SyncError("dirty_worktree", "Ada perubahan lokal; simpan dengan push sebelum pull.", result["status"])
+                if result["behind"]:
+                    message = ("Ada perubahan lokal dan remote lebih baru; pertahankan seluruh record/bukti "
+                               "dan minta coach merekonsiliasi perubahan serta ringkasan sebelum sinkronisasi. "
+                               "Jangan reset, force-push, atau mengulang push/pull untuk menimpa data.")
+                else:
+                    message = ("Ada perubahan lokal; simpan dan baca ulang catatan dahulu, lalu gunakan push "
+                               "jika remote tetap sama. Jangan menghapus perubahan untuk membuat pull berhasil.")
+                raise SyncError("dirty_worktree", message, result["status"])
             if not result["remote_head"]:
                 raise SyncError("remote_main_missing", "Remote main belum ada; publish dengan push dahulu.", "unpublished")
             code, _ = git.run("merge", "--ff-only", "refs/remotes/origin/main", check=False)
@@ -318,7 +381,13 @@ def synchronize(root, action, message, expected_origin=AUTHORIZED_REPOSITORY):
                 raise SyncError("pull_blocked", "Fast-forward ditolak; perubahan lokal tetap dipertahankan.", "conflict")
         elif action == "push":
             if result["behind"]:
-                raise SyncError("behind_remote", "Remote lebih baru; pull setelah perubahan lokal aman.", "behind")
+                if result["pending_files"] or result["staged_foreign_files"]:
+                    message = ("Remote lebih baru dan ada perubahan lokal; pertahankan seluruh record/bukti "
+                               "dan minta coach merekonsiliasi perubahan serta ringkasan. "
+                               "Jangan mengulang push/pull, reset, atau force-push.")
+                else:
+                    message = "Remote lebih baru; gunakan pull fast-forward lalu periksa ulang status."
+                raise SyncError("behind_remote", message, "behind")
             for path in result["pending_files"]:
                 safe_file(root, path)
             check_commits(git, result["remote_head"])
@@ -370,7 +439,16 @@ def main():
         result, code = {"action": arguments.action, "status": "error", "error": "root_missing",
                         "message": "Folder coaching tidak tersedia.", "remote_verified": False}, 1
     else:
-        result, code = synchronize(root, arguments.action, arguments.message)
+        import session
+        try:
+            with session.mutation_lock(root):
+                result, code = synchronize(root, arguments.action, arguments.message)
+        except (ValueError, OSError) as error:
+            busy = isinstance(error, ValueError) and str(error).startswith('Pencatatan sedang digunakan chat lain')
+            result, code = {'action': arguments.action, 'status': 'busy' if busy else 'error',
+                            'error': 'session_busy' if busy else 'session_lock_io', 'remote_verified': False,
+                            'message': 'Catatan sedang ditulis; coba setelah writer selesai.' if busy else
+                                       'Lock pencatatan tidak dapat diperiksa; data lokal tetap tersimpan.'}, 1
         save_status(root, result)
     print(json.dumps(result, ensure_ascii=True, indent=2))
     return code

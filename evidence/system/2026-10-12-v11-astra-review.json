@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-12",
+  "reviewer": "gpt-6-astra",
+  "kind": "system_review",
+  "scope": "read-only production diff; all repros/tests in temporary folders",
+  "blocking_findings_remaining": 0,
+  "findings_closed": [
+    "completed retry repairs summaries before push",
+    "unverified responses remain awaiting_review",
+    "checkpoint readback then sync",
+    "direct raw response survives rejected grading and summary interruptions",
+    "task-specific audio provenance and evidence artifact identity"
+  ],
+  "tests_rerun_by_reviewer": {
+    "session": 34,
+    "references": 21,
+    "wrapper": 25
+  },
+  "sync_tests": "16 passed by implementation/root combined suite, not separately rerun by reviewer",
+  "limits": "Code review does not verify human screenshot, recording, IELTS audio playback or another laptop."
+}

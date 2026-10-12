@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "task_id": "reading-rockets-features",
+  "skill": "Reading",
+  "visibility": "coach_only_after_done",
+  "source_version": "IELTS Sample Tasks 2023; isolated prompt excerpt",
+  "verified_date": "2026-10-12",
+  "timezone": "Asia/Jakarta",
+  "question_numbers": [
+    "7",
+    "8",
+    "9",
+    "10"
+  ],
+  "source": {
+    "url": "https://ielts.org/cdn/Sample-tests/ielts-academic-reading-sample-tasks-2023.pdf",
+    "sha256": "61035d701cbc12b8aff41c6df25bc25d2d394f6e915ea258c82d2b384be7ed8f",
+    "pages": 46
+  },
+  "prompt": {
+    "path": "materials/reading-rockets-features.pdf",
+    "sha256": "d73fb38e8289fc6a80b19e8fda9c6449dbf607cd197f47168655065eaec1ec70",
+    "source_pages": [
+      3,
+      4
+    ]
+  },
+  "key": {
+    "url": "https://ielts.org/cdn/Sample-tests/ielts-academic-reading-sample-tasks-2023.pdf#page=5",
+    "source_pages": [
+      5
+    ],
+    "page_texts": [
+      {
+        "page": 5,
+        "text": "Academic Reading Sample Task – Matching Features\n(Answers)\n7 A\n8 A\n9 B\n10 E\nIELTS.org\nPage 5 of 46"
+      }
+    ],
+    "entries": [
+      {
+        "question_numbers": [
+          "7"
+        ],
+        "source_page": 5,
+        "order": "fixed",
+        "answer_lines": [
+          "A"
+        ]
+      },
+      {
+        "question_numbers": [
+          "8"
+        ],
+        "source_page": 5,
+        "order": "fixed",
+        "answer_lines": [
+          "A"
+        ]
+      },
+      {
+        "question_numbers": [
+          "9"
+        ],
+        "source_page": 5,
+        "order": "fixed",
+        "answer_lines": [
+          "B"
+        ]
+      },
+      {
+        "question_numbers": [
+          "10"
+        ],
+        "source_page": 5,
+        "order": "fixed",
+        "answer_lines": [
+          "E"
+        ]
+      }
+    ],
+    "optional_words_and_alternatives_policy": "",
+    "coach_policy": "Use exact printed variants and optional words; do not invent alternatives. Count order-independent groups without awarding the same answer twice."
+  },
+  "transcript": null,
+  "reading_text": {
+    "url": "https://ielts.org/cdn/Sample-tests/ielts-academic-reading-sample-tasks-2023.pdf#page=3",
+    "source_pages": [
+      3,
+      4
+    ],
+    "page_texts": [
+      {
+        "page": 3,
+        "text": "Academic Reading Sample Task – Matching Features\n[Note: This is an extract from an Academic Reading passage on the development of rockets.\nThe text preceding this extract explored the slow development of the rocket and explained\nthe principle of propulsion.]\nThe invention of rockets is linked inextricably with the invention of 'black powder'. Most\nhistorians of technology credit the Chinese with its discovery. They base their belief on\nstudies of Chinese writings or on the notebooks of early Europeans who settled in or\nmade long visits to China to study its history and civilisation. It is probable that, some\ntime in the tenth century, black powder was first compounded from its basic ingredients\nof saltpetre, charcoal and sulphur. But this does not mean that it was immediately used\nto propel rockets. By the thirteenth century, powder-propelled fire arrows had become\nrather common. The Chinese relied on this type of technological development to\nproduce incendiary projectiles of many sorts, explosive grenades and possibly cannons\nto repel their enemies. One such weapon was the 'basket of fire' or, as directly\ntranslated from Chinese, the 'arrows like flying leopards'. The 0.7 metre-long arrows,\neach with a long tube of gunpowder attached near the point of each arrow, could be fired\nfrom a long, octagonal-shaped basket at the same time and had a range of 400 paces.\nAnother weapon was the 'arrow as a flying sabre', which could be fired from crossbows.\nThe rocket, placed in a similar position to other rocket-propelled arrows, was designed to\nincrease the range. A small iron weight was attached to the 1.5m bamboo shaft, just\nbelow the feathers, to increase the arrow's stability by moving the centre of gravity to a\nposition below the rocket. At a similar time, the Arabs had developed the 'egg which\nmoves and burns'. This 'egg' was apparently full of gunpowder and stabilised by a 1.5m\ntail. It was fired using two rockets attached to either side of this tail.\nIt was not until the eighteenth century that Europe became seriously interested in the\npossibilities of using the rocket itself as a weapon of war and not just to propel other\nweapons. Prior to this, rockets were used only in pyrotechnic displays. The incentive for\nthe more aggressive use of rockets came not from within the European continent but\nfrom far-away India, whose leaders had built up a corps of rocketeers and used rockets\nsuccessfully against the British in the late eighteenth century. The Indian rockets used\nagainst the British were described by a British Captain serving in India as ‘an iron\nenvelope about 200 millimetres long and 40 millimetres in diameter with sharp points at\nthe top and a 3m-long bamboo guiding stick’. In the early nineteenth century the British\nbegan to experiment with incendiary barrage rockets. The British rocket differed from the\nIndian version in that it was completely encased in a stout, iron cylinder, terminating in a\nconical head, measuring one metre in diameter and having a stick almost five metres\nlong and constructed in such a way that it could be firmly attached to the body of the\nrocket. The Americans developed a rocket, complete with its own launcher, to use\nagainst the Mexicans in the mid-nineteenth century. A long cylindrical tube was propped\nup by two sticks and fastened to the top of the launcher, thereby allowing the rockets to\nbe inserted and lit from the other end. However, the results were sometimes not that\nimpressive as the behaviour of the rockets in flight was less than predictable.\nIELTS.org\nPage 3 of 46"
+      },
+      {
+        "page": 4,
+        "text": "Questions 7 – 10\nLook at the following items (Questions 7-10) and the list of groups below.\nMatch each item with the group which first invented or used them.\nWrite the correct letter A-E in boxes 7-10 on your answer sheet.\nNB You may use any letter more than once.\n7 black powder\n8 rocket-propelled arrows for fighting\n9 rockets as war weapons\n10 the rocket launcher\nFirst invented or used by\nA the Chinese\nB the Indians\nC the British\nD the Arabs\nE the Americans\nIELTS.org\nPage 4 of 46"
+      }
+    ]
+  },
+  "verification": {
+    "status": "verified_from_official_source",
+    "method": "Official IELTS PDF fetched from exact catalog source URL; full-PDF SHA256 matches original materials/PROVENANCE.json. Prompt pages rendered and inspected; relevant key/transcript/passage pages extracted with pdfplumber. Key entries parsed from the original answer pages and asserted against exact task question range. Source page excerpts retained verbatim for coach verification.",
+    "prompt_visual_qa": "Relevant original question page rendered and inspected; source title/type/range matches learner prompt excerpt.",
+    "full_source_stored_in_repo": false,
+    "runtime_limits": "Checksum/task alignment checks do not establish learner response, playback, browser access or IELTS band."
+  },
+  "answer_instruction": {
+    "source_pages": [
+      3,
+      4
+    ],
+    "text": "See exact official prompt-only PDF for question type/instructions."
+  }
+}

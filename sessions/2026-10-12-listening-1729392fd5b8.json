@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-listening-1729392fd5b8",
+  "status": "in_progress",
+  "phase": "awaiting_evidence",
+  "started_at": "2026-10-12T22:49:09+07:00",
+  "skill": "Listening",
+  "task_id": "system-rehearsal",
+  "kind": "system_test",
+  "available_minutes": 20,
+  "material": null,
+  "conditions": {
+    "audio": "synthetic_three_beeps",
+    "play_started_by": "user",
+    "official_material_used": false,
+    "baseline": false
+  },
+  "evidence": [
+    "evidence/system/2026-10-12-v11-playback-report.json"
+  ],
+  "response_revisions": [
+    {
+      "revision_id": "f455a520e961458f8d8366808a9d050b",
+      "created_at": "2026-10-12T22:52:11+07:00",
+      "payload": {
+        "text": "TES SISTEM: pengguna melaporkan tiga beep terdengar setelah menekan Play sendiri. Respons screenshot dan rekaman belum diterima.",
+        "provenance": {
+          "method": "user_report_chat",
+          "reference": "chat:call_896f8fd7107449528b1891513b74564d"
+        },
+        "evidence": [
+          "evidence/system/2026-10-12-v11-playback-report.json"
+        ],
+        "conditions": {
+          "audio": "synthetic_three_beeps",
+          "play_started_by": "user",
+          "official_material_used": false,
+          "baseline": false
+        },
+        "phase": "awaiting_evidence",
+        "purpose": "attempt"
+      }
+    }
+  ],
+  "result": null
+}

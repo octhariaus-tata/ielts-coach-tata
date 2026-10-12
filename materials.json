@@ -62,7 +62,8 @@
         "auto_score": "not_applicable",
         "recording_capture": "not_applicable",
         "audio_verification": "Official recording link inspected in exact source PDF p12; official CDN HTTP 200 audio/mpeg; downloaded ID3+MP3 parsed by afinfo without playback",
-        "audio_duration_seconds": 92.592
+        "audio_duration_seconds": 92.592,
+        "local_correction_cache": "verified"
       },
       "key_pages": [
         13
@@ -92,7 +93,16 @@
         "coach_timing_estimate": "2 minutes instructions, 1 minute scan, about 1 minute 33 seconds one play, 2 minutes finish/capture, 10 minutes feedback and one correction, remainder next action",
         "score_policy": "Report /6 only; no IELTS band. Respect order-independent pairs exactly as key p13 permits; count play from learner report, coach never starts it."
       },
-      "fallback_id": null
+      "fallback_id": null,
+      "coach_reference": {
+        "schema_version": 1,
+        "path": "coach_refs/listening-social-contact-short-answer.json",
+        "sha256": "46c0adc11e953a4544735ce15bb49bfa51a5f0f9f990120e30d3f11aee9f024b",
+        "visibility": "coach_only_after_done",
+        "verified_date": "2026-10-12",
+        "content": "exact key and transcript/passage excerpts; never attach in learner instructions",
+        "status": "verified"
+      }
     },
     {
       "id": "listening-packham-form",
@@ -145,7 +155,8 @@
         "auto_score": "not_applicable",
         "recording_capture": "not_applicable",
         "audio_verification": "HTTP 200 audio/mpeg; downloaded ID3+MP3 parsed by afinfo without playback",
-        "audio_duration_seconds": 154.566531
+        "audio_duration_seconds": 154.566531,
+        "local_correction_cache": "verified"
       },
       "key_pages": [
         7
@@ -177,7 +188,16 @@
         "coach_timing_estimate": "2 minutes read instruction, 1 minute scan form, about 2 minutes 35 seconds single play, 2 minutes finish/capture, 9 minutes feedback, remainder next action",
         "score_policy": "Report /8 only; no IELTS band. Count audio play from learner report; coach never starts it."
       },
-      "fallback_id": "listening-social-contact-short-answer"
+      "fallback_id": "listening-social-contact-short-answer",
+      "coach_reference": {
+        "schema_version": 1,
+        "path": "coach_refs/listening-packham-form.json",
+        "sha256": "e4709b55d857937f5a5990cf96b41e6578f44d802d00cc3e21aeaa9873cb6a52",
+        "visibility": "coach_only_after_done",
+        "verified_date": "2026-10-12",
+        "content": "exact key and transcript/passage excerpts; never attach in learner instructions",
+        "status": "verified"
+      }
     },
     {
       "id": "reading-marie-curie-tfng",
@@ -224,7 +244,8 @@
         "audio_playback": "not_applicable",
         "browser_attempt_results": "not_checked",
         "auto_score": "not_applicable",
-        "recording_capture": "not_applicable"
+        "recording_capture": "not_applicable",
+        "local_correction_cache": "verified"
       },
       "key_pages": [
         14
@@ -250,6 +271,15 @@
         "type": "new official short exercise",
         "coach_timing_estimate": "2 minutes instruction, 8 minutes read/answer, 7 minutes feedback with text evidence, 3 minutes one correction",
         "score_policy": "Report correct/number read only; no IELTS band."
+      },
+      "coach_reference": {
+        "schema_version": 1,
+        "path": "coach_refs/reading-marie-curie-tfng.json",
+        "sha256": "6ae6ffe79f9f50c9556e43d1c4b873ce88e26a10dacfc3c8765f079c896baddd",
+        "visibility": "coach_only_after_done",
+        "verified_date": "2026-10-12",
+        "content": "exact key and transcript/passage excerpts; never attach in learner instructions",
+        "status": "verified"
       }
     },
     {
@@ -298,7 +328,8 @@
         "audio_playback": "not_applicable",
         "browser_attempt_results": "not_checked",
         "auto_score": "not_applicable",
-        "recording_capture": "not_applicable"
+        "recording_capture": "not_applicable",
+        "local_correction_cache": "verified"
       },
       "key_pages": [
         5
@@ -324,6 +355,15 @@
         "type": "new official short exercise",
         "coach_timing_estimate": "2 minutes instruction, 8 minutes read/answer, 7 minutes feedback with text evidence, 3 minutes one correction",
         "score_policy": "Report correct/number read only; no IELTS band."
+      },
+      "coach_reference": {
+        "schema_version": 1,
+        "path": "coach_refs/reading-rockets-features.json",
+        "sha256": "ae5dad513bc498983f8255806e71714af33df0e920c49a315b1a3ce81a39e1bd",
+        "visibility": "coach_only_after_done",
+        "verified_date": "2026-10-12",
+        "content": "exact key and transcript/passage excerpts; never attach in learner instructions",
+        "status": "verified"
       }
     },
     {
@@ -620,14 +660,30 @@
       "title": "Judy’s dissertation",
       "skill": "Listening",
       "reason": "Key/transcript already exposed in historical technical trial; retake is review, not a new baseline.",
-      "source": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test"
+      "source": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+      "role": "historical_archive",
+      "readiness": "archive_not_selectable",
+      "selectable": false,
+      "freshness": {
+        "status": "key_already_exposed",
+        "eligible_for_new_attempt": false
+      },
+      "archive_reason": "Full runnable prompt/audio/provenance metadata not yet available. Preserve historical source/evidence; coach must verify a complete review packet before selecting a retake."
     },
     {
       "id": "listening-furniture-review",
       "title": "Second-hand furniture",
       "skill": "Listening",
       "reason": "Key exposed in historical attempt; conditions unclear; retake is review only.",
-      "source": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test"
+      "source": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+      "role": "historical_archive",
+      "readiness": "archive_not_selectable",
+      "selectable": false,
+      "freshness": {
+        "status": "key_already_exposed",
+        "eligible_for_new_attempt": false
+      },
+      "archive_reason": "Full runnable prompt/audio/provenance metadata not yet available. Preserve historical source/evidence; coach must verify a complete review packet before selecting a retake."
     }
   ],
   "optional_online_references": [

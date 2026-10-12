@@ -1,6 +1,6 @@
 # Bank tugas awal — IELTS Academic Tata
 
-Diperiksa pada **12 Oktober 2026**, Asia/Jakarta. Ini persiapan sistem; belum ada latihan baru atau progres kemampuan yang dihasilkan. Metadata lengkap dan URL koreksi untuk coach ada di [materials.json](materials.json). Salinan prompt memakai jalur relatif dan bisa dibuka di laptop lain setelah sinkronisasi. [Provenance](materials/PROVENANCE.json) menyimpan versi, halaman, checksum, dan cara ekstraksi.
+Diperiksa pada **12 Oktober 2026**, Asia/Jakarta. Ini persiapan sistem; belum ada latihan baru atau progres kemampuan yang dihasilkan. Metadata lengkap dan URL koreksi untuk coach ada di [materials.json](materials.json). Salinan prompt memakai jalur relatif dan bisa dibuka di laptop lain setelah sinkronisasi. [Provenance](materials/PROVENANCE.json) menyimpan versi, halaman, checksum, dan cara ekstraksi. Referensi koreksi untuk dua Listening dan dua Reading berada dalam `coach_refs/`; periksa kecocokan versi/checksum sebelum digunakan offline dan jangan berikan cache itu kepada Tata sebelum done.
 
 ## Sesi pertama ketika Tata siap
 
@@ -8,7 +8,13 @@ Pilih **Packham’s Shipping Agency**, `listening-packham-form`: [prompt tanpa k
 
 Untuk sesi 20 menit: sekitar 2 menit pengarahan, 1 menit membaca form, 2 menit 35 detik audio, 2 menit menyelesaikan/mengirim jawaban, lalu feedback dan satu perbaikan. Tata boleh memasukkan jawaban awal bernomor 1–8 langsung di chat, atau menulis lalu mengirim foto/screenshot. Setelah “done”, jangan meminta semua jawaban diketik ulang. Laporkan hasil /8 dengan status bukti; cuplikan ini tidak dikonversi ke band.
 
-Audio terverifikasi sebagai file MP3 154,57 detik: HTTP 200, header ID3 dan struktur audio berhasil dibaca, **belum diputar**. Playback di laptop Tata belum diperiksa. Key dan transcript versi PDF 2023 dibaca coach untuk kesiapan koreksi; keduanya tidak dimasukkan ke prompt lokal atau ditampilkan sebelum selesai. [Sumber resmi IELTS](https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf), [audio resmi](https://ielts.org/cdn/Sample-tests/Listening/ielts-listening-sample-task-1-form-completion.mp3).
+Audio terverifikasi sebagai file MP3 154,57 detik: HTTP 200, header ID3 dan struktur audio berhasil dibaca, **belum diputar pada persiapan v1**. Playback pada perangkat belajar tetap memerlukan bukti; lihat pemeriksaan lokal saat ini. Key dan transcript versi PDF 2023 dibaca coach untuk kesiapan koreksi; keduanya tidak dimasukkan ke prompt lokal atau ditampilkan sebelum selesai. [Sumber resmi IELTS](https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf), [audio resmi](https://ielts.org/cdn/Sample-tests/Listening/ielts-listening-sample-task-1-form-completion.mp3).
+
+## Antrean bergulir oleh coach
+
+Antrean awal, sebelum ada latihan baru: **sekarang Packham; cadangan Social Contact; berikutnya Reading Marie Curie; cadangan berikutnya Rockets**. Sesudah hasil tersimpan, coach memilih satu tugas berikutnya beserta cadangannya menurut rotasi Listening → Reading → Speaking → Writing dan memperbarui catatan sesi/status. Ini keputusan coaching dari bukti dan waktu yang tersedia, bukan scheduler atau janji tugas berjalan sendiri.
+
+Periksa attempt aktif sebelum menggunakan antrean; “lanjut” meneruskan ID yang sama. Jawaban dikirim bertahap boleh langsung dicatat sebagai checkpoint sebelum semua soal selesai. Sesudah feedback, revisi disimpan terpisah dari respons pertama. Sesi terlewat tidak menambah utang tugas. Untuk pengukuran baru setelah bank ini terpakai, coach menyiapkan materi resmi baru serta memeriksa resource sebelum menugaskannya.
 
 ## Antrean tiap skill
 
@@ -21,7 +27,7 @@ Audio terverifikasi sebagai file MP3 154,57 detik: HTTP 200, header ID3 dan stru
 | Writing | `writing-tourism-task2` — [International Tourism, Task 2B](materials/writing-tourism-task2.pdf) | `writing-further-education-task1` — [Further Education in Britain, Task 1A](materials/writing-further-education-task1.pdf) | Micro-task adaptasi coach dari prompt resmi: posisi + satu paragraf untuk Task 2; introduction + overview untuk Task 1. Respons bahasa Inggris di chat/file, atau screenshot. Jangan beri band seluruh task dari cuplikan. |
 | Speaking | `speaking-important-object-part2` — [An Important Possession, Part 2](materials/speaking-important-object-part2.pdf) | `speaking-hometown-part1` — [Hometown and Accommodation, Part 1](materials/speaking-hometown-part1.pdf) | Part 2: persiapan 1 menit, bicara 1–2 menit, lalu feedback + satu pengulangan untuk perbaikan. Part 1: beberapa pertanyaan resmi + feedback. Audio/voice dipakai bila dukungannya telah diperiksa; transcript-only membatasi penilaian. |
 
-Writing lengkap memerlukan sekitar **20 menit menulis Task 1/150 kata** atau **40 menit Task 2/250 kata**, ditambah waktu feedback. Micro-task 20 menit adalah latihan tambahan, bukan diagnostik Writing utuh. Speaking dengan prompt resmi dan coach AI tetap dinilai sebagai estimasi AI, bukan hasil examiner resmi; pronunciation tidak bisa dinilai dari transcript saja. [Sumber Writing](https://ielts.org/cdn/Sample-tests/ielts-academic-writing-sample-tasks-2023.pdf), [sumber Reading](https://ielts.org/cdn/Sample-tests/ielts-academic-reading-sample-tasks-2023.pdf), [sumber Speaking](https://ielts.org/cdn/ielts-downloadable-assets/ielts-sample-tests/ielts-speaking-sample-tasks-2023.pdf).
+Writing lengkap memerlukan sekitar **20 menit menulis Task 1/150 kata** atau **40 menit Task 2/250 kata**, ditambah waktu feedback. Micro-task 20 menit adalah latihan tambahan, bukan diagnostik Writing utuh; feedback hanya untuk aspek yang terlihat. Estimasi band per task memerlukan respons lengkap dan seluruh kriteria; Task 2 saja bukan band Writing keseluruhan. Speaking satu bagian mendapat feedback terbatas; estimasi seluruh Speaking memerlukan audio memadai Parts 1–3 yang diperiksa, seluruh kriteria serta ketidakpastian. Pronunciation tidak bisa dinilai dari transcript saja. Semua estimasi coach AI bukan hasil examiner resmi. [Sumber Writing](https://ielts.org/cdn/Sample-tests/ielts-academic-writing-sample-tasks-2023.pdf), [sumber Reading](https://ielts.org/cdn/Sample-tests/ielts-academic-reading-sample-tasks-2023.pdf), [sumber Speaking](https://ielts.org/cdn/ielts-downloadable-assets/ielts-sample-tests/ielts-speaking-sample-tasks-2023.pdf).
 
 ## Status pemeriksaan fitur
 
@@ -35,7 +41,7 @@ Writing lengkap memerlukan sekitar **20 menit menulis Task 1/150 kata** atau **4
 
 Prompt lokal hanya berisi tugas, tidak berisi halaman key atau respons sample. Speaking berasal dari halaman yang mencampur task dan transcript: hanya wilayah prompt dirasterisasi agar tidak ada teks sample tersembunyi. Satu cue Part 2 dipulihkan dari text layer sumber karena PDF resmi menimpanya dengan baris instruksi berikutnya; pemulihan ini dicatat dalam provenance.
 
-Label **terverifikasi** pada resource bukan jaminan akses browser hasil, playback, atau rekaman di laptop lain. Periksa fitur yang relevan saat memberikan tugas. Jika sumber koreksi gagal dibuka pada saat review, simpan jawaban dan tandai penilaian tertunda; jangan mengarang key dari ingatan. Coach memakai link versi yang dicatat di materials.json, lalu memperlihatkan bukti hanya sesudah selesai.
+Label **terverifikasi** pada resource bukan jaminan akses browser hasil, playback, atau rekaman pada perangkat yang sedang dipakai. Periksa fitur yang relevan saat memberikan tugas. Saat online gagal, gunakan cache koreksi hanya jika versi, soal dan checksum sesuai snapshot materi sesi. Jika cache tidak lengkap/tidak cocok atau sumber tidak dapat diperiksa, simpan jawaban dan tandai fase `awaiting_review`; jangan mengarang key dari ingatan. Coach memakai versi yang dicatat di materials.json, lalu memperlihatkan bukti hanya sesudah selesai.
 
 ## Referensi online tambahan — belum siap sebagai cadangan
 
@@ -43,10 +49,10 @@ Label **terverifikasi** pada resource bukan jaminan akses browser hasil, playbac
 
 Karena itu gunakan **Social Contact** sebagai cadangan Packham. Jangan mengganti cadangan lokal ini dengan Library sampai preflight relevan dapat dilakukan di sesi Tata. Untuk Library, Tata tetap menekan Play sendiri; hasil hanya dibaca dari keadaan halaman yang saat itu dapat diakses atau screenshot. [Sumber resmi tugas](https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test).
 
-## Materi review dan pengisian ulang
+## Arsip review dan pengisian ulang
 
-- **Judy’s dissertation**: key sudah terekspos pada trial sistem 12 Oktober; retake adalah review, bukan baseline.
-- **Second-hand furniture**: key sudah terekspos di riwayat; konteks attempt belum jelas. Review saja.
+- **Judy’s dissertation**: arsip historis, paket executable belum disiapkan dalam bank ini. Key sudah terekspos pada trial sistem 12 Oktober; jika dipersiapkan lagi, retake adalah review, bukan baseline.
+- **Second-hand furniture**: arsip historis, paket executable belum disiapkan dalam bank ini. Key sudah terekspos di riwayat; konteks attempt belum jelas. Review saja setelah bahan siap.
 - Setelah tugas baru selesai, freshness berubah menurut catatan sesi; untuk checkpoint cari soal resmi baru, jangan mengulang delapan cuplikan ini sebagai tes perkembangan.
 - Bank ini berisi cuplikan untuk pilot/latihan. Tes Listening/Reading lengkap /40, Writing utuh, dan sampel Speaking yang memadai disiapkan terpisah sesuai [PLAN.md](PLAN.md).
 - Jalur resmi tambahan: [IELTS sample Academic](https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test), [British Council Listening](https://takeielts.britishcouncil.org/prepare/ielts-free-practice-mock-tests/academic/listening), [British Council Reading](https://takeielts.britishcouncil.org/prepare/ielts-free-practice-mock-tests/academic/reading). Ini indeks untuk coach, bukan daftar pencarian manual bagi Tata.

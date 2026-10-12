@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12-owner-system-design",
+  "created_at": "2026-10-12T23:19:25.339825+07:00",
+  "payload": {
+    "event_id": "2026-10-12-owner-system-design",
+    "kind": "learner",
+    "actor": "owner",
+    "scope": "global",
+    "category": "preference",
+    "text": "i am also curious about the overall system, please make a reliable and scalable and self learning system that can improve based on analyzing user feeedback, with the goals to pass that ielts score\n\nwhat is the overall system\n\nhow many subagent or skill we made etc, please use best practice for this\n\nask astra feedback too",
+    "provenance": {
+      "method": "direct_human_chat_request",
+      "reference": "User request in this chat, 12 October 2026: overall system and self-learning"
+    },
+    "signals": {}
+  },
+  "session_snapshots": {},
+  "rule_version": "adaptation-1.2"
+}

@@ -1,0 +1,205 @@
+IELTS Coach v1.2 — all data simulated except owner feedback and prior technical rehearsal. No Tata learning progress.
+Distinct current tests:130 =34sessions +21references +25coach +7coach-adaptation +25adaptation +18sync.
+Combined124 run preceded latest five focused regressions/source guards. Unchanged modules passed combined run; changed adapter/coach verified below at latest source.
+
+COMBINED RUN124
+test_ai_sample_patterns_remain_ai_hypotheses_with_uncertainty (test_adaptation.AdaptationTests) ... ok
+test_analyze_rejects_stale_or_invented_supplied_records (test_adaptation.AdaptationTests) ... ok
+test_conflicting_experiment_event_and_unscoped_change_do_not_mutate (test_adaptation.AdaptationTests) ... ok
+test_experiment_adoption_needs_independent_comparable_new_outcomes (test_adaptation.AdaptationTests) ... ok
+test_experiment_rejects_heterogeneous_unknown_and_cross_stream_evidence (test_adaptation.AdaptationTests) ... ok
+test_experiment_without_baseline_is_honestly_pending_and_reviews_idempotent (test_adaptation.AdaptationTests) ... ok
+test_feedback_is_append_only_idempotent_and_raw_instructions_do_not_execute (test_adaptation.AdaptationTests) ... ok
+test_feedback_rejects_unproven_mutations_bad_signals_and_unsafe_id (test_adaptation.AdaptationTests) ... ok
+test_feedback_session_kinds_cannot_cross_streams (test_adaptation.AdaptationTests) ... ok
+test_full_listening_readiness_still_requires_other_skills_and_is_local_policy (test_adaptation.AdaptationTests) ... ok
+test_one_attempt_is_not_a_stable_weakness_or_band_readiness (test_adaptation.AdaptationTests) ... ok
+test_pending_historical_unverified_record_does_not_feed_patterns (test_adaptation.AdaptationTests) ... ok
+test_preferences_are_explicit_learner_signals_scoped_to_current_attempt (test_adaptation.AdaptationTests) ... ok
+test_resolution_is_append_only_correction_required_stays_quarantined (test_adaptation.AdaptationTests) ... ok
+test_retakes_system_tests_and_unknown_or_assisted_conditions_do_not_infer_ability (test_adaptation.AdaptationTests) ... ok
+test_scoring_dispute_quarantines_inference_but_keeps_exposure_and_rotation (test_adaptation.AdaptationTests) ... ok
+test_scoring_dispute_requires_specific_session_and_cannot_close_global_grading (test_adaptation.AdaptationTests) ... ok
+test_source_confirmation_becomes_stale_if_original_result_changes (test_adaptation.AdaptationTests) ... ok
+test_total_only_and_historical_scores_cannot_invent_patterns (test_adaptation.AdaptationTests) ... ok
+test_two_distinct_fresh_task_labels_make_hypothesis_with_original_proof (test_adaptation.AdaptationTests) ... ok
+test_checkpoint_keeps_input_and_waiting_phase (test_coach.CoachTests) ... ok
+test_checkpoint_missing_provenance_never_mutates_record (test_coach.CoachTests) ... ok
+test_checkpoint_summary_interruption_recovers_same_input_once (test_coach.CoachTests) ... ok
+test_complete_saved_locally_on_push_failure_and_retry_has_no_regrade (test_coach.CoachTests) ... ok
+test_complete_without_evidence_stays_waiting (test_coach.CoachTests) ... ok
+test_current_sync_must_be_clean_verified_and_up_to_date_to_switch (test_coach.CoachTests) ... ok
+test_direct_response_is_checkpointed_before_invalid_grade_stays_pending (test_coach.CoachTests) ... ok
+test_direct_source_checkpoint_summary_failure_preserves_input_before_grading (test_coach.CoachTests) ... ok
+test_historical_synced_cache_never_proves_current_transfer_readiness (test_coach.CoachTests) ... ok
+test_malformed_checkpoint_or_result_is_rejected_without_mutation (test_coach.CoachTests) ... ok
+test_malformed_nested_source_response_is_rejected_without_mutation (test_coach.CoachTests) ... ok
+test_missing_cache_during_done_leaves_response_pending (test_coach.CoachTests) ... ok
+test_missing_or_wrong_audio_provenance_blocks_local_prepare (test_coach.CoachTests) ... ok
+test_offline_prepare_uses_verified_local_materials (test_coach.CoachTests) ... ok
+test_playback_observation_requires_audio_material_and_matching_task (test_coach.CoachTests) ... ok
+test_prepare_learner_packet_never_exposes_key_transcript_or_cache (test_coach.CoachTests) ... ok
+test_prepare_resumes_same_attempt_while_ignoring_new_requested_task (test_coach.CoachTests) ... ok
+test_readiness_distinguishes_files_playback_speaking_and_transfer (test_coach.CoachTests) ... ok
+test_readiness_is_device_local_and_cannot_be_inherited_from_other_device (test_coach.CoachTests) ... ok
+test_readiness_rejects_invalid_observation_provenance_or_missing_artifact (test_coach.CoachTests) ... ok
+test_remote_behind_with_local_changes_requires_reconciliation_before_new_attempt (test_coach.CoachTests) ... ok
+test_repeat_done_with_changed_result_never_overwrites_original (test_coach.CoachTests) ... ok
+test_replaced_playback_and_evidence_invalidate_cached_readiness (test_coach.CoachTests) ... ok
+test_summary_failure_preserves_completed_record_and_retry_rebuilds_before_push (test_coach.CoachTests) ... ok
+test_unverified_response_is_kept_pending_without_completed_progress (test_coach.CoachTests) ... ok
+test_current_time_budget_wins_but_resume_preserves_attempt (test_coach_adaptation.CoachAdaptationTests) ... ok
+test_disputed_score_is_archived_and_warned_not_learned (test_coach_adaptation.CoachAdaptationTests) ... ok
+test_explicit_learner_feedback_changes_next_session_budget (test_coach_adaptation.CoachAdaptationTests) ... ok
+test_failed_feedback_push_retry_preserves_one_event (test_coach_adaptation.CoachAdaptationTests) ... ok
+test_owner_feedback_does_not_project_preferences_onto_tata (test_coach_adaptation.CoachAdaptationTests) ... ok
+test_untrusted_feedback_text_is_data_without_script_execution (test_coach_adaptation.CoachAdaptationTests) ... ok
+test_actual_four_caches_work_offline_and_report_only_metadata (test_references.ReferenceTests) ... ok
+test_cache_and_prompt_paths_cannot_escape_project (test_references.ReferenceTests) ... ok
+test_changed_cache_checksum_fails (test_references.ReferenceTests) ... ok
+test_corrupt_json_with_new_checksum_still_fails (test_references.ReferenceTests) ... ok
+test_duplicate_question_in_source_key_fails (test_references.ReferenceTests) ... ok
+test_empty_reading_text_fails (test_references.ReferenceTests) ... ok
+test_historical_exposed_tasks_are_archived_and_not_selectable (test_references.ReferenceTests) ... ok
+test_incomplete_or_changed_structured_key_fails_even_with_new_checksum (test_references.ReferenceTests) ... ok
+test_learner_packet_omits_all_correction_content_and_original_urls (test_references.ReferenceTests) ... ok
+test_learner_packet_rejects_cache_path_and_path_traversal (test_references.ReferenceTests) ... ok
+test_missing_cache_fails_without_network_or_fabricated_key (test_references.ReferenceTests) ... ok
+test_missing_metadata_is_not_ready (test_references.ReferenceTests) ... ok
+test_missing_transcript_and_changed_page_range_fail (test_references.ReferenceTests) ... ok
+test_real_key_entries_cover_exact_source_ranges_not_just_checksums (test_references.ReferenceTests) ... ok
+test_real_listening_word_limits_optional_variants_and_group_rules_preserved (test_references.ReferenceTests) ... ok
+test_word_limit_policy_must_match_verified_prompt (test_references.ReferenceTests) ... ok
+test_writing_speaking_are_not_objective_key_checks (test_references.ReferenceTests) ... ok
+test_wrong_prompt_hash_fails (test_references.ReferenceTests) ... ok
+test_wrong_question_range_fails (test_references.ReferenceTests) ... ok
+test_wrong_source_provenance_fails (test_references.ReferenceTests) ... ok
+test_wrong_version_fails_even_if_cache_hash_matches (test_references.ReferenceTests) ... ok
+test_catalog_snapshot_survives_updates_and_wrong_source_is_rejected (test_session.SessionTests) ... ok
+test_checkpoint_cli_uses_same_record (test_session.SessionTests) ... ok
+test_checkpoint_durable_idempotent_and_resume_without_grading (test_session.SessionTests) ... ok
+test_checkpoint_original_review_and_conditions_are_preserved (test_session.SessionTests) ... ok
+test_checkpoint_requires_provenance_and_rejects_unsafe_evidence (test_session.SessionTests) ... ok
+test_completed_material_requires_review_label (test_session.SessionTests) ... ok
+test_corrupt_legacy_completed_shape_rejected_before_summary_mutation (test_session.SessionTests) ... ok
+test_corrupt_record_rejected_before_mutation (test_session.SessionTests) ... ok
+test_done_is_idempotent_and_historical_provenance_survives (test_session.SessionTests) ... ok
+test_empty_total_score_cannot_close_session (test_session.SessionTests) ... ok
+test_interrupted_checkpoint_recovers_without_input_loss (test_session.SessionTests) ... ok
+test_legacy_completed_record_read_and_idempotent_without_new_requirements (test_session.SessionTests) ... ok
+test_missing_proof_duplicate_answer_and_too_many_patterns (test_session.SessionTests) ... ok
+test_missing_provenance_verification_and_unverified_score_rejected (test_session.SessionTests) ... ok
+test_partial_screenshot_score_only_counts_visible_answers (test_session.SessionTests) ... ok
+test_phase_only_wait_keeps_same_attempt_and_cannot_complete_empty_result (test_session.SessionTests) ... ok
+test_pronunciation_requires_known_audio_input (test_session.SessionTests) ... ok
+test_real_evidence_required_and_path_escape_rejected (test_session.SessionTests) ... ok
+test_rebuild_recovers_after_summary_write_failure (test_session.SessionTests) ... ok
+test_resume_same_attempt_and_block_new_task (test_session.SessionTests) ... ok
+test_review_revision_cannot_be_selected_for_original_grade (test_session.SessionTests) ... ok
+test_score_checkpoint_cannot_support_objective_answers (test_session.SessionTests) ... ok
+test_snippet_cannot_become_full_and_unknown_questions_rejected (test_session.SessionTests) ... ok
+test_speaking_full_band_needs_all_parts_audio_and_criteria (test_session.SessionTests) ... ok
+test_system_tests_do_not_enter_learning_progress (test_session.SessionTests) ... ok
+test_total_only_rejects_guessed_patterns (test_session.SessionTests) ... ok
+test_total_score_checkpoint_only_can_close_without_invented_errors (test_session.SessionTests) ... ok
+test_transcript_cannot_get_pronunciation_estimate (test_session.SessionTests) ... ok
+test_two_local_writers_cannot_mutate_same_attempt (test_session.SessionTests) ... ok
+test_unknown_catalog_task_cannot_start (test_session.SessionTests) ... ok
+test_writing_full_requires_complete_sample_four_criteria_and_correct_task (test_session.SessionTests) ... ok
+test_writing_microtask_no_band_but_limited_feedback_allowed (test_session.SessionTests) ... ok
+test_writing_task_band_summary_labels_task_not_skill_band (test_session.SessionTests) ... ok
+test_wrong_key_version_and_small_sample_band_rejected (test_session.SessionTests) ... ok
+test_adaptation_data_and_exact_skill_files_roundtrip (test_sync.SyncTests) ... ok
+test_ancestor_repo_is_not_mistaken_for_project_repo (test_sync.SyncTests) ... ok
+test_cli_refuses_unapproved_origin_without_fetch_or_stage (test_sync.SyncTests) ... ok
+test_coach_references_roundtrip_and_sensitive_paths_stay_blocked (test_sync.SyncTests) ... ok
+test_dirty_and_behind_recovery_does_not_offer_push_pull_loop (test_sync.SyncTests) ... ok
+test_dirty_local_is_preserved_on_pull (test_sync.SyncTests) ... ok
+test_divergent_histories_not_reset_or_merged (test_sync.SyncTests) ... ok
+test_exact_github_destination_https_and_ssh (test_sync.SyncTests) ... ok
+test_foreign_file_committed_then_deleted_cannot_leak_in_history (test_sync.SyncTests) ... ok
+test_no_repo_and_no_origin_are_local_only (test_sync.SyncTests) ... ok
+test_offline_push_keeps_pending_and_does_not_claim_synced (test_sync.SyncTests) ... ok
+test_remote_rejected_push_keeps_local_commit_for_retry (test_sync.SyncTests) ... ok
+test_secret_and_symlink_are_refused (test_sync.SyncTests) ... ok
+test_skill_whitelist_does_not_bypass_secret_or_symlink_checks (test_sync.SyncTests) ... ok
+test_staged_foreign_refused_without_unstaging (test_sync.SyncTests) ... ok
+test_two_copies_roundtrip_binary_and_repeated_push (test_sync.SyncTests) ... ok
+test_unknown_unstaged_is_preserved_but_not_published (test_sync.SyncTests) ... ok
+test_wrong_branch_and_different_push_url_refused (test_sync.SyncTests) ... ok
+
+----------------------------------------------------------------------
+Ran 124 tests in 114.304s
+
+OK
+
+FINAL COACH+INTEGRATION32
+test_checkpoint_keeps_input_and_waiting_phase (test_coach.CoachTests) ... ok
+test_checkpoint_missing_provenance_never_mutates_record (test_coach.CoachTests) ... ok
+test_checkpoint_summary_interruption_recovers_same_input_once (test_coach.CoachTests) ... ok
+test_complete_saved_locally_on_push_failure_and_retry_has_no_regrade (test_coach.CoachTests) ... ok
+test_complete_without_evidence_stays_waiting (test_coach.CoachTests) ... ok
+test_current_sync_must_be_clean_verified_and_up_to_date_to_switch (test_coach.CoachTests) ... ok
+test_direct_response_is_checkpointed_before_invalid_grade_stays_pending (test_coach.CoachTests) ... ok
+test_direct_source_checkpoint_summary_failure_preserves_input_before_grading (test_coach.CoachTests) ... ok
+test_historical_synced_cache_never_proves_current_transfer_readiness (test_coach.CoachTests) ... ok
+test_malformed_checkpoint_or_result_is_rejected_without_mutation (test_coach.CoachTests) ... ok
+test_malformed_nested_source_response_is_rejected_without_mutation (test_coach.CoachTests) ... ok
+test_missing_cache_during_done_leaves_response_pending (test_coach.CoachTests) ... ok
+test_missing_or_wrong_audio_provenance_blocks_local_prepare (test_coach.CoachTests) ... ok
+test_offline_prepare_uses_verified_local_materials (test_coach.CoachTests) ... ok
+test_playback_observation_requires_audio_material_and_matching_task (test_coach.CoachTests) ... ok
+test_prepare_learner_packet_never_exposes_key_transcript_or_cache (test_coach.CoachTests) ... ok
+test_prepare_resumes_same_attempt_while_ignoring_new_requested_task (test_coach.CoachTests) ... ok
+test_readiness_distinguishes_files_playback_speaking_and_transfer (test_coach.CoachTests) ... ok
+test_readiness_is_device_local_and_cannot_be_inherited_from_other_device (test_coach.CoachTests) ... ok
+test_readiness_rejects_invalid_observation_provenance_or_missing_artifact (test_coach.CoachTests) ... ok
+test_remote_behind_with_local_changes_requires_reconciliation_before_new_attempt (test_coach.CoachTests) ... ok
+test_repeat_done_with_changed_result_never_overwrites_original (test_coach.CoachTests) ... ok
+test_replaced_playback_and_evidence_invalidate_cached_readiness (test_coach.CoachTests) ... ok
+test_summary_failure_preserves_completed_record_and_retry_rebuilds_before_push (test_coach.CoachTests) ... ok
+test_unverified_response_is_kept_pending_without_completed_progress (test_coach.CoachTests) ... ok
+test_current_time_budget_wins_but_resume_preserves_attempt (test_coach_adaptation.CoachAdaptationTests) ... ok
+test_disputed_score_is_archived_and_warned_not_learned (test_coach_adaptation.CoachAdaptationTests) ... ok
+test_explicit_learner_feedback_changes_next_session_budget (test_coach_adaptation.CoachAdaptationTests) ... ok
+test_failed_feedback_push_retry_preserves_one_event (test_coach_adaptation.CoachAdaptationTests) ... ok
+test_owner_feedback_does_not_project_preferences_onto_tata (test_coach_adaptation.CoachAdaptationTests) ... ok
+test_session_only_time_constraint_expires_after_completion (test_coach_adaptation.CoachAdaptationTests) ... ok
+test_untrusted_feedback_text_is_data_without_script_execution (test_coach_adaptation.CoachAdaptationTests) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 3.941s
+
+OK
+
+FINAL ADAPTATION25
+test_adopted_decision_source_snapshot_change_invalidates_current_evidence (test_adaptation.AdaptationTests) ... ok
+test_ai_sample_patterns_remain_ai_hypotheses_with_uncertainty (test_adaptation.AdaptationTests) ... ok
+test_analyze_rejects_stale_or_invented_supplied_records (test_adaptation.AdaptationTests) ... ok
+test_assisted_attempt_does_not_support_recurring_hypothesis (test_adaptation.AdaptationTests) ... ok
+test_conflicting_experiment_event_and_unscoped_change_do_not_mutate (test_adaptation.AdaptationTests) ... ok
+test_experiment_adoption_needs_independent_comparable_new_outcomes (test_adaptation.AdaptationTests) ... ok
+test_experiment_rejects_heterogeneous_unknown_and_cross_stream_evidence (test_adaptation.AdaptationTests) ... ok
+test_experiment_source_bytes_pin_baseline_and_outcomes_without_json_changes (test_adaptation.AdaptationTests) ... ok
+test_experiment_without_baseline_is_honestly_pending_and_reviews_idempotent (test_adaptation.AdaptationTests) ... ok
+test_feedback_is_append_only_idempotent_and_raw_instructions_do_not_execute (test_adaptation.AdaptationTests) ... ok
+test_feedback_rejects_unproven_mutations_bad_signals_and_unsafe_id (test_adaptation.AdaptationTests) ... ok
+test_feedback_session_kinds_cannot_cross_streams (test_adaptation.AdaptationTests) ... ok
+test_full_listening_readiness_still_requires_other_skills_and_is_local_policy (test_adaptation.AdaptationTests) ... ok
+test_one_attempt_is_not_a_stable_weakness_or_band_readiness (test_adaptation.AdaptationTests) ... ok
+test_original_source_evidence_bytes_are_pinned_without_repeating_resolution_evidence (test_adaptation.AdaptationTests) ... ok
+test_pending_historical_unverified_record_does_not_feed_patterns (test_adaptation.AdaptationTests) ... ok
+test_persisted_corrupt_feedback_is_rejected_before_preference_inference (test_adaptation.AdaptationTests) ... ok
+test_preferences_are_explicit_learner_signals_scoped_to_current_attempt (test_adaptation.AdaptationTests) ... ok
+test_resolution_is_append_only_correction_required_stays_quarantined (test_adaptation.AdaptationTests) ... ok
+test_retakes_system_tests_and_unknown_or_assisted_conditions_do_not_infer_ability (test_adaptation.AdaptationTests) ... ok
+test_scoring_dispute_quarantines_inference_but_keeps_exposure_and_rotation (test_adaptation.AdaptationTests) ... ok
+test_scoring_dispute_requires_specific_session_and_cannot_close_global_grading (test_adaptation.AdaptationTests) ... ok
+test_source_confirmation_becomes_stale_if_original_result_changes (test_adaptation.AdaptationTests) ... ok
+test_total_only_and_historical_scores_cannot_invent_patterns (test_adaptation.AdaptationTests) ... ok
+test_two_distinct_fresh_task_labels_make_hypothesis_with_original_proof (test_adaptation.AdaptationTests) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.261s
+
+OK

@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-12",
+  "kind": "system_test",
+  "thread_id": "01a130d0-9882-73c2-b4c6-6e2247a2e09e",
+  "host": "local",
+  "project_id": "2593483b-ec6c-4da0-9f2d-51567a4ab497",
+  "session_id": "2026-10-12-listening-1729392fd5b8",
+  "phase": "awaiting_evidence",
+  "checkpoint_count": 1,
+  "recovered_text": "TES SISTEM: pengguna melaporkan tiga beep terdengar setelah menekan Play sendiri. Respons screenshot dan rekaman belum diterima.",
+  "recovered_provenance": {
+    "method": "user_report_chat",
+    "reference": "chat:call_896f8fd7107449528b1891513b74564d"
+  },
+  "recovered_evidence": [
+    "evidence/system/2026-10-12-v11-playback-report.json"
+  ],
+  "recovered_conditions": {
+    "audio": "synthetic_three_beeps",
+    "play_started_by": "user",
+    "official_material_used": false,
+    "baseline": false
+  },
+  "method": "actual new Codex local project chat, read-only session-file readback; wait_threads completed result retrieved",
+  "limits": "Same laptop; no remote verification in new chat, no audio replay, no grading, no mutations, screenshot and recording still pending."
+}

@@ -1,0 +1,29 @@
+{
+  "kind": "system_review",
+  "date": "2026-10-12",
+  "reviewer": "gpt-6-astra",
+  "production_review": "read_only",
+  "blocking_findings_remaining": 0,
+  "design_recommendations": [
+    "one main coach and on-demand reviewer",
+    "one portable repository skill",
+    "separate workflow preferences, learning hypotheses, and score/target decisions",
+    "quarantine disputed assessments from ability inference",
+    "explicit temporary vs persistent preference scope",
+    "evaluate changes using comparable sources and allow inconclusive decisions"
+  ],
+  "material_findings_fixed": [
+    "confirmed score resolution pins original source artifact bytes, not JSON alone",
+    "assisted attempts excluded from ability inference",
+    "stored event payload schema/digest validated",
+    "experiment source snapshots and original artifact bytes pinned; changes/missing pins invalidate evidence"
+  ],
+  "independent_forward_test": "evidence/system/2026-10-12-v12-forward-review.json",
+  "final_reviewer_tests": {
+    "adaptation": 25,
+    "coach_adaptation": 7
+  },
+  "total_distinct_project_tests": 130,
+  "training": "record-and-rule adaptation; no fine-tuning",
+  "limits": "Synthetic forward test, not learner improvement. Human screenshot/recording pending; IELTS baseline missing; new release not pushed."
+}

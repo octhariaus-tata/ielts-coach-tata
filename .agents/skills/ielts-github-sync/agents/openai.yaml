@@ -1,0 +1,3 @@
+interface:
+  display_name: "IELTS GitHub Sync"
+  short_description: "Sinkronisasi repo IELTS saat milestone dan tiap jam"

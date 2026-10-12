@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-12",
+  "kind": "system_test",
+  "input": "Terdengar tiga beep",
+  "source": "user async reply call_896f8fd7107449528b1891513b74564d",
+  "asset": "tests/fixtures/rehearsal-tone.wav",
+  "limit": "No official Listening attempt/audio played; no learner progress."
+}

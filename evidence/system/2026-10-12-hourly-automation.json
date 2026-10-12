@@ -1,0 +1,13 @@
+{
+  "kind": "system_configuration",
+  "date": "2026-10-12",
+  "automation_id": "ielts-github-sync-tiap-jam",
+  "name": "IELTS GitHub sync tiap jam",
+  "status": "ACTIVE",
+  "interval_minutes": 60,
+  "target_thread_id": "01a13075-8a9b-7923-aaf3-4f6e1909c7dc",
+  "destination": "current local chat",
+  "skill": "ielts-github-sync",
+  "method": "automation_update create, mode view, native TOML readback",
+  "limits": "Local laptop/app/files/Git access required; only this laptop schedule verified. Rehearsal screenshot/audio recording still pending."
+}

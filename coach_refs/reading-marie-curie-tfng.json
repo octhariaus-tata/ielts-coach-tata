@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "task_id": "reading-marie-curie-tfng",
+  "skill": "Reading",
+  "visibility": "coach_only_after_done",
+  "source_version": "IELTS Sample Tasks 2023; isolated prompt excerpt",
+  "verified_date": "2026-10-12",
+  "timezone": "Asia/Jakarta",
+  "question_numbers": [
+    "1",
+    "2",
+    "3"
+  ],
+  "source": {
+    "url": "https://ielts.org/cdn/Sample-tests/ielts-academic-reading-sample-tasks-2023.pdf",
+    "sha256": "61035d701cbc12b8aff41c6df25bc25d2d394f6e915ea258c82d2b384be7ed8f",
+    "pages": 46
+  },
+  "prompt": {
+    "path": "materials/reading-marie-curie-tfng.pdf",
+    "sha256": "5d0ad54ec7689655f0c60bd3dc81bf740aff67437848e9d25e4f4c8e3f89a965",
+    "source_pages": [
+      12,
+      13
+    ]
+  },
+  "key": {
+    "url": "https://ielts.org/cdn/Sample-tests/ielts-academic-reading-sample-tasks-2023.pdf#page=14",
+    "source_pages": [
+      14
+    ],
+    "page_texts": [
+      {
+        "page": 14,
+        "text": "Academic Reading Sample Task – Identifying\nInformation: True/False/Not Given (Answers)\n1 FALSE\n2 NOT GIVEN\n3 TRUE\nIELTS.org\nPage 14 of 46"
+      }
+    ],
+    "entries": [
+      {
+        "question_numbers": [
+          "1"
+        ],
+        "source_page": 14,
+        "order": "fixed",
+        "answer_lines": [
+          "FALSE"
+        ]
+      },
+      {
+        "question_numbers": [
+          "2"
+        ],
+        "source_page": 14,
+        "order": "fixed",
+        "answer_lines": [
+          "NOT GIVEN"
+        ]
+      },
+      {
+        "question_numbers": [
+          "3"
+        ],
+        "source_page": 14,
+        "order": "fixed",
+        "answer_lines": [
+          "TRUE"
+        ]
+      }
+    ],
+    "optional_words_and_alternatives_policy": "",
+    "coach_policy": "Use exact printed variants and optional words; do not invent alternatives. Count order-independent groups without awarding the same answer twice."
+  },
+  "transcript": null,
+  "reading_text": {
+    "url": "https://ielts.org/cdn/Sample-tests/ielts-academic-reading-sample-tasks-2023.pdf#page=12",
+    "source_pages": [
+      12,
+      13
+    ],
+    "page_texts": [
+      {
+        "page": 12,
+        "text": "Academic Reading Sample Task – Identifying\nInformation: True/False/Not Given\n[Note: This is an extract from a Part 1 text about the scientist Marie Curie.]\nAdapted with permission from Encyclopaedia Britannica, © 2007 by Encyclopaedia Britannica,\nInc.\nThe life and work of Marie Curie\nMarie Curie is probably the most famous woman scientist who has ever lived. Born Maria\nSklodowska in Poland in 1867, she is famous for her work on radioactivity, and was twice a\nwinner of the Nobel Prize. With her husband, Pierre Curie, and Henri Becquerel, she was\nawarded the 1903 Nobel Prize for Physics, and was then sole winner of the 1911 Nobel Prize\nfor Chemistry. She was the first woman to win a Nobel Prize.\nFrom childhood, Marie was remarkable for her prodigious memory, and at the age of 16 won\na gold medal on completion of her secondary education. Because her father lost his savings\nthrough bad investment, she then had to take work as a teacher. From her earnings she was\nable to finance her sister Bronia’s medical studies in Paris, on the understanding that Bronia\nwould, in turn, later help her to get an education.\nIn 1891 this promise was fulfilled and Marie went to Paris and began to study at the\nSorbonne (the University of Paris). She often worked far into the night and lived on little\nmore than bread and butter and tea. She came first in the examination in the physical\nsciences in 1893, and in 1894 was placed second in the examination in mathematical\nsciences. It was not until the spring of that year that she was introduced to Pierre Curie.\nIELTS.org\nPage 12 of 46"
+      },
+      {
+        "page": 13,
+        "text": "Questions 1 – 3\nDo the following statements agree with the information given in Reading Passage 1?\nIn boxes 1-3 on your answer sheet, write\nTRUE if the statement agrees with the information\nFALSE if the statement contradicts the information\nNOT GIVEN if there is no information on this\n1 Marie Curie’s husband was a joint winner of both Marie’s Nobel Prizes.\n2 Marie became interested in science when she was a child.\n3 Marie was able to attend the Sorbonne because of her sister’s financial contribution.\nIELTS.org\nPage 13 of 46"
+      }
+    ]
+  },
+  "verification": {
+    "status": "verified_from_official_source",
+    "method": "Official IELTS PDF fetched from exact catalog source URL; full-PDF SHA256 matches original materials/PROVENANCE.json. Prompt pages rendered and inspected; relevant key/transcript/passage pages extracted with pdfplumber. Key entries parsed from the original answer pages and asserted against exact task question range. Source page excerpts retained verbatim for coach verification.",
+    "prompt_visual_qa": "Relevant original question page rendered and inspected; source title/type/range matches learner prompt excerpt.",
+    "full_source_stored_in_repo": false,
+    "runtime_limits": "Checksum/task alignment checks do not establish learner response, playback, browser access or IELTS band."
+  },
+  "answer_instruction": {
+    "source_pages": [
+      12,
+      13
+    ],
+    "text": "See exact official prompt-only PDF for question type/instructions."
+  }
+}

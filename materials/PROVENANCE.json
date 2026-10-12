@@ -127,7 +127,7 @@
       "source_audio_link_verified": "Exact recording link target read from official source PDF p12; audio retrieved via official IELTS CDN."
     }
   },
-  "answer_content_policy": "Only prompt excerpts and audio are stored. Full source PDFs, keys and transcripts are not stored in this folder.",
+  "answer_content_policy": "materials/ stores learner prompt-only excerpts and audio, with no answer pages or sample transcript in those prompts. coach_refs/ separately stores coach-only verified key and transcript/Reading text excerpts; do not deliver them before done. Full source PDFs are not stored in the repository.",
   "qa": {
     "verified_date": "2026-10-12",
     "prompt_pdf_count": 8,

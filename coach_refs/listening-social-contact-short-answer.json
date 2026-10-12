@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "task_id": "listening-social-contact-short-answer",
+  "skill": "Listening",
+  "visibility": "coach_only_after_done",
+  "source_version": "IELTS Sample Tasks 2023; isolated prompt excerpt",
+  "verified_date": "2026-10-12",
+  "timezone": "Asia/Jakarta",
+  "question_numbers": [
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16"
+  ],
+  "source": {
+    "url": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf",
+    "sha256": "5bd770e58157ca70ee394822a46d29082cd298ac4a3a053e1278e08ceddd6724",
+    "pages": 33
+  },
+  "prompt": {
+    "path": "materials/listening-social-contact-short-answer.pdf",
+    "sha256": "2d35e526aae3ca180daa5663b52641f2dbec43f975ab6e833967b9ca1c344401",
+    "source_pages": [
+      11
+    ]
+  },
+  "key": {
+    "url": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf#page=13",
+    "source_pages": [
+      13
+    ],
+    "page_texts": [
+      {
+        "page": 13,
+        "text": "Listening Sample Task – Short-answer Questions\n(Answers)\n11 & 12 in either order\nlanguage\ncustoms\n13 & 14 in either order\nmusic (groups)\nlocal history (groups)\n15 & 16 in either order\n(the) (public) library/libraries\n(the) town hall\nWords in brackets are optional - they are correct, but not necessary. Alternative answers are\nseparated by a slash (/).\nPage 13 of 33 IELTS.org"
+      }
+    ],
+    "entries": [
+      {
+        "question_numbers": [
+          "11",
+          "12"
+        ],
+        "source_page": 13,
+        "order": "any",
+        "answer_lines": [
+          "language",
+          "customs"
+        ]
+      },
+      {
+        "question_numbers": [
+          "13",
+          "14"
+        ],
+        "source_page": 13,
+        "order": "any",
+        "answer_lines": [
+          "music (groups)",
+          "local history (groups)"
+        ]
+      },
+      {
+        "question_numbers": [
+          "15",
+          "16"
+        ],
+        "source_page": 13,
+        "order": "any",
+        "answer_lines": [
+          "(the) (public) library/libraries",
+          "(the) town hall"
+        ]
+      }
+    ],
+    "optional_words_and_alternatives_policy": "Words in brackets are optional - they are correct, but not necessary. Alternative answers are separated by a slash (/). Page 13 of 33 IELTS.org",
+    "coach_policy": "Use exact printed variants and optional words; do not invent alternatives. Count order-independent groups without awarding the same answer twice."
+  },
+  "transcript": {
+    "url": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf#page=12",
+    "source_pages": [
+      12
+    ],
+    "page_texts": [
+      {
+        "page": 12,
+        "text": "Listening Sample Task – Short-answer Questions\n(Recording and Tapescript)\nLink to Recording\nTapescript\nYou will hear an extract from a talk given to a group who are going to stay in the UK.\nGood evening, and welcome to the British Council. My name is John Parker and I’ve\nbeen asked to talk to you briefly about certain aspects of life in the UK before you\nactually go there. So I'm going to talk first about the best ways of making social\ncontacts there. Now you might be wondering why it should be necessary. After all,\nwe meet people all the time. But when you’re living in a foreign country it can be\nmore difficult, not just because of the language, but because customs may be\ndifferent.\nIf you’re going to work in the UK you will probably be living in private\naccommodation, so it won’t be quite so easy to meet people. But there are still things\nthat you can do to help yourself. First of all, you can get involved in activities in your\nlocal community, join a group of some kind. For example, you’ll probably find that\nthere are theatre groups who might be looking for actors, set designers and so on, or\nif you play an instrument you could join music groups in your area. Or if you like the\nidea of finding out about local history there’ll be a group for that too. These are just\nexamples. And the best places to get information about things like this are either the\ntown hall or the public library. Libraries in the UK perform quite a broad range of\nfunctions nowadays – they’re not just confined to lending books, although that’s their\nmain role of course.\nPage 12 of 33 IELTS.org"
+      }
+    ],
+    "timestamps_available": false,
+    "coach_policy": "Cite page and supporting source words after done. No timestamps supplied by this PDF; do not fabricate them."
+  },
+  "reading_text": null,
+  "verification": {
+    "status": "verified_from_official_source",
+    "method": "Official IELTS PDF fetched from exact catalog source URL; full-PDF SHA256 matches original materials/PROVENANCE.json. Prompt pages rendered and inspected; relevant key/transcript/passage pages extracted with pdfplumber. Key entries parsed from the original answer pages and asserted against exact task question range. Source page excerpts retained verbatim for coach verification.",
+    "prompt_visual_qa": "Relevant original question page rendered and inspected; source title/type/range matches learner prompt excerpt.",
+    "full_source_stored_in_repo": false,
+    "runtime_limits": "Checksum/task alignment checks do not establish learner response, playback, browser access or IELTS band."
+  },
+  "answer_instruction": {
+    "source_page": 11,
+    "text": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+    "max_words": 3,
+    "allow_number": true
+  }
+}

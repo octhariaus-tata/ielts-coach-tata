@@ -1,0 +1,25 @@
+{
+  "kind": "system_verification",
+  "date": "2026-10-12",
+  "python_modules": 5,
+  "custom_project_skills": 1,
+  "development_subagents_this_extension": 3,
+  "runtime_coach": 1,
+  "optional_reviewer": 1,
+  "official_starter_tasks": 8,
+  "local_correction_references": 4,
+  "completed_learner_sessions": 0,
+  "feedback_events": [
+    {
+      "id": "2026-10-12-owner-system-design",
+      "actor": "owner",
+      "learner_preferences_inferred": false
+    }
+  ],
+  "publish_status": "local pending user rehearsal",
+  "hashes": {
+    "scripts/adaptation.py": "2328b56e6d726e906a5730407d135d1bd348e6c5d9f6805889bc489ac86289b1",
+    "scripts/coach.py": "697ccbe81c44c49a818e3df9c496c016e89024e3364bf6f83a442cb789231baf",
+    ".agents/skills/ielts-coach/SKILL.md": "f9a6d191f4267071e562d45d539aa55617ddb75f94b78bce04d69d58f50c9b42"
+  }
+}

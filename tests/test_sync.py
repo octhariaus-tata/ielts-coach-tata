@@ -101,6 +101,77 @@ class SyncTests(unittest.TestCase):
         self.assertEqual(self.head(self.b), before)
         self.assertEqual((self.b / "PROGRESS.md").read_text(), "Pending simulated session\n")
 
+    def test_coach_references_roundtrip_and_sensitive_paths_stay_blocked(self):
+        reference = b"%PDF-1.7\nOfficial correction reference simulation\n%%EOF\n"
+        self.write(self.a, "coach_refs/listening-example.pdf", reference)
+        self.write(self.a, "coach_refs/PROVENANCE.json", '{"kind":"system-test"}\n')
+        self.assertTrue(SYNC.allowed_path("coach_refs/listening-example.pdf"))
+        for path in ("coach_refs/.local/cache.json", "coach_refs/token.json",
+                     "coach_refs/private.key", "coach_refs/../private.txt"):
+            self.assertFalse(SYNC.allowed_path(path), path)
+        result = self.sync(self.a, "push")
+        self.assertEqual(result["status"], "synced")
+        self.sync(self.b, "pull")
+        self.assertEqual((self.b / "coach_refs/listening-example.pdf").read_bytes(), reference)
+        self.assertEqual((self.b / "coach_refs/PROVENANCE.json").read_text(), '{"kind":"system-test"}\n')
+
+    def test_dirty_and_behind_recovery_does_not_offer_push_pull_loop(self):
+        self.write(self.a, "PLAN.md", "Remote plan simulation\n")
+        self.sync(self.a, "push")
+        self.write(self.b, "sessions/pending.json", '{"kind":"system-test","response":"original"}\n')
+        before = self.head(self.b)
+        for action, error in (("pull", "dirty_worktree"), ("push", "behind_remote")):
+            result = self.sync(self.b, action, expected=1)
+            self.assertEqual(result["error"], error)
+            self.assertIn("merekonsiliasi", result["message"])
+            self.assertIn("record/bukti", result["message"])
+            self.assertEqual(result["behind"], 1)
+            self.assertEqual(self.head(self.b), before)
+            self.assertEqual(self.git(self.b, "diff", "--cached", "--name-only"), "")
+            self.assertEqual((self.b / "sessions/pending.json").read_text(),
+                             '{"kind":"system-test","response":"original"}\n')
+
+    def test_adaptation_data_and_exact_skill_files_roundtrip(self):
+        files = {
+            "SYSTEM.md": "System design simulation\n",
+            "ADAPTATION.md": "Adaptation policy simulation\n",
+            "feedback/system-test.json": '{"kind":"system-test","text":"raw feedback"}\n',
+            "learning/state.json": '{"kind":"system-test","rules_version":1}\n',
+            ".agents/skills/ielts-coach/SKILL.md": "---\nname: ielts-coach\n---\nSimulation skill\n",
+            ".agents/skills/ielts-coach/agents/openai.yaml": "interface:\n  display_name: Simulation\n",
+        }
+        for path, contents in files.items():
+            self.assertTrue(SYNC.allowed_path(path), path)
+            self.write(self.a, path, contents)
+        blocked = (".agents/settings.json", ".agents/skills/other/SKILL.md",
+                   ".agents/skills/ielts-coach/credentials.json",
+                   ".agents/skills/ielts-coach/agents/other.yaml",
+                   ".agents/skills/ielts-coach/../other/SKILL.md",
+                   "feedback/.env", "learning/token.json")
+        for path in blocked:
+            self.assertFalse(SYNC.allowed_path(path), path)
+        self.write(self.a, ".agents/settings.json", "Local settings must not publish\n")
+        self.write(self.a, ".agents/skills/other/SKILL.md", "Unrelated skill must not publish\n")
+        self.assertEqual(self.sync(self.a, "push")["status"], "synced")
+        self.sync(self.b, "pull")
+        for path, contents in files.items():
+            self.assertEqual((self.b / path).read_text(), contents)
+        self.assertFalse((self.b / ".agents/settings.json").exists())
+        self.assertFalse((self.b / ".agents/skills/other/SKILL.md").exists())
+
+    def test_skill_whitelist_does_not_bypass_secret_or_symlink_checks(self):
+        skill_path = ".agents/skills/ielts-coach/SKILL.md"
+        self.write(self.a, skill_path, "gh" + "p_" + "a" * 36 + "\n")
+        result = self.sync(self.a, "push", expected=1)
+        self.assertEqual(result["error"], "secret_blocked")
+        (self.a / skill_path).unlink()
+        try:
+            (self.a / skill_path).symlink_to(self.a / "PROFILE.md")
+        except OSError:
+            self.skipTest("Symlink creation not available")
+        result = self.sync(self.a, "push", expected=1)
+        self.assertEqual(result["error"], "symlink_blocked")
+
     def test_divergent_histories_not_reset_or_merged(self):
         self.write(self.a, "PLAN.md", "Laptop A\n")
         self.sync(self.a, "push")
