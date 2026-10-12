@@ -49,4 +49,6 @@ Mock lengkap memerlukan blok waktu khusus di luar sesi 20 menit. Jadwal tersebut
 
 ## Pemeriksaan pertama
 
+Paket sistem v1 selesai 12 Oktober 2026; ini bukan awal minggu belajar atau diagnostik. Saat laptop Tata tersedia, ikuti SETUP.md dan periksa STATUS.md. Tugas pertama yang disiapkan adalah Packham form completion; cadangan lokal Social Contact. Pilih berikutnya mengikuti rotasi dari TASK_BANK.md, dengan riwayat sessions/ sebagai bukti paparan materi. Hasil baru dicatat melalui alat sesi; tes sistem dikecualikan dari kemajuan Tata.
+
 Coach membaca profil/log, memilih satu tugas resmi yang belum pernah dikerjakan, memverifikasi bahan dan akses sebelum attempt, lalu menguji alur **mulai → kerjakan → done → feedback → log**. Pilot berhasil jika ada bukti hasil, feedback yang didukung key, dan log tersimpan. Screenshot adalah fallback yang sah bila browser tidak dapat diakses.

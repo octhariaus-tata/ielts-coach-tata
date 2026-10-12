@@ -18,12 +18,14 @@ Screenshot sebagian diuji pada level input jawaban yang sudah dibaca; tes ini ti
 
 ## GitHub dan perangkat
 
-Pemilik repo berubah dari rancangan SukrajPutera menjadi octhariaus-tata atas pilihan eksplisit pengguna. Repo privat https://github.com/octhariaus-tata/ielts-coach-tata dibuat dengan branch main; bukti UI ada di evidence/system/2026-10-12-github-private.jpg. Dokumen utama diterbitkan via browser pada commit e3353fcc1e31a78fc531437c32b21d421d08e655; materi dan alat sedang diterbitkan via Git.
+Pemilik repo berubah dari rancangan SukrajPutera menjadi octhariaus-tata atas pilihan eksplisit pengguna. Repo privat https://github.com/octhariaus-tata/ielts-coach-tata dibuat dengan branch main; bukti UI ada di evidence/system/2026-10-12-github-private.jpg. Dokumen utama diterbitkan via browser pada commit e3353fcc1e31a78fc531437c32b21d421d08e655; materi dan alat lengkap diterbitkan via Git.
 
 Awalnya Git HTTPS lokal ditolak karena credential tidak valid, dan konektor GitHub akun SukrajPutera mengembalikan404 untuk repo ini. Pengguna kemudian mengizinkan unduhan GitHub CLI resmi lokal dan menyelesaikan sendiri otorisasi akun octhariaus-tata. Kelanjutan login sempat ditolak review otomatis sebelum persetujuan scope diberikan; diteruskan sesudah pengguna mengonfirmasi otorisasi. API CLI memverifikasi repo private=true, default_branch=main, serta akses push. Tidak mengganti konektor atau menambahkan collaborator.
 
-GitHub CLI v2.102.0 arm64 diunduh hanya ke .local/bin/gh; checksum SHA256 dari rilis resmi cocok (da922c20d1792e5b2cbf375593d7a658acf034c12c84e007e71c76ef959c337e). Konfigurasi CLI dan helper berada di .local/ yang diabaikan Git. Autentikasi Git memakai konfigurasi repo lokal; konfigurasi Git global tidak diubah. Credential tidak disalin ke repo atau laptop lain. Round-trip remote produksi sedang diverifikasi.
+GitHub CLI v2.102.0 arm64 diunduh hanya ke .local/bin/gh; checksum SHA256 dari rilis resmi cocok (da922c20d1792e5b2cbf375593d7a658acf034c12c84e007e71c76ef959c337e). Konfigurasi CLI dan helper berada di .local/ yang diabaikan Git. Autentikasi Git memakai konfigurasi repo lokal; konfigurasi Git global tidak diubah. Credential tidak disalin ke repo atau laptop lain.
 
 Push awal dengan Git bawaan menemui HTTP400. Commit tetap lokal dan tidak dianggap sukses. Pengiriman ulang dengan HTTP/1.1 dan postBuffer 50 MiB berhasil menerbitkan commit 6f17628a2bf75f765da1d26ef07319fc0ad2d65d; konfigurasi workaround hanya di kedua repo lokal. TLS tetap diverifikasi.
+
+Round-trip GitHub produksi berhasil: paket dengan backup offline pada commit 76680317f92cd8545c9784e1537321a228349413 diambil pada salinan kedua; 34 file tracked cocok SHA256. Marker tes sistem ditulis di salinan kedua, push menghasilkan commit 5aacfe7d8507c93ce22572452efbaa83fc095e13, lalu pull di folder utama membaca marker yang sama dan melaporkan synced/remote_verified=true, ahead=0, behind=0, pending_files kosong. Bukti: evidence/system/2026-10-12-github-roundtrip.txt. Kedua salinan ada pada komputer macOS ini, bukan bukti lintas laptop.
 
 Laptop Tata belum tersedia. macOS diuji di komputer ini; Windows/Linux, playback audio oleh Tata, pembacaan hasil pada laptop belajar, serta Speaking dengan rekaman belum diuji. Setup pertama dan satu round-trip sinkronisasi diperlukan pada setiap laptop baru.

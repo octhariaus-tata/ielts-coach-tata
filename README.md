@@ -22,7 +22,7 @@ Coach menyebut dua status secara terpisah: **tersimpan lokal** dan **tersinkron 
 
 ## Laptop lain
 
-Repo yang dituju: [octhariaus-tata/ielts-coach-tata](https://github.com/octhariaus-tata/ielts-coach-tata), privat, branch `main`. Keberadaan, akses, dan status publikasinya harus diperiksa pada [STATUS.md](STATUS.md); link ini sendiri bukan bukti repo sudah berhasil diterbitkan.
+Repo: [octhariaus-tata/ielts-coach-tata](https://github.com/octhariaus-tata/ielts-coach-tata), privat, branch `main`. Paket sudah terbit dan sinkronisasi dua arah diuji pada komputer asal. Kesiapan tiap perangkat serta status terbaru dicatat pada [STATUS.md](STATUS.md).
 
 Login Codex dengan akun yang digunakan belajar, lalu Suk menyiapkan credential GitHub dan salinan folder terbaru. Login Codex dan login GitHub adalah dua hal terpisah. Sinkronisasi percakapan tidak memindahkan seluruh folder lokal. [Dokumentasi project OpenAI](https://learn.chatgpt.com/docs/projects).
 
