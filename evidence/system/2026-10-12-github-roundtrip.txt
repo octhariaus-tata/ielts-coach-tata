@@ -1,0 +1,7 @@
+TES SISTEM — bukan latihan atau skor Tata.
+Tanggal: 12 Oktober 2026, Asia/Jakarta.
+Repo: octhariaus-tata/ielts-coach-tata, private, main.
+Commit sumber: 76680317f92cd8545c9784e1537321a228349413
+34 file tracked dibaca ulang dan SHA256 identik pada salinan kedua.
+Dua salinan berada di komputer macOS yang sama; laptop Tata belum diuji.
+Marker ini dibuat pada salinan kedua untuk menguji jalur push lalu pull kembali ke folder utama.
