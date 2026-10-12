@@ -12,6 +12,8 @@ Panduan ini untuk Suk atau coach. Tata memakai chat setelah setup selesai. Semua
 
 Script menggunakan pustaka standar Python dan perintah Git. GitHub connector yang terhubung dapat memakai akun berbeda dari browser atau Git lokal; jangan menganggap akses ketiganya sama. Jangan menambahkan collaborator atau mengganti konektor sebagai cara mengatasi akses tanpa arahan pengguna.
 
+Di komputer asal, pengguna telah mengizinkan GitHub CLI resmi lokal di `.local/bin/gh` dan menyelesaikan login octhariaus-tata. Helper Git disetel hanya pada repo lokal, tanpa mengubah Git global. Folder `.local/` dan credential tidak ikut clone. Pada laptop baru, Suk perlu menyiapkan autentikasi Git yang tersedia; jika memakai CLI tambahan, mintalah izin pemasangan dan biarkan pengguna menyelesaikan otorisasi. Jangan menyalin credential dari komputer asal.
+
 ## 2. Ambil salinan utama
 
 Untuk laptop baru, clone ke lokasi yang dipilih Suk:

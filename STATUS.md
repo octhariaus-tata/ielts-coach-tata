@@ -4,9 +4,9 @@ Diperbarui: 12 Oktober 2026, Asia/Jakarta. Kesiapan lokal telah diuji; pemeriksa
 
 | Komponen | Status saat ini |
 | --- | --- |
-| Repo bersama | Repo privat `octhariaus-tata/ielts-coach-tata`, branch `main`, telah dibuat; publikasi paket lengkap masih berlangsung |
-| Sinkronisasi | Git HTTPS lokal ditolak karena credential; konektor GitHub memakai akun lain dan belum punya akses repo. Belum ada klaim sinkronisasi berhasil |
-| Sistem pencatatan | Selesai; 15 tes sesi lulus. Riwayat lama dipertahankan; belum ada latihan baru Tata |
+| Repo bersama | Repo privat `octhariaus-tata/ielts-coach-tata`, branch `main`; dokumen utama sudah terbit, paket lengkap sedang diterbitkan melalui Git |
+| Sinkronisasi | Login CLI berhasil sebagai octhariaus-tata setelah otorisasi pengguna; uji round-trip GitHub sedang dijalankan. Cek status aktual dengan scripts/sync.py |
+| Sistem pencatatan | Selesai; 16 tes sesi lulus. Riwayat lama dipertahankan; belum ada latihan baru Tata |
 | Bank tugas | 8 tugas resmi; 7 PDF soal tanpa key + MP3 Packham 154,57 detik tersedia lokal. Playback oleh Tata belum diperiksa |
 | Pengujian sinkronisasi | 14 tes integrasi lulus dengan bare remote sementara dan dua salinan pada komputer ini; PDF/MP3/PNG identik. Ini belum membuktikan GitHub auth atau laptop lain |
 | Sesi dan ID aktif | Lihat bagian Keadaan sesi di bawah; dikelola dari sessions/ |

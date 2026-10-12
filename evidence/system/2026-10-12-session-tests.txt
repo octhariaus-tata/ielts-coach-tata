@@ -1,0 +1,20 @@
+test_catalog_snapshot_survives_updates_and_wrong_source_is_rejected (test_session.SessionTests) ... ok
+test_corrupt_record_rejected_before_mutation (test_session.SessionTests) ... ok
+test_done_is_idempotent_and_historical_provenance_survives (test_session.SessionTests) ... ok
+test_missing_proof_duplicate_answer_and_too_many_patterns (test_session.SessionTests) ... ok
+test_partial_screenshot_score_only_counts_visible_answers (test_session.SessionTests) ... ok
+test_pronunciation_requires_known_audio_input (test_session.SessionTests) ... ok
+test_real_evidence_required_and_path_escape_rejected (test_session.SessionTests) ... ok
+test_rebuild_recovers_after_summary_write_failure (test_session.SessionTests) ... ok
+test_resume_same_attempt_and_block_new_task (test_session.SessionTests) ... ok
+test_snippet_cannot_become_full_and_unknown_questions_rejected (test_session.SessionTests) ... ok
+test_system_tests_do_not_enter_learning_progress (test_session.SessionTests) ... ok
+test_total_only_rejects_guessed_patterns (test_session.SessionTests) ... ok
+test_transcript_cannot_get_pronunciation_estimate (test_session.SessionTests) ... ok
+test_unknown_catalog_task_cannot_start (test_session.SessionTests) ... ok
+test_wrong_key_version_and_small_sample_band_rejected (test_session.SessionTests) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.045s
+
+OK

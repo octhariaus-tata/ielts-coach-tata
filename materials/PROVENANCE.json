@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "verified_date": "2026-10-12",
+  "sources": {
+    "listening": {
+      "url": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf",
+      "sha256": "5bd770e58157ca70ee394822a46d29082cd298ac4a3a053e1278e08ceddd6724",
+      "pages": 33,
+      "verified_date": "2026-10-12"
+    },
+    "reading": {
+      "url": "https://ielts.org/cdn/Sample-tests/ielts-academic-reading-sample-tasks-2023.pdf",
+      "sha256": "61035d701cbc12b8aff41c6df25bc25d2d394f6e915ea258c82d2b384be7ed8f",
+      "pages": 46,
+      "verified_date": "2026-10-12"
+    },
+    "writing": {
+      "url": "https://ielts.org/cdn/Sample-tests/ielts-academic-writing-sample-tasks-2023.pdf",
+      "sha256": "f9b5b43fbb3f070741f970ecf2adbfaaef8b2f520eb5e2d350bae39557b1c7af",
+      "pages": 26,
+      "verified_date": "2026-10-12"
+    },
+    "speaking": {
+      "url": "https://ielts.org/cdn/ielts-downloadable-assets/ielts-sample-tests/ielts-speaking-sample-tasks-2023.pdf",
+      "sha256": "70e542190a0628cb387e9f94ddc5750e4d647b876c2d3b85fcfab90ec4295096",
+      "pages": 7,
+      "verified_date": "2026-10-12"
+    }
+  },
+  "outputs": {
+    "listening-packham-form": {
+      "file": "materials/listening-packham-form.pdf",
+      "source": "listening",
+      "pages": [
+        3
+      ],
+      "sha256": "d25c8a054dcb4b77335ae55c2e6854559c0f2f5e73a52fc0cd68b9e4c9b011c1",
+      "extraction": "whole prompt pages; answer pages omitted"
+    },
+    "reading-marie-curie-tfng": {
+      "file": "materials/reading-marie-curie-tfng.pdf",
+      "source": "reading",
+      "pages": [
+        12,
+        13
+      ],
+      "sha256": "5d0ad54ec7689655f0c60bd3dc81bf740aff67437848e9d25e4f4c8e3f89a965",
+      "extraction": "whole prompt pages; answer pages omitted"
+    },
+    "reading-rockets-features": {
+      "file": "materials/reading-rockets-features.pdf",
+      "source": "reading",
+      "pages": [
+        3,
+        4
+      ],
+      "sha256": "d73fb38e8289fc6a80b19e8fda9c6449dbf607cd197f47168655065eaec1ec70",
+      "extraction": "whole prompt pages; answer pages omitted"
+    },
+    "writing-tourism-task2": {
+      "file": "materials/writing-tourism-task2.pdf",
+      "source": "writing",
+      "pages": [
+        7
+      ],
+      "sha256": "cedf4c59adf4a09e10ce16d8925a618231918d5828f03948aa3933c1df4d6875",
+      "extraction": "whole prompt pages; answer pages omitted"
+    },
+    "writing-further-education-task1": {
+      "file": "materials/writing-further-education-task1.pdf",
+      "source": "writing",
+      "pages": [
+        3
+      ],
+      "sha256": "e06fcb44baafe2f3f69d0eaeed53a4ce70dfffc899cb74859e73aba298ac9d8c",
+      "extraction": "whole prompt pages; answer pages omitted"
+    },
+    "speaking-hometown-part1": {
+      "file": "materials/speaking-hometown-part1.pdf",
+      "source": "speaking",
+      "pages": [
+        3
+      ],
+      "source_crop_bottom_points": 343,
+      "sha256": "6c535bf0fd15dc7d33fe61e7076dd770915f322175556b4dc0038457ecf16027",
+      "extraction": "rasterised prompt region only; sample transcript and recording links omitted"
+    },
+    "speaking-important-object-part2": {
+      "file": "materials/speaking-important-object-part2.pdf",
+      "source": "speaking",
+      "pages": [
+        5
+      ],
+      "source_crop_bottom_points": 416,
+      "sha256": "e6201dc4ac66992729e10510658ca8786edb6c8a2e170f73140ffcf53e2dc1ff",
+      "extraction": "Rasterised prompt region only; sample text omitted. Final cue restored from source text layer because original PDF visually overlaps this cue with next instruction."
+    },
+    "listening-packham-form-audio": {
+      "file": "materials/listening-packham-form.mp3",
+      "url": "https://ielts.org/cdn/Sample-tests/Listening/ielts-listening-sample-task-1-form-completion.mp3",
+      "sha256": "eeb094a86cd36167790382f60f5dcac36c92f90b9f18eb44a466d324db8c1b73",
+      "bytes": 1225460,
+      "content_type": "audio/mpeg",
+      "duration_seconds": 154.566531,
+      "verification": "HTTP 200 audio/mpeg; ID3 header and afinfo MP3 parse; playback not performed",
+      "pdf_audio_link": "https://s3.eu-west-2.amazonaws.com/ielts-web-static/production/Sample-tests/Listening/ielts-listening-sample-task-1-form-completion.mp3",
+      "pdf_audio_link_status": "403 when fetched; working official IELTS CDN path downloaded"
+    }
+  },
+  "answer_content_policy": "Only prompt excerpts and audio are stored. Full source PDFs, keys and transcripts are not stored in this folder.",
+  "qa": {
+    "verified_date": "2026-10-12",
+    "prompt_pdf_count": 7,
+    "prompt_page_count": 9,
+    "visual_inspection": "All nine delivered prompt pages rendered and inspected; no clipping, key pages or sample transcript included. Speaking Part 2 restored cue rendered and re-inspected.",
+    "text_checks": "Reopened delivered PDFs; no answer/sample transcript headings or candidate sample text; both Speaking PDFs only raster prompt + provenance note.",
+    "audio_inspection": "afinfo parses MP3; estimated 154.566531 seconds. Playback not performed.",
+    "full_sources_in_project": false
+  }
+}
