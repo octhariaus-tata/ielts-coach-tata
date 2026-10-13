@@ -67,6 +67,10 @@ Present-simple set 01: **11/12**, respons awal + pemeriksaan setiap kalimat ters
 
 Revisi Q5 diterima sesudah feedback: The guide helps visitors. Bukti review terpisah: evidence/practice/2026-10-13-present-simple-set01-review.json. Skor awal tetap 11/12; bukan pengukuran baru.
 
+## 13 Oktober 2026 — grammar negatives tambahan
+
+Set negatif buatan coach: **12/12 untuk struktur grammar saja** (don't/doesn't + base verb); dua typo terpisah, cuastomers → customers dan Thet → They. Respons pertama dan pemeriksaan: [drill negatives](evidence/practice/2026-10-13-present-simple-negatives-set01.json). Bukan skor IELTS/CEFR atau klaim mastery. Berikutnya ajarkan pertanyaan Do/Does dengan material, worked example, guided dan independent; grammar dan ejaan diperiksa terpisah.
+
 <!-- managed-sessions:start -->
 ## Sesi baru — ringkasan dari sessions/
 

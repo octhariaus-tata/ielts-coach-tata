@@ -1,0 +1,50 @@
+{
+  "id": "2026-10-13-present-simple-negatives-set01",
+  "kind": "supplemental_grammar_drill",
+  "source_label": "coach_created_not_official_IELTS",
+  "lesson": "learning/coaching-notes/2026-10-13-present-simple-negatives-set01.md",
+  "phase": "reviewed",
+  "response": {
+    "text": "1. My sister doesn't work in a hospital\n2. Tourists don't visit local markets\n3. This shop doesn't sell souvenirs\n4. We don't use our phones for banking\n5. The guide doesn't help visitors\n6. I don't like crowded places\n7. Local businesses don't need more cuastomers\n8. She doesn't buy fresh fruit every week\n9. My phone doesn't store my photos\n10. Thet don't support local businesses\n11. You don't speak English at work\n12. A visitor doesn't enjoy the local food",
+    "purpose": "initial_practice",
+    "provenance": {
+      "method": "learner_chat_text",
+      "reference": "Tata complete first 1–12 negative-sentence responses in this chat, 13 October 2026. Raw spelling preserved."
+    }
+  },
+  "conditions": {
+    "actual_minutes": null,
+    "instructional_context": "After explanation, worked example and guided negative-sentence practice; no per-item help during set reported."
+  },
+  "limits": "Practice accuracy only, not IELTS band/CEFR or proof of lasting mastery.",
+  "result": {
+    "score": {
+      "correct": 12,
+      "total": 12,
+      "scope": "negative_grammar_only"
+    },
+    "spelling_errors": [
+      {
+        "number": 7,
+        "given": "cuastomers",
+        "expected": "customers"
+      },
+      {
+        "number": 10,
+        "given": "Thet",
+        "expected": "They",
+        "interpretation": "Clear pronoun typo in transformation of They support local businesses; grammar assessed for intended They."
+      }
+    ],
+    "verification_method": "Coach checks do/does agreement and base verb in each complete sentence against the original practice set. Spelling reported separately. No official IELTS key.",
+    "feedback": {
+      "strength": "All 12 negative constructions use appropriate don't/doesn't and the base form of the main verb.",
+      "patterns": [
+        "Two spelling slips in customers and They; original raw text preserved."
+      ],
+      "action": "Before sending the next set, check spelling separately after checking grammar.",
+      "next_task": "Present-simple questions: material → worked example → one guided example → independent set. Do/Does + subject + base verb."
+    },
+    "band": null
+  }
+}
