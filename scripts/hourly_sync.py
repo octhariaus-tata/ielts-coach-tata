@@ -46,6 +46,8 @@ def run(root, message='Sinkronisasi otomatis IELTS Coach Tata'):
             import lessons
             lessons.load(root)
             lessons.packets(root)
+            import scorecard
+            scorecard.validate_saved(root)
             adaptation.analyze(root, records=records)
             catalog = json.loads((root / 'materials.json').read_text(encoding='utf-8'))
             for task in catalog['tasks']:

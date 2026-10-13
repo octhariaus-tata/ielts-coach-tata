@@ -17,6 +17,7 @@ import sync as git_sync
 import references
 import adaptation
 import lessons
+import scorecard
 
 CAPABILITIES = ('audio_playback', 'screenshot_capture', 'speaking_audio')
 STATES = ('passed', 'failed', 'not_tested')
@@ -420,6 +421,7 @@ def complete(root, sid, result=None):
     except (ValueError, OSError):
         return dict(outcome, summaries_saved=False, synced=False,
                     message='Hasil tersimpan; ringkasan belum pulih. Retry complete tanpa result.')
+    outcome['scorecard_update'] = scorecard.safely_refresh(root)
     sync_result = sync_action(root, 'push', 'Simpan sesi IELTS ' + sid)
     outcome.update(summaries_saved=True, sync=sync_result, synced=sync_result.get('status') == 'synced' and
                    sync_result.get('remote_verified') is True, retry_sync_only=already,
@@ -436,11 +438,13 @@ def status(root, observation=None, verify_sync=False):
     active = [s for s in records if s['status'] == 'in_progress' and s['kind'] != 'system_test']
     next_task = next((t for t in catalog(root)['tasks'] if t['id'] == planned['next_task_id']), None)
     task = active[0].get('material') if active else next_task
+    report = scorecard.safely_refresh(root)
     sync_result = sync_action(root, 'status') if verify_sync else local_sync(root)
     return {'active': active, 'system_tests': [s for s in records if s['kind'] == 'system_test'],
             'completed_learning_count': sum(s['status'] == 'completed' and s['kind'] != 'system_test' for s in records),
             'queue': planned, 'sync': sync_result, 'readiness': readiness(root, task, sync_result),
-            'coaching_brief': coaching_brief(root, records, task.get('skill') if task else None)}
+            'coaching_brief': coaching_brief(root, records, task.get('skill') if task else None),
+            'scorecard_update': report}
 
 
 def lesson(root, action, lid=None, payload=None, minutes=None, defer_sync=False):
@@ -495,6 +499,8 @@ def lesson(root, action, lid=None, payload=None, minutes=None, defer_sync=False)
     result['coaching_brief'] = coaching_brief(root)
     if result.get('waiting'):
         return result
+    if action in ('complete', 'advance') and result.get('lesson', {}).get('status') == 'completed':
+        result['scorecard_update'] = scorecard.safely_refresh(root)
     if defer_sync:
         result.update(synced=False, sync_pending=True)
     else:
@@ -522,6 +528,7 @@ def main():
     p.add_argument('--verify-sync', action='store_true')
     p = commands.add_parser('feedback')
     p.add_argument('--input', type=Path, required=True)
+    commands.add_parser('scorecard', help='Save a local derived evidence report; never grade or estimate response latency.')
     p = commands.add_parser('lesson')
     p.add_argument('action', choices=('teacher-brief', 'packet', 'retire-packet', 'prepare', 'migrate', 'inspect',
                                       'present', 'checkpoint', 'review', 'advance', 'complete'))
@@ -539,6 +546,8 @@ def main():
             output = complete(args.root, args.id, read_json(args.result) if args.result else None)
         elif args.command == 'feedback':
             output = feedback(args.root, read_json(args.input))
+        elif args.command == 'scorecard':
+            output = scorecard.refresh(args.root)
         elif args.command == 'lesson':
             output = lesson(args.root, args.action, args.id, read_json(args.input) if args.input else None,
                             args.minutes, args.defer_sync)

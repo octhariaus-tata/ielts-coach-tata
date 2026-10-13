@@ -1,0 +1,192 @@
+{
+  "version": "scorecard-1",
+  "derived": true,
+  "generated_at": "2026-10-13T22:43:24+07:00",
+  "source_sha256": {
+    "feedback/2026-10-12-owner-system-design.json": "0cfc2537eeaaf5b3dbeeb4e32f59db048f1e0145d153a8c7324b69424b4d5517",
+    "feedback/2026-10-13-learner-english-teaching-sequence.json": "3b82ef09b16aba8373e1cf086b2e9c29a930d5ac0dbf7f4fadfe8821eee67d00",
+    "feedback/2026-10-13-learner-faster-coaching.json": "3752ab2b029a849396af10c2aefbfe304e5fe687b7cf0003f69b334319bc4dd3",
+    "feedback/2026-10-13-learner-many-grammar-exercises.json": "e3299cd86d85efc33593a3904f4bafab1f029c06659eeeb4c73645e81abff85e",
+    "feedback/2026-10-13-learner-response-latency.json": "73870b2b1aba7b7e09b4f385973e5225428968e7a61b42993aa992c3fada9978",
+    "feedback/2026-10-13-learner-session-volume.json": "12c2b884b4ccb4268c96e4771e827d6bbf116dfb0be9d03a495541730d39d810",
+    "feedback/2026-10-13-learner-study-volume-global.json": "e955d7792338e9a0781187410e43badc6d84e39d0de2fe5ae51effd6b62dd171",
+    "feedback/2026-10-13-learner-teach-before-test.json": "8c6ba42fac2a31efb39db709e801b6b490073ca239f5be8ca5b60c8043a454f7",
+    "feedback/2026-10-13-learner-teaching-confirmed.json": "6e84a14261535bd216a12e4ff751352d21a648b365e604f6ecf9e83fbe5e0570",
+    "learning/lessons/2026-10-13-lesson-fe844fc5d679.json": "01d960e544d6619f80892b396f200cf8a95ef87edcb1e8f5b57c897b197bfe82",
+    "learning/packets/tata-short-answers-v1.json": "dff49e0dbd5f635988e88ca07856173210ca1e1edf7081a0ca8e85cfcf47ac70",
+    "learning/scorecards/tracking.json": "b8972d469ec90f4e6d4d1fdb54aa938b851f0ca28c59d16d9459bdc3958d3ca7",
+    "sessions/2026-10-12-listening-1729392fd5b8.json": "d125f6f77670b318c45f5306a8c829aae1c62acd88c8af5418928a70e656e90e",
+    "sessions/2026-10-13-listening-616b14552b51.json": "1499fdda76bea84b7782e1dcf9546c62bce97bcb5944631156b8d884f68fcb84",
+    "sessions/2026-10-13-listening-b009564c17b7.json": "3bfc73088be4e47cf5c62b2240facf93146303b53df192ef2ae227894664c5ee",
+    "sessions/2026-10-13-reading-c3d297229593.json": "271a303deba2bfd90286233affbb0a661f5fd7a7113678277595e59502959481",
+    "sessions/2026-10-13-speaking-683f3d42db99.json": "408b607c1197b5f5d7e573920f449f571a84e29af636edcbe9b1baf40ea75958",
+    "sessions/2026-10-13-writing-9ce1ee9f8c8b.json": "7694b15432e0635f0997f79aab3d73dcaf39809e8ce75dbf164a2e1cce154788"
+  },
+  "learning": {
+    "target_overall": 6.5,
+    "per_skill": {
+      "Listening": {
+        "latest_observation": {
+          "session_id": "2026-10-13-listening-616b14552b51",
+          "task_id": "listening-social-contact-short-answer",
+          "scope": "snippet",
+          "assessment_mode": "answers_key",
+          "source_label": "official",
+          "score": {
+            "correct": 4,
+            "total": 6
+          },
+          "conditions": {
+            "actual_minutes": null,
+            "audio_plays": 3,
+            "key_seen_before": null
+          },
+          "source": "sessions/2026-10-13-listening-616b14552b51.json",
+          "excluded_reasons": [
+            "known_assisted_or_key_exposed",
+            "unaided_conditions_unverified"
+          ],
+          "uncertainty": "Audio diputar 3 kali menurut laporan Tata; latihan dengan pengulangan, bukan pengukuran sekali putar. Paparan key sebelumnya dan durasi aktual belum diketahui; jangan simpulkan kenaikan band."
+        },
+        "latest_eligible_observation": null,
+        "baseline_status": "insufficient",
+        "full_evidence": []
+      },
+      "Reading": {
+        "latest_observation": {
+          "session_id": "2026-10-13-reading-c3d297229593",
+          "task_id": "reading-marie-curie-tfng",
+          "scope": "snippet",
+          "assessment_mode": "answers_key",
+          "source_label": "official",
+          "score": {
+            "correct": 2,
+            "total": 3
+          },
+          "conditions": {
+            "actual_minutes": null,
+            "key_seen_before": null
+          },
+          "source": "sessions/2026-10-13-reading-c3d297229593.json",
+          "excluded_reasons": [
+            "freshness_conditions_unverified",
+            "unaided_conditions_unverified"
+          ],
+          "uncertainty": "Cuplikan 3 soal tanpa band; durasi aktual dan paparan key sebelum attempt belum diketahui. Tidak ada kalimat bukti dari Tata; jangan mengasumsikan strategi atau kenaikan kemampuan."
+        },
+        "latest_eligible_observation": null,
+        "baseline_status": "insufficient",
+        "full_evidence": []
+      },
+      "Writing": {
+        "latest_observation": {
+          "session_id": "2026-10-13-writing-9ce1ee9f8c8b",
+          "task_id": "writing-tourism-task2",
+          "scope": "partial",
+          "assessment_mode": "ai_estimate",
+          "source_label": "official",
+          "score": null,
+          "conditions": {
+            "task_scope": "micro_task",
+            "assigned_output": "Satu kalimat posisi + satu paragraf pendukung, sekitar 100–130 kata total. Posisi menjawab apakah disadvantages outweigh advantages, satu alasan dijelaskan dengan contoh.",
+            "assigned_writing_minutes": 10,
+            "score_policy": "Feedback aspek terlihat saja; tanpa band task. Adaptasi coach dari prompt resmi, bukan esai penuh 250 kata/40 menit.",
+            "actual_minutes": null,
+            "key_seen_before": null
+          },
+          "source": "sessions/2026-10-13-writing-9ce1ee9f8c8b.json",
+          "excluded_reasons": [
+            "freshness_conditions_unverified",
+            "unaided_conditions_unverified"
+          ],
+          "uncertainty": "Micro-task 97 kata, bukan Writing Task 2 lengkap. Feedback hanya aspek terlihat dari teks; durasi aktual dan asal bantuan belum diketahui. Tidak menilai band task atau band Writing keseluruhan."
+        },
+        "latest_eligible_observation": null,
+        "baseline_status": "insufficient",
+        "full_evidence": []
+      },
+      "Speaking": {
+        "latest_observation": {
+          "session_id": "2026-10-13-speaking-683f3d42db99",
+          "task_id": "speaking-important-object-part2",
+          "scope": "sample",
+          "assessment_mode": "ai_estimate",
+          "source_label": "official",
+          "score": null,
+          "conditions": {
+            "actual_minutes": null,
+            "key_seen_before": null
+          },
+          "source": "sessions/2026-10-13-speaking-683f3d42db99.json",
+          "excluded_reasons": [
+            "freshness_conditions_unverified",
+            "unaided_conditions_unverified"
+          ],
+          "uncertainty": "Sampel satu Part 2 dalam teks saja; asal transkripsi dan durasi belum diketahui. Tidak menilai pronunciation atau fluency lisan, tidak memberi band Speaking. Koreksi mengacu bentuk teks yang tersedia, tanpa mengasumsikan persis bunyi audio."
+        },
+        "latest_eligible_observation": null,
+        "baseline_status": "insufficient",
+        "full_evidence": []
+      }
+    },
+    "effectiveness": "insufficient_evidence",
+    "experiments": [],
+    "causal_claim": false
+  },
+  "focused_checks": {
+    "status": "insufficient_evidence",
+    "samples": [],
+    "excluded": [],
+    "limit": "Coach-verified conditions; aspect counts stay separate. No pooled accuracy, mastery, band or causal claim."
+  },
+  "teaching": {
+    "documented_sequence": 0,
+    "assessed_completed_lessons": 0,
+    "explicit_skips": [],
+    "insufficient_delivery_evidence": [],
+    "limit": "Presentation records support documented delivery, not proof of learner comprehension."
+  },
+  "practice": [
+    {
+      "lesson_id": "2026-10-13-lesson-fe844fc5d679",
+      "status": "awaiting_response",
+      "prepared": 20,
+      "presented": 0,
+      "submitted": 0,
+      "reviewed": 0,
+      "homework_debt": 0
+    }
+  ],
+  "coverage": {
+    "post_rollout_completed_main_lessons": 0,
+    "latest_four": [],
+    "skills_in_latest_four": [],
+    "missing_skills": [
+      "Listening",
+      "Reading",
+      "Speaking",
+      "Writing"
+    ],
+    "completed_four_lesson_blocks": 0,
+    "historical_main_completions": 5,
+    "limit": "Task+linked lesson count once; short drills excluded. Coverage deviations require coach explanation, not automatic failure."
+  },
+  "integrity": {
+    "status": "no_detected_record_validation_failure",
+    "assessment_validation_issues": [],
+    "unresolved_disputes": [],
+    "zero_lost_responses_proven": false,
+    "limit": "Validated records do not independently inventory every received chat response or prove grading correctness."
+  },
+  "latency": {
+    "status": "not_measured",
+    "samples": 0,
+    "median_seconds": null,
+    "p90_seconds": null,
+    "reason": "No verified complete-submission receipt and substantive-feedback display endpoints. Script-write times are not user waiting time."
+  },
+  "thresholds": {
+    "drill_accuracy": "No universal threshold; report correct/assessed per objective and aspect.",
+    "latency": "No verified baseline or service target yet; separate routine feedback and full reviews."
+  }
+}

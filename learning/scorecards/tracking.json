@@ -1,0 +1,15 @@
+{
+  "version": "scorecard-1",
+  "started_at": "2026-10-13T22:37:15+07:00",
+  "pre_tracking_completion_ids": [
+    "session:2026-10-13-listening-b009564c17b7",
+    "session:2026-10-13-listening-616b14552b51",
+    "session:2026-10-13-reading-c3d297229593",
+    "session:2026-10-13-speaking-683f3d42db99",
+    "session:2026-10-13-writing-9ce1ee9f8c8b"
+  ],
+  "provenance": {
+    "method": "coach_scorecard_rollout",
+    "reference": "User approved lightweight tracking in the existing coach; prior completions excluded from new-workflow cadence."
+  }
+}

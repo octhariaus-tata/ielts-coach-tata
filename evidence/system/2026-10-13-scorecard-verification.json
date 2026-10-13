@@ -1,0 +1,35 @@
+{
+  "kind": "system_test",
+  "date_local": "2026-10-13",
+  "timezone": "Asia/Jakarta",
+  "learner_progress": false,
+  "version": "scorecard-1",
+  "full_suite": {
+    "tests": 189,
+    "elapsed_seconds": 74.775,
+    "status": "passed"
+  },
+  "final_focused_suite": {
+    "tests": 11,
+    "elapsed_seconds": 3.119,
+    "status": "passed"
+  },
+  "reviewer": {
+    "agent": "/root/astra_kpi_design",
+    "model": "gpt-6-astra",
+    "method": "read_only_independent_review_and_isolated_test_rehearsal",
+    "final_recheck": "no_remaining_blocker",
+    "focused_tests_independently_passed": 10
+  },
+  "original_record_integrity": {
+    "source_commit": "f8c783a5cdd63ac4a3a07a731d7eb116eeb329ea",
+    "json_files_checked": 28,
+    "changed_original_files": []
+  },
+  "report": "learning/coaching-notes/2026-10-13-scorecard-implementation.md",
+  "limits": [
+    "System tests are not learner progress or improved IELTS performance.",
+    "Actual user-visible latency remains unmeasured.",
+    "Report source hashes do not prove that all received responses were captured."
+  ]
+}

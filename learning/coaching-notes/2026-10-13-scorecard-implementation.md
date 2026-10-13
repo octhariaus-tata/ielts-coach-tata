@@ -1,0 +1,19 @@
+# Lightweight coaching scorecard — 13 October 2026
+
+User approved the main coach scorecard after independent discussion with Astra. No separate KPI skill, permanent agent, dashboard, external service or automation was created.
+
+The report is derived by `scripts/scorecard.py` from existing session, lesson, packet, feedback and experiment records. `coach.py scorecard` saves it locally and reads it back; `status` includes the same report for progress requests. Official completion and teaching-lesson completion update it before the existing milestone sync. Ordinary answers, checkpoints and reviews do not run scorecard reporting. A report failure is actionable but preserves the saved attempt; a retry does not regrade.
+
+The rollout boundary is pinned in `learning/scorecards/tracking.json`. Five historical main completions remain evidence but do not count as outcomes of the newly tracked workflow. The active banking prompt and unknown legacy budget are preserved. Current independent practice is 20 prepared / 0 presented / 0 submitted / 0 reviewed, with no homework debt. Learning effectiveness is **insufficient evidence**; response latency is **not measured**; no record validation failure was detected. This is not proof that no response was ever lost.
+
+Reports separate latest observations from eligible unaided evidence, targeted transfer from retention, teaching delivery from prepared packets, quantities from accuracy, and technical checks from IELTS readiness. Explicitly unknown assistance excludes a result from scorecard learning eligibility without changing its historical grade or the underlying adaptation rules. No universal 80% drill cutoff, latency SLA, band conversion, pooled accuracy, mastery or causal claim is introduced.
+
+Focused checks require coach-verified fresh, unaided conditions, a completed teaching source on another packet with a comparable objective, assessed aspect counts and response provenance. Normalized previously exposed prompts and future teaching sources are rejected. Semantic freshness still needs coach review. Retention requires a documented 3–7 day source-completion to checkpoint interval; checkpoint timestamps are never treated as end-to-end waiting time.
+
+Four-main-lesson reports count a linked official attempt and teaching lesson once after both complete; short drills and system tests do not advance the count. Reports preserve their named four-lesson window and evidence available when generated. They are not reconstructed historical ability assessments. Retries do not duplicate reports. Missing skill coverage is shown for coach explanation, rather than silently treated as failure.
+
+Validation: the full suite passed **189 tests in 74.775 seconds**. The final expanded scorecard suite passed **11 tests in 3.119 seconds**, including retention-interval and backup-envelope checks. `git diff --check` passed. All 28 original JSON files in sessions, feedback, guided/practice evidence, lessons and packets matched pre-implementation commit `f8c783a5cdd63ac4a3a07a731d7eb116eeb329ea` byte-for-byte.
+
+Astra independently reviewed and rehearsed the implementation in isolated fixtures. It found three problems—reused content across packet IDs, future-source transfer and malformed completion timestamps. These were fixed with regressions. Its final recheck passed all 10 then-current focused tests and found no remaining blocker. Production learner records and network state were not changed by the reviewer. Root subsequently added and passed the backup-envelope test and retention assertions.
+
+The current report is `learning/scorecards/current.json`. It is a derived cache with input hashes, not authoritative grading evidence. Source drift requires regeneration; backup validates its envelope and conservative claims. Milestone publication is verified separately through the existing private-repository synchronizer. Test evidence is system evidence only.
