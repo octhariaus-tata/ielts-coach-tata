@@ -54,6 +54,12 @@ Tindakan perbaikan dan latihan berikutnya:
 
 Kesalahan tidak boleh disimpulkan dari skor total saja. Untuk jawaban lengkap yang terbaca, beri koreksi per soal atau simpan detailnya dalam bukti. Pembetulan log lama harus disertai alasan dan tanggal; jangan menghapus provenance awal.
 
+## 13 Oktober 2026 — review English dan kebutuhan pengajaran
+
+Lima latihan singkat empat skill tersimpan: Packham 3/8 (Q5 ambigu; putaran belum diketahui), Social Contact 4/6 (3 kali putar), Marie Curie 2/3, Speaking phone teks saja, Writing Tourism micro-task 97 kata. Revisi sesudah feedback terpisah dari respons awal. Belum ada band IELTS/CEFR atau bukti naik band.
+
+[Review English dan materi contoh](learning/coaching-notes/2026-10-13-english-review.md) mencatat kekuatan penyampaian ide/contoh serta dua prioritas pengajaran: verb forms/agreement, dan frasa natural/pengembangan alasan. Tata meminta materi, contoh dan strategi sebelum latihan; masukan mentah tersimpan pada feedback/2026-10-13-learner-teach-before-test.json. Coach mengikuti penjelasan → worked example → latihan terbimbing → soal mandiri baru, tanpa mengubah target atau penilaian awal. Contoh pengajaran coach berlabel buatan AI, bukan pengukuran resmi.
+
 <!-- managed-sessions:start -->
 ## Sesi baru — ringkasan dari sessions/
 

@@ -27,6 +27,12 @@ Preferensi global Tata, 13 Oktober 2026: siapkan cukup soal/materi untuk sesi be
 
 Saat belum ada sesi belajar selesai: Listening Packham, soal 1–8, maksimum 20 menit termasuk feedback. Berikan `materials/listening-packham-form.pdf` dan audio lokal; Tata menekan Play sendiri, lalu mengirim jawaban awal langsung di chat atau foto/screenshot lembar jawabannya, diakhiri done. Cadangan siap lokal: Making Social Contact in the UK, soal 11–16, `materials/listening-social-contact-short-answer.pdf` beserta audio. Library guide hanya referensi online opsional. Setelah sesi selesai, ikuti tugas berikutnya pada bagian Keadaan sesi. Judy dan furnitur hanya untuk review.
 
+## Pengarahan belajar terbaru — 13 Oktober 2026
+
+Review lima latihan dan materi contoh tersedia di [English review](learning/coaching-notes/2026-10-13-english-review.md), berdasarkan feedback/2026-10-13-learner-teach-before-test.json. Revisi Tourism yang diminta pada hasil awal sudah diterima; belum pengukuran independen. Berikan penjelasan satu konsep dan worked example sebelum latihan, sambil menjaga alur cepat sesuai masukan Tata.
+
+Tugas pedagogis berikut: mini-lesson verb forms/agreement; cadangan pedagogis: worked example TFNG (contoh coach buatan AI). Paket Listening resmi baru belum siap dan perlu preflight sebelum ditugaskan. Tidak ada attempt baru pada review ini. Skor lama dipertahankan; belum ada band IELTS terkini.
+
 ## Cara memperbarui
 
 Coach memperbarui kesiapan setelah ada bukti. Status sesi berasal dari catatan `sessions/`; gunakan alat sesi untuk membuat, melanjutkan dan menutup attempt, lalu baca ulang record serta ringkasannya. “Done” berulang memakai ID semula. Simpan hasil lokal dahulu; ubah klaim sinkronisasi hanya setelah status Git dan push benar-benar diperiksa.
