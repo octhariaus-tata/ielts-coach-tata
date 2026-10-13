@@ -1,5 +1,15 @@
 # Bank tugas awal — IELTS Academic Tata
 
+## Next-session preparation — verified 13 October 2026
+
+Resume the active guided banking prompt first; preparation below creates no new attempt and changes no historical timing or learner results. The prepared short-answer support lesson is still active, followed by the cached written Listening precision packet and Reading backup. Coach keeps the 40-minute default for newly started lessons and chooses a manageable subset rather than creating homework debt.
+
+New official Listening application material: `listening-national-arts-notes`, **The National Arts Centre**, Part 2 note/table completion, Q11–20. [Question-only PDF](materials/listening-national-arts-notes.pdf) and [official audio cached locally](materials/listening-national-arts-notes.mp3) are ready. Full-source SHA256 matched the existing IELTS 2023 provenance; prompt p29–30 was extracted, reopened, rendered and visually inspected. Exact p31–32 transcript and p33 key are stored separately in coach_refs; never deliver them before completion. Audio HTTP 200/audio-mpeg and afinfo parse verified, estimated duration 346.853878 seconds, without playback.
+
+This fills the previously empty official Listening queue. It is not an ability result, full /40 assessment, or a controlled same-task-type comparison with Packham. No local attempt exists; prior exposure outside saved history remains unconfirmed and must be checked at assignment. Resource integrity is verified; current-device audibility/browser-results/recording readiness remain unverified. Tata presses Play; coach never starts or repeats audio. The upcoming Teacher packet may reference only the question PDF, not the correction cache; main coach supplies the verified task link at independent stage. Written preparation remains supplementary and does not advance the main rotation.
+
+The historical bank description below is retained as preparation history, not the current next action; STATUS.md and coaching_brief own the resume point.
+
 Diperiksa pada **12 Oktober 2026**, Asia/Jakarta. Ini persiapan sistem; belum ada latihan baru atau progres kemampuan yang dihasilkan. Metadata lengkap dan URL koreksi untuk coach ada di [materials.json](materials.json). Salinan prompt memakai jalur relatif dan bisa dibuka di laptop lain setelah sinkronisasi. [Provenance](materials/PROVENANCE.json) menyimpan versi, halaman, checksum, dan cara ekstraksi. Referensi koreksi untuk dua Listening dan dua Reading berada dalam `coach_refs/`; periksa kecocokan versi/checksum sebelum digunakan offline dan jangan berikan cache itu kepada Tata sebelum done.
 
 ## Sesi pertama ketika Tata siap

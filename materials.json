@@ -652,6 +652,104 @@
         "coach_timing_estimate": "2 minutes instruction, 1 minute Part 2 preparation if applicable, 2–4 minutes answer, 8 minutes feedback, 5 minutes redo one aspect",
         "score_policy": "AI estimate with evidence/uncertainty for adequate audio sample; transcript-only cannot assess pronunciation or reliable fluency timing. Not an official examiner result."
       }
+    },
+    {
+      "id": "listening-national-arts-notes",
+      "skill": "Listening",
+      "role": "primary",
+      "provider": "IELTS.org (official IELTS Partners sample)",
+      "source_label": "official",
+      "title": "The National Arts Centre — note and table completion",
+      "question_type": "note_table_completion",
+      "source_version": "IELTS Sample Tasks 2023; isolated prompt excerpt",
+      "source_pages": [
+        29,
+        30
+      ],
+      "question_numbers": [
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+      ],
+      "urls": {
+        "task": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf#page=29",
+        "prompt": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf#page=29",
+        "source": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf",
+        "index": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+        "key": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf#page=33",
+        "transcript": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf#page=31",
+        "audio": "https://ielts.org/cdn/Sample-tests/Listening/ielts-listening-sample-task-8-note-completion.mp3",
+        "reference": null
+      },
+      "local": {
+        "prompt": "materials/listening-national-arts-notes.pdf",
+        "audio": "materials/listening-national-arts-notes.mp3",
+        "prompt_sha256": "715976832139187867492c938740b7eb4bf2679cd85dac77eca8ebdda7c5a470",
+        "audio_sha256": "674b14b3346a84ea239e90b67c78a750431f387fc814d31f1fc600208a2f05f7"
+      },
+      "verification": {
+        "date": "2026-10-13",
+        "timezone": "Asia/Jakarta",
+        "method": "Same official PDF SHA256 confirmed; exact prompt p29–30, transcript p31–32 and key p33 read; extracted prompt reopened and both pages rendered and inspected.",
+        "source_pdf": "verified",
+        "prompt_file": "verified",
+        "key": "verified",
+        "transcript": "verified",
+        "audio": "verified",
+        "audio_playback": "not_checked",
+        "browser_attempt_results": "not_checked",
+        "auto_score": "not_applicable",
+        "recording_capture": "not_applicable",
+        "audio_verification": "Exact recording link read from p31; official CDN HTTP 200 audio/mpeg, MP3 parsed using afinfo, without playback.",
+        "audio_duration_seconds": 346.853878,
+        "local_correction_cache": "verified"
+      },
+      "key_pages": [
+        33
+      ],
+      "reference_pages": null,
+      "freshness": {
+        "status": "no_attempt_in_local_history",
+        "basis": "No task/response for this source excerpt in saved sessions or supplied chat history. Learner prior exposure remains unconfirmed; confirm at assignment. No attempt created during preparation.",
+        "eligible_for_new_attempt": true
+      },
+      "delivery": "Give local prompt-only PDF and local audio; Tata presses Play herself. Withhold full source PDF, key and transcript until done. Check playback support on the learning laptop without starting recording for Tata.",
+      "result_collection": {
+        "primary": "At initial attempt, learner answers directly in chat numbered 11–16, or writes on paper and sends a photo/screenshot. Never ask to retype all answers after done.",
+        "fallback": "screenshot of handwritten/typed numbered answers",
+        "current_browser_access": "not_checked"
+      },
+      "difficulty": {
+        "status": "coach_estimate",
+        "note": "Part 2 note/table completion with factual details and distractors; likely more demanding than a single short grammar drill. Estimate only, no IELTS band assigned."
+      },
+      "transcript_pages": [
+        31,
+        32
+      ],
+      "suggested_session": {
+        "minutes": 40,
+        "type": "official short Listening application task following teaching",
+        "coach_timing_estimate": "Within a new 40-minute lesson: 5 theory, 5 worked example, 8 guided, 17 independent (includes scan, about 5 minutes 47 seconds audio and submission), 5 review. Legacy resumed budget remains unknown. Plans are not actual durations.",
+        "score_policy": "Report /10 with evidence and actual known conditions; no band. Different task type from original form-completion drill, so do not claim a controlled comparable efficacy outcome."
+      },
+      "fallback_id": null,
+      "coach_reference": {
+        "schema_version": 1,
+        "path": "coach_refs/listening-national-arts-notes.json",
+        "sha256": "66e38528e3d9b75e980bd577a6ecbf30eaea5525f8e6c4821ad358baa30c3ea0",
+        "visibility": "coach_only_after_done",
+        "verified_date": "2026-10-13",
+        "content": "Exact key and transcript excerpts; coach only, withheld before complete submission.",
+        "status": "verified"
+      }
     }
   ],
   "review_only": [

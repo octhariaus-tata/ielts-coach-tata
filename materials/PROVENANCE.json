@@ -125,6 +125,28 @@
       "verification": "HTTP 200 audio/mpeg; ID3 header and afinfo MP3 parse; playback not performed",
       "pdf_audio_link": "https://s3.eu-west-2.amazonaws.com/ielts-web-static/production/Sample-tests/Listening/ielts-listening-sample-task-3-short-answer-questions.mp3",
       "source_audio_link_verified": "Exact recording link target read from official source PDF p12; audio retrieved via official IELTS CDN."
+    },
+    "listening-national-arts-notes": {
+      "file": "materials/listening-national-arts-notes.pdf",
+      "source": "listening",
+      "pages": [
+        29,
+        30
+      ],
+      "sha256": "715976832139187867492c938740b7eb4bf2679cd85dac77eca8ebdda7c5a470",
+      "extraction": "Whole official prompt pages only; transcript p31–32 and key p33 omitted.",
+      "verified_date": "2026-10-13"
+    },
+    "listening-national-arts-notes-audio": {
+      "file": "materials/listening-national-arts-notes.mp3",
+      "url": "https://ielts.org/cdn/Sample-tests/Listening/ielts-listening-sample-task-8-note-completion.mp3",
+      "sha256": "674b14b3346a84ea239e90b67c78a750431f387fc814d31f1fc600208a2f05f7",
+      "bytes": 4386027,
+      "content_type": "audio/mpeg",
+      "duration_seconds": 346.853878,
+      "verification": "HTTP 200 audio/mpeg; afinfo MP3 parse; no playback performed.",
+      "pdf_audio_link": "https://s3.eu-west-2.amazonaws.com/ielts-web-static/production/Sample-tests/Listening/ielts-listening-sample-task-8-note-completion.mp3",
+      "verified_date": "2026-10-13"
     }
   },
   "answer_content_policy": "materials/ stores learner prompt-only excerpts and audio, with no answer pages or sample transcript in those prompts. coach_refs/ separately stores coach-only verified key and transcript/Reading text excerpts; do not deliver them before done. Full source PDFs are not stored in the repository.",

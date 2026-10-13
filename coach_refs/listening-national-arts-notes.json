@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "task_id": "listening-national-arts-notes",
+  "skill": "Listening",
+  "visibility": "coach_only_after_done",
+  "source_version": "IELTS Sample Tasks 2023; isolated prompt excerpt",
+  "verified_date": "2026-10-13",
+  "timezone": "Asia/Jakarta",
+  "question_numbers": [
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20"
+  ],
+  "source": {
+    "url": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf",
+    "sha256": "5bd770e58157ca70ee394822a46d29082cd298ac4a3a053e1278e08ceddd6724",
+    "pages": 33
+  },
+  "prompt": {
+    "path": "materials/listening-national-arts-notes.pdf",
+    "sha256": "715976832139187867492c938740b7eb4bf2679cd85dac77eca8ebdda7c5a470",
+    "source_pages": [
+      29,
+      30
+    ]
+  },
+  "key": {
+    "url": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf#page=33",
+    "source_pages": [
+      33
+    ],
+    "page_texts": [
+      {
+        "page": 33,
+        "text": " \n \nPage 33 of 33    IELTS.org \nListening Sample Task – Note Completion (Answers) \n \n11 classical music (concerts)  \n / (classical) (music) concerts \n \n12 (a) bookshop / (a) bookstore \n \n13 planned \n \n14 1983 / (the) 1980s \n \n15 (the) City Council \n \n16 363 \n \n17 (the) Garden Hall \n \n18 Three Lives \n \n19 £4.50 \n \n20 Faces of China "
+      }
+    ],
+    "entries": [
+      {
+        "question_numbers": [
+          "11"
+        ],
+        "source_page": 33,
+        "order": "fixed",
+        "answer_lines": [
+          "classical music (concerts)",
+          "/ (classical) (music) concerts"
+        ]
+      },
+      {
+        "question_numbers": [
+          "12"
+        ],
+        "source_page": 33,
+        "order": "fixed",
+        "answer_lines": [
+          "(a) bookshop / (a) bookstore"
+        ]
+      },
+      {
+        "question_numbers": [
+          "13"
+        ],
+        "source_page": 33,
+        "order": "fixed",
+        "answer_lines": [
+          "planned"
+        ]
+      },
+      {
+        "question_numbers": [
+          "14"
+        ],
+        "source_page": 33,
+        "order": "fixed",
+        "answer_lines": [
+          "1983 / (the) 1980s"
+        ]
+      },
+      {
+        "question_numbers": [
+          "15"
+        ],
+        "source_page": 33,
+        "order": "fixed",
+        "answer_lines": [
+          "(the) City Council"
+        ]
+      },
+      {
+        "question_numbers": [
+          "16"
+        ],
+        "source_page": 33,
+        "order": "fixed",
+        "answer_lines": [
+          "363"
+        ]
+      },
+      {
+        "question_numbers": [
+          "17"
+        ],
+        "source_page": 33,
+        "order": "fixed",
+        "answer_lines": [
+          "(the) Garden Hall"
+        ]
+      },
+      {
+        "question_numbers": [
+          "18"
+        ],
+        "source_page": 33,
+        "order": "fixed",
+        "answer_lines": [
+          "Three Lives"
+        ]
+      },
+      {
+        "question_numbers": [
+          "19"
+        ],
+        "source_page": 33,
+        "order": "fixed",
+        "answer_lines": [
+          "£4.50"
+        ]
+      },
+      {
+        "question_numbers": [
+          "20"
+        ],
+        "source_page": 33,
+        "order": "fixed",
+        "answer_lines": [
+          "Faces of China"
+        ]
+      }
+    ],
+    "optional_words_and_alternatives_policy": "",
+    "coach_policy": "Apply exact printed optional words/alternatives after complete submission; do not invent acceptable variants."
+  },
+  "transcript": {
+    "url": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf#page=31",
+    "source_pages": [
+      31,
+      32
+    ],
+    "page_texts": [
+      {
+        "page": 31,
+        "text": " \n \nPage 31 of 33    IELTS.org \nListening Sample Task – Note Completion (Recording \nand Tapescript) \n \nLink to Recording \n \nTapescript \n \nYou will hear a man talking on the radio about a National Arts Centre. \n \nHello, and welcome to “Focus on the Arts”. I’m your host - Dave Green - and this is \nyour very own local radio programme. Every Friday evening we put the spotlight on \ndifferent arts and culture facilities, and look at the shows and events that are on offer \nin the coming week. \n \nAnd today the focus is on The National Arts Centre. Now, if you don’t already know it \nyourself, I’m sure you’ve all heard of it. It’s famous throughout the world as one of \nthe major venues for classical music. \n \nBut did you know that it’s actually much more than just a place to hear concerts? The \nCentre itself is a huge complex that caters for a great range of arts. Under a single \nroof it houses concert rooms, theatres, cinemas, art galleries and a wonderful public \nlibrary, as well as service facilities including 3 restaurants and a book shop. So, at any \none time, the choice of entertainment there is simply enormous. \n \nSo, how did they manage to build such a big arts complex right in the heart of the \ncity? Well, the area was completely destroyed by bombs during the war in 1940. So, \nthe opportunity was taken to create a cultural centre that would be, what they called: \n‘the City’s gift to the Nation’. Of course, it took a while for such a big project to get \nstarted, but it was planned in the 60s, built in the 70s and eventually opened to the \npublic in 1983. Ever since then it has proved to be a great success. It’s not privately \nowned, like many arts centres, but is still in public hands: - it’s run by the City Council. \nBoth our National Symphony Orchestra and National Theatre Company were \ninvolved in the planning of the project, and they are now based there - giving regular \nperformances every week - and as the Centre is open 363 days of the year, there are \nplenty of performances to choose from. \n \nPause \n \nSo, to give you some idea of what’s on, and to help you choose from the many \npossibilities, we’ve made a selection of the star attractions. \n \nIf you’re interested in classical music, then we recommend you go along to the \nNational on either Monday or Tuesday evening at 7.30 for a spectacular production \nof ‘The Magic Flute’ - probably the most popular of all Mozart’s operas. It’s in the \nGarden Hall and tickets start at only £8.00, but you’ll have to be early if you want to "
+      },
+      {
+        "page": 32,
+        "text": " \n \nPage 32 of 33    IELTS.org \nget them that cheap! And remember, it’s only on for those two evenings. \n \nFor those more interested in the cinema, you might like to see the new Canadian film \nwhich is showing on Wednesday evening at 8pm in Cinema 2. And that’s called ‘Three \nLives.’ It’s had fantastic reviews and tickets cost just £4.50, which is a reduction on the \nusual price of £5.50. So it’s really good value, especially for such a great movie. \n \nBut you can see the centre’s main attraction at the weekend, because on Saturday \nand Sunday, 11am to 10pm, they’re showing a wonderful new exhibition that hasn’t \nbeen seen anywhere else in Europe yet. It’s a collection of Chinese Art called ‘Faces of \nChina’ - that’s in Gallery 1 - and it has some really fascinating paintings and \nsculptures by leading artists from all over China - and the good news is that it’s \ncompletely free, so don’t miss it! \n \nSo, why not go along to the National Arts Centre next week for one - or all - of these \ngreat events - and you can always pick up a programme and check out all the other \nperformances and exhibitions on offer, or coming soon, on almost every day of the \nyear. \n \nNext week we’ll be looking at the new Museum of Science … "
+      }
+    ],
+    "timestamps_available": false,
+    "coach_policy": "Use source page evidence after completion; no timestamps supplied."
+  },
+  "reading_text": null,
+  "verification": {
+    "status": "verified_from_official_source",
+    "method": "Official source PDF fetched HTTP 200 and SHA256 matched original provenance; p29–30 learner prompt pages extracted and rendered; p31–32 transcript and p33 key inspected by main coach. Audio linked from exact source page, parsed without playback.",
+    "prompt_visual_qa": "Both prompt pages inspected at 1300px; readable notes/table and instructions, no clipping, transcript or answer pages.",
+    "full_source_stored_in_repo": false,
+    "runtime_limits": "Asset parsing and checksum do not prove audibility, browser results or learner progress."
+  },
+  "answer_instruction": {
+    "source_page": 29,
+    "text": "Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+    "max_words": 3,
+    "allow_number": true
+  }
+}

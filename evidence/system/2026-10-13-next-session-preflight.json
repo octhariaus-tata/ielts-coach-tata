@@ -1,0 +1,91 @@
+{
+  "kind": "system_test",
+  "checked_at": "2026-10-13T23:03:30+07:00",
+  "learner_progress": false,
+  "task_id": "listening-national-arts-notes",
+  "source": "official IELTS sample 2023",
+  "source_pdf_sha256": "5bd770e58157ca70ee394822a46d29082cd298ac4a3a053e1278e08ceddd6724",
+  "questions": [
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20"
+  ],
+  "resource_checks": {
+    "prompt": {
+      "status": "passed",
+      "checked_at": "2026-10-13T23:03:28+07:00",
+      "path": "materials/listening-national-arts-notes.pdf",
+      "sha256": "715976832139187867492c938740b7eb4bf2679cd85dac77eca8ebdda7c5a470",
+      "method": "local file read; checksum if declared"
+    },
+    "audio_file": {
+      "status": "passed",
+      "checked_at": "2026-10-13T23:03:28+07:00",
+      "path": "materials/listening-national-arts-notes.mp3",
+      "sha256": "674b14b3346a84ea239e90b67c78a750431f387fc814d31f1fc600208a2f05f7",
+      "method": "local file read; checksum if declared"
+    },
+    "correction_cache": {
+      "status": "passed",
+      "reasons": [
+        "Cache lokal sesuai source version, prompt, rentang soal dan provenance resmi."
+      ],
+      "checked_at": "2026-10-13T23:03:28+07:00",
+      "task_id": "listening-national-arts-notes",
+      "path": "coach_refs/listening-national-arts-notes.json",
+      "cache_sha256": "66e38528e3d9b75e980bd577a6ecbf30eaea5525f8e6c4821ad358baa30c3ea0",
+      "source_sha256": "5bd770e58157ca70ee394822a46d29082cd298ac4a3a053e1278e08ceddd6724",
+      "question_numbers": [
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+      ],
+      "verified_date": "2026-10-13"
+    }
+  },
+  "audio_parse": {
+    "tool": "afinfo",
+    "format": "MP3",
+    "duration_seconds": 346.853878,
+    "played": false
+  },
+  "prompt_visual_review": {
+    "pages": 2,
+    "method": "Prompt-only excerpt reopened, rendered using bundled Poppler and both PNGs inspected by coach",
+    "status": "passed",
+    "limits": "Fontconfig emitted cache warnings; generated pages were readable and visually inspected."
+  },
+  "readiness_limits": {
+    "audio_audibility": "not_tested",
+    "browser_results": "not_tested",
+    "learner_prior_exposure": "unconfirmed"
+  },
+  "original_json_integrity": {
+    "base_commit": "bee618d4992a8ea87ab2356401f8dc3f47014b28",
+    "checked": 28,
+    "changed": []
+  },
+  "tests": {
+    "count": 190,
+    "seconds": 73.558,
+    "status": "passed"
+  },
+  "provenance": {
+    "method": "main_coach_tool_verified_preparation",
+    "reference": "User request in this chat: anything else we can do and improve before tomorrow session? Existing authorization covers preparing next task and one backup."
+  }
+}

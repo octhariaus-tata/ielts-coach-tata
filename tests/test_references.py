@@ -36,8 +36,9 @@ class ReferenceTests(unittest.TestCase):
         self.assertEqual(checked['status'], 'failed')
         self.assertTrue(checked['reasons'])
 
-    def test_actual_four_caches_work_offline_and_report_only_metadata(self):
-        self.assertEqual(len(self.tasks), 4)
+    def test_actual_caches_work_offline_and_report_only_metadata(self):
+        self.assertTrue({'listening-packham-form', 'listening-social-contact-short-answer',
+                         'reading-marie-curie-tfng', 'reading-rockets-features'}.issubset({t['id'] for t in self.tasks}))
         for task in self.tasks:
             checked = references.check_reference(self.root, task)
             self.assertEqual(checked['status'], 'passed')
@@ -64,10 +65,16 @@ class ReferenceTests(unittest.TestCase):
             cache = json.loads((self.root / task['coach_reference']['path']).read_text(encoding='utf-8'))
             self.assertEqual(cache['answer_instruction']['max_words'], 3)
             self.assertTrue(cache['answer_instruction']['allow_number'])
-            self.assertIn('Words in brackets are optional', cache['key']['optional_words_and_alternatives_policy'])
-            self.assertIn('separated by a slash', cache['key']['optional_words_and_alternatives_policy'])
+            printed = '\n'.join(p['text'] for p in cache['key']['page_texts'])
+            if 'Words in brackets are optional' in printed:
+                self.assertIn('Words in brackets are optional', cache['key']['optional_words_and_alternatives_policy'])
+                self.assertIn('separated by a slash', cache['key']['optional_words_and_alternatives_policy'])
+            else:
+                self.assertEqual(cache['key']['optional_words_and_alternatives_policy'], '')
             groups = [e for e in cache['key']['entries'] if e['order'] == 'any']
-            expected = [['6', '7']] if task['id'] == 'listening-packham-form' else [['11', '12'], ['13', '14'], ['15', '16']]
+            expected = {'listening-packham-form': [['6', '7']],
+                        'listening-social-contact-short-answer': [['11', '12'], ['13', '14'], ['15', '16']],
+                        'listening-national-arts-notes': []}[task['id']]
             self.assertEqual([g['question_numbers'] for g in groups], expected)
             self.assertTrue(all(len(g['answer_lines']) == 2 for g in groups))
             self.assertFalse(cache['transcript']['timestamps_available'])
