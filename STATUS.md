@@ -29,6 +29,8 @@ Saat belum ada sesi belajar selesai: Listening Packham, soal 1–8, maksimum 20 
 
 ## Pengarahan belajar terbaru — 13 Oktober 2026
 
+Preferensi berkelanjutan eksplisit Tata: menulis dalam bahasa Inggris saat belajar; coach memakai bahasa Inggris yang jelas untuk mendukungnya. Urutan setiap pelajaran: materi/penjelasan → worked example beserta alasan → latihan bersama → latihan mandiri. Sumber mentah: feedback/2026-10-13-learner-english-teaching-sequence.json. Tidak ada perubahan durasi atau target. Preferensi dicatat di sini karena schema sinyal terstruktur belum memiliki language/lesson-sequence.
+
 Review lima latihan dan materi contoh tersedia di [English review](learning/coaching-notes/2026-10-13-english-review.md), berdasarkan feedback/2026-10-13-learner-teach-before-test.json. Revisi Tourism yang diminta pada hasil awal sudah diterima; belum pengukuran independen. Berikan penjelasan satu konsep dan worked example sebelum latihan, sambil menjaga alur cepat sesuai masukan Tata.
 
 Tugas pedagogis berikut: mini-lesson verb forms/agreement; cadangan pedagogis: worked example TFNG (contoh coach buatan AI). Paket Listening resmi baru belum siap dan perlu preflight sebelum ditugaskan. Tidak ada attempt baru pada review ini. Skor lama dipertahankan; belum ada band IELTS terkini.
