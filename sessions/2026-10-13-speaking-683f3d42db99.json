@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-speaking-683f3d42db99",
+  "status": "in_progress",
+  "phase": "working",
+  "started_at": "2026-10-13T15:42:37+07:00",
+  "skill": "Speaking",
+  "task_id": "speaking-important-object-part2",
+  "kind": "practice",
+  "available_minutes": 20,
+  "material": {
+    "id": "speaking-important-object-part2",
+    "skill": "Speaking",
+    "role": "primary",
+    "provider": "IELTS.org (official IELTS Partners sample)",
+    "source_label": "official",
+    "title": "An Important Possession — Speaking Part 2",
+    "question_type": "individual_long_turn",
+    "source_version": "IELTS Sample Tasks 2023; isolated prompt excerpt",
+    "source_pages": [
+      5
+    ],
+    "question_numbers": [],
+    "urls": {
+      "task": "https://ielts.org/cdn/ielts-downloadable-assets/ielts-sample-tests/ielts-speaking-sample-tasks-2023.pdf#page=5",
+      "prompt": "https://ielts.org/cdn/ielts-downloadable-assets/ielts-sample-tests/ielts-speaking-sample-tasks-2023.pdf#page=5",
+      "source": "https://ielts.org/cdn/ielts-downloadable-assets/ielts-sample-tests/ielts-speaking-sample-tasks-2023.pdf",
+      "index": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+      "key": null,
+      "transcript": "https://ielts.org/cdn/ielts-downloadable-assets/ielts-sample-tests/ielts-speaking-sample-tasks-2023.pdf#page=5",
+      "audio": null,
+      "reference": "https://ielts.org/cdn/ielts-downloadable-assets/ielts-sample-tests/ielts-speaking-sample-tasks-2023.pdf#page=5"
+    },
+    "local": {
+      "prompt": "materials/speaking-important-object-part2.pdf",
+      "audio": null,
+      "prompt_sha256": "e6201dc4ac66992729e10510658ca8786edb6c8a2e170f73140ffcf53e2dc1ff"
+    },
+    "verification": {
+      "date": "2026-10-12",
+      "timezone": "Asia/Jakarta",
+      "method": "Official PDF fetched HTTP 200; content and question/page ranges inspected; prompt excerpt reopened and rendered for QA",
+      "source_pdf": "verified",
+      "prompt_file": "verified",
+      "key": "not_applicable",
+      "transcript": "verified",
+      "audio": "not_applicable",
+      "audio_playback": "not_applicable",
+      "browser_attempt_results": "not_checked",
+      "auto_score": "not_applicable",
+      "recording_capture": "not_checked",
+      "sample_recording": "not_checked",
+      "prompt_note": "Source page includes sample transcript and an overlapping final cue line. Local file contains prompt-only raster region; final cue restored from source text layer, no hidden sample text."
+    },
+    "key_pages": null,
+    "reference_pages": [
+      5
+    ],
+    "freshness": {
+      "status": "no_attempt_in_local_history",
+      "basis": "PROFILE.md, PROGRESS.md and AUDIT.md read on 2026-10-12; confirm learner has not seen key at session start",
+      "eligible_for_new_attempt": true
+    },
+    "delivery": "Give local prompt-only file; do not give bundled source, key or sample responses before done. Resolve relative local file path against the project root.",
+    "result_collection": {
+      "primary": "voice/audio if supported at session time",
+      "fallback": "learner transcript; pronunciation not assessed and fluency timing limited",
+      "current_browser_access": "not_checked"
+    },
+    "difficulty": {
+      "status": "not_estimated",
+      "note": "No official band or difficulty assigned to this extract."
+    },
+    "suggested_session": {
+      "minutes": 20,
+      "type": "official prompt, practice with AI coach",
+      "coach_timing_estimate": "2 minutes instruction, 1 minute Part 2 preparation if applicable, 2–4 minutes answer, 8 minutes feedback, 5 minutes redo one aspect",
+      "score_policy": "AI estimate with evidence/uncertainty for adequate audio sample; transcript-only cannot assess pronunciation or reliable fluency timing. Not an official examiner result."
+    }
+  },
+  "conditions": {},
+  "evidence": [],
+  "response_revisions": [],
+  "result": null
+}
