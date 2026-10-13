@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-learner-english-teaching-sequence",
+  "created_at": "2026-10-13T16:21:26.524195+07:00",
+  "payload": {
+    "event_id": "2026-10-13-learner-english-teaching-sequence",
+    "kind": "learner",
+    "actor": "learner",
+    "category": "preference",
+    "scope": "global",
+    "text": "oke thanks for the feed back, from now I want to write in english when I'm learning with you. So, please before start my learn, I hope you can begin with a material, an then example, exercise with you and then personal exercise. If you give me an question directly, without give me an example or tricks to anwers, maybe means nothing",
+    "signals": {},
+    "provenance": {
+      "method": "learner_chat",
+      "reference": "Explicit ongoing preference from Tata in this chat, 13 October 2026: learner writes English while learning; lessons begin with material, example, guided exercise, independent exercise. Coach will respond in clear English to support this request. No new time budget or concise/detailed signal inferred."
+    }
+  },
+  "payload_sha256": "e84ea2bbeec8a9b1d79f672ef3c2afc2f09a7bc8d26da27c5d0c5409b7d13767",
+  "session_snapshots": {},
+  "rule_version": "adaptation-1.2"
+}
