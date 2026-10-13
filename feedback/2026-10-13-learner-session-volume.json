@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-learner-session-volume",
+  "created_at": "2026-10-13T08:27:09.335334+07:00",
+  "payload": {
+    "event_id": "2026-10-13-learner-session-volume",
+    "kind": "learner",
+    "actor": "learner",
+    "category": "preference",
+    "scope": "session",
+    "session_id": "2026-10-13-listening-b009564c17b7",
+    "text": "want to make sure, will this session only have these question?\n\nor will there be another set of question for the session?\n\nhow many question total?\n\nbecause if it is only this, it is not enough to make a proper learning session",
+    "signals": {},
+    "provenance": {
+      "method": "learner chat message",
+      "reference": "Current chat, 13 October 2026: question about total session questions after Packham task delivery"
+    }
+  },
+  "payload_sha256": "888bcf51791cf14eb8611765db72978cf88bc7320c2368e37f4a0133228abc51",
+  "session_snapshots": {
+    "2026-10-13-listening-b009564c17b7": "91f85cd2e6867e25cc084809d5b13640ed383b1a7f93214b8927266a8da7e15a"
+  },
+  "rule_version": "adaptation-1.2"
+}
