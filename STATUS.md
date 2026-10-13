@@ -23,6 +23,8 @@ Diperbarui: 12 Oktober 2026, Asia/Jakarta. v1.1, adaptasi v1.2 dan autosync sele
 
 ## Tugas berikutnya
 
+Preferensi global Tata, 13 Oktober 2026: siapkan cukup soal/materi untuk sesi belajar yang berbobot pada setiap run, beserta review kesalahan dan penerapan perbaikan. Sumber mentah: `feedback/2026-10-13-learner-study-volume-global.json`. Jumlah menyesuaikan skill dan budget waktu; tidak ada durasi baru atau jumlah minimum universal yang dinyatakan. Untuk hari ini, alur yang disetujui adalah Packham 8 soal → review → Social Contact 6 soal → review akhir (14 soal baru total; estimasi coach 25–30 menit). Siapkan tugas berikutnya setelah attempt pertama selesai dan periksa materi saat itu; simpan tiap attempt dengan ID terpisah. Preferensi ini bukan bukti kemampuan atau perubahan target IELTS.
+
 Saat belum ada sesi belajar selesai: Listening Packham, soal 1–8, maksimum 20 menit termasuk feedback. Berikan `materials/listening-packham-form.pdf` dan audio lokal; Tata menekan Play sendiri, lalu mengirim jawaban awal langsung di chat atau foto/screenshot lembar jawabannya, diakhiri done. Cadangan siap lokal: Making Social Contact in the UK, soal 11–16, `materials/listening-social-contact-short-answer.pdf` beserta audio. Library guide hanya referensi online opsional. Setelah sesi selesai, ikuti tugas berikutnya pada bagian Keadaan sesi. Judy dan furnitur hanya untuk review.
 
 ## Cara memperbarui
