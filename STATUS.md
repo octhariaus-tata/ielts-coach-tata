@@ -39,6 +39,8 @@ Tugas pedagogis berikut: mini-lesson verb forms/agreement; cadangan pedagogis: w
 
 Present-simple set 01 buatan coach: 11/12 setelah materi/contoh/guided practice, tanpa band atau klaim mastery. Bukti: evidence/practice/2026-10-13-present-simple-set01.json. Koreksi Q5 sudah diterima: The guide helps visitors, tersimpan sebagai review tanpa mengganti 11/12. Materi berikutnya siap di learning/coaching-notes/2026-10-13-present-simple-negatives-lesson.md: do not/does not → worked example → guided → independent. Satu set ini bukan baseline IELTS; paket Listening resmi baru masih perlu preflight.
 
+Guided negatives diterima benar: Tourism doesn't help local businesses. Bukti evidence/guided/2026-10-13-present-simple-negatives-01.json. Tugas aktif pedagogis: satu set 12 kalimat negatif di learning/coaching-notes/2026-10-13-present-simple-negatives-set01.md; respons mandiri belum diterima. Drill buatan coach, bukan attempt IELTS.
+
 ## Cara memperbarui
 
 Coach memperbarui kesiapan setelah ada bukti. Status sesi berasal dari catatan `sessions/`; gunakan alat sesi untuk membuat, melanjutkan dan menutup attempt, lalu baca ulang record serta ringkasannya. “Done” berulang memakai ID semula. Simpan hasil lokal dahulu; ubah klaim sinkronisasi hanya setelah status Git dan push benar-benar diperiksa.

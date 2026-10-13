@@ -1,0 +1,17 @@
+{
+  "id": "2026-10-13-present-simple-negatives-guided-01",
+  "kind": "guided_learning",
+  "source_label": "coach_created_not_official_IELTS",
+  "text": "Tourism doesn't help local businesses",
+  "purpose": "guided_practice",
+  "provenance": {
+    "method": "learner_chat_text",
+    "reference": "Tata guided response in this chat, 13 October 2026, after material and worked example of present-simple negatives; coach identified tourism as singular and offered choices."
+  },
+  "conditions": {
+    "assisted": true
+  },
+  "feedback": "Correct: singular tourism takes does not/doesn't and base verb help.",
+  "lesson": "learning/coaching-notes/2026-10-13-present-simple-negatives-lesson.md",
+  "limits": "Supported practice; no IELTS band or inference of independent mastery."
+}
