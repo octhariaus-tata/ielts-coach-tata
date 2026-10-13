@@ -35,6 +35,10 @@ Review lima latihan dan materi contoh tersedia di [English review](learning/coac
 
 Tugas pedagogis berikut: mini-lesson verb forms/agreement; cadangan pedagogis: worked example TFNG (contoh coach buatan AI). Paket Listening resmi baru belum siap dan perlu preflight sebelum ditugaskan. Tidak ada attempt baru pada review ini. Skor lama dipertahankan; belum ada band IELTS terkini.
 
+## Latihan tambahan terbaru — 13 Oktober 2026
+
+Present-simple set 01 buatan coach: 11/12 setelah materi/contoh/guided practice, tanpa band atau klaim mastery. Bukti: evidence/practice/2026-10-13-present-simple-set01.json. Koreksi satu kalimat Q5 (the guide helps visitors); berikutnya materi negatives do not/does not → contoh → guided → independent. Satu set ini bukan baseline IELTS; paket Listening resmi baru masih perlu preflight.
+
 ## Cara memperbarui
 
 Coach memperbarui kesiapan setelah ada bukti. Status sesi berasal dari catatan `sessions/`; gunakan alat sesi untuk membuat, melanjutkan dan menutup attempt, lalu baca ulang record serta ringkasannya. “Done” berulang memakai ID semula. Simpan hasil lokal dahulu; ubah klaim sinkronisasi hanya setelah status Git dan push benar-benar diperiksa.

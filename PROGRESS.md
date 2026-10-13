@@ -60,6 +60,10 @@ Lima latihan singkat empat skill tersimpan: Packham 3/8 (Q5 ambigu; putaran belu
 
 [Review English dan materi contoh](learning/coaching-notes/2026-10-13-english-review.md) mencatat kekuatan penyampaian ide/contoh serta dua prioritas pengajaran: verb forms/agreement, dan frasa natural/pengembangan alasan. Tata meminta materi, contoh dan strategi sebelum latihan; masukan mentah tersimpan pada feedback/2026-10-13-learner-teach-before-test.json. Coach mengikuti penjelasan → worked example → latihan terbimbing → soal mandiri baru, tanpa mengubah target atau penilaian awal. Contoh pengajaran coach berlabel buatan AI, bukan pengukuran resmi.
 
+## 13 Oktober 2026 — latihan grammar tambahan, bukan IELTS
+
+Present-simple set 01: **11/12**, respons awal + pemeriksaan setiap kalimat tersimpan di [evidence latihan](evidence/practice/2026-10-13-present-simple-set01.json). Materi buatan coach AI, sesudah penjelasan, contoh dan latihan terbimbing; bukan skor IELTS/CEFR atau bukti penguasaan yang bertahan. Q5 help → helps karena the guide tunggal. Perbaikan berikut: tulis ulang Q5; selanjutnya ajarkan do not/does not dengan contoh sebelum latihan. Hasil IELTS awal tidak diubah.
+
 <!-- managed-sessions:start -->
 ## Sesi baru — ringkasan dari sessions/
 

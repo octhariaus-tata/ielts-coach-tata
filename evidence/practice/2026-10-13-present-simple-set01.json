@@ -1,0 +1,123 @@
+{
+  "id": "2026-10-13-present-simple-set01",
+  "kind": "supplemental_grammar_drill",
+  "source_label": "coach_created_not_official_IELTS",
+  "lesson": "learning/coaching-notes/2026-10-13-present-simple-set01.md",
+  "recorded_at": "2026-10-13T16:32:49.214626+07:00",
+  "phase": "reviewed",
+  "response": {
+    "text": "1. works\n2. visit\n3. sells\n4. use\n5. help\n6. like\n7. need\n8. buys\n9. stores\n10. support\n11. speak\n12. enjoys",
+    "purpose": "initial_practice",
+    "provenance": {
+      "method": "learner_chat_text",
+      "reference": "Tata first numbered 1–12 answers in this chat, 13 October 2026. Complete submitted set; no official test attempt involved."
+    }
+  },
+  "conditions": {
+    "actual_minutes": null,
+    "instructional_context": "After material, worked example and guided practice. No per-item assistance during this set reported."
+  },
+  "limits": "Supplemental practice accuracy only; no IELTS/CEFR band, baseline or mastery/transfer inference.",
+  "result": {
+    "score": {
+      "correct": 11,
+      "total": 12
+    },
+    "verification_method": "Coach checks each saved answer against the present-simple rule and original sentence; not an official IELTS key.",
+    "answers": [
+      {
+        "number": 1,
+        "given": "works",
+        "expected": "works",
+        "correct": true,
+        "proof": "Subject my sister: third-person singular takes -s for this ordinary verb."
+      },
+      {
+        "number": 2,
+        "given": "visit",
+        "expected": "visit",
+        "correct": true,
+        "proof": "Subject tourists: I/you/we/they or plural noun takes base verb."
+      },
+      {
+        "number": 3,
+        "given": "sells",
+        "expected": "sells",
+        "correct": true,
+        "proof": "Subject this shop: third-person singular takes -s for this ordinary verb."
+      },
+      {
+        "number": 4,
+        "given": "use",
+        "expected": "use",
+        "correct": true,
+        "proof": "Subject we: I/you/we/they or plural noun takes base verb."
+      },
+      {
+        "number": 5,
+        "given": "help",
+        "expected": "helps",
+        "correct": false,
+        "proof": "Subject the guide: third-person singular takes -s for this ordinary verb."
+      },
+      {
+        "number": 6,
+        "given": "like",
+        "expected": "like",
+        "correct": true,
+        "proof": "Subject I: I/you/we/they or plural noun takes base verb."
+      },
+      {
+        "number": 7,
+        "given": "need",
+        "expected": "need",
+        "correct": true,
+        "proof": "Subject local businesses: I/you/we/they or plural noun takes base verb."
+      },
+      {
+        "number": 8,
+        "given": "buys",
+        "expected": "buys",
+        "correct": true,
+        "proof": "Subject she: third-person singular takes -s for this ordinary verb."
+      },
+      {
+        "number": 9,
+        "given": "stores",
+        "expected": "stores",
+        "correct": true,
+        "proof": "Subject my phone: third-person singular takes -s for this ordinary verb."
+      },
+      {
+        "number": 10,
+        "given": "support",
+        "expected": "support",
+        "correct": true,
+        "proof": "Subject they: I/you/we/they or plural noun takes base verb."
+      },
+      {
+        "number": 11,
+        "given": "speak",
+        "expected": "speak",
+        "correct": true,
+        "proof": "Subject you: I/you/we/they or plural noun takes base verb."
+      },
+      {
+        "number": 12,
+        "given": "enjoys",
+        "expected": "enjoys",
+        "correct": true,
+        "proof": "Subject a visitor: third-person singular takes -s for this ordinary verb."
+      }
+    ],
+    "feedback": {
+      "strength": "Eleven forms match their subjects, including both singular and plural/I/you/we/they examples.",
+      "patterns": [
+        "Q5 the guide is singular, so help needs -s: helps. One error in this instructional set, not a persistent weakness."
+      ],
+      "action": "Rewrite Q5 as The guide helps visitors. Identify the guide as singular.",
+      "next_task": "After correcting Q5, explain present-simple negatives do not/does not with a worked example before guided and independent practice."
+    },
+    "band": null
+  }
+}
