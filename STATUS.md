@@ -36,9 +36,8 @@ Jangan menandai laptop baru siap berdasarkan keberhasilan komputer ini. Bila off
 <!-- managed-sessions:start -->
 ## Keadaan sesi — dibaca dari sessions/
 
-- Sesi belajar aktif: 2026-10-13-speaking-683f3d42db99.
-- Sesi belajar selesai: 3.
+- Sesi belajar aktif: tidak ada.
+- Sesi belajar selesai: 4.
 - Tes sistem tidak dihitung sebagai kemajuan Tata.
-- 2026-10-13-speaking-683f3d42db99: awaiting_review (1 checkpoint tersimpan).
-- Tugas berikutnya: Speaking An Important Possession, Part 2; cadangan Hometown and Accommodation, Part 1. Rekaman hanya dinilai bila audio asli tersedia dan diperiksa; transcript-only mendapat feedback terbatas tanpa pronunciation/band.
+- Tugas berikutnya: Writing International Tourism Task 2 micro-task: posisi + satu paragraf; cadangan Further Education Task 1 introduction + overview. Feedback aspek yang terlihat tanpa band task.
 <!-- managed-sessions:end -->

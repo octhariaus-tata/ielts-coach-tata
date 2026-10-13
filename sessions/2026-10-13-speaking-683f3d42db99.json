@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "id": "2026-10-13-speaking-683f3d42db99",
-  "status": "in_progress",
-  "phase": "awaiting_review",
+  "status": "completed",
+  "phase": "completed",
   "started_at": "2026-10-13T15:42:37+07:00",
   "skill": "Speaking",
   "task_id": "speaking-important-object-part2",
@@ -103,5 +103,37 @@
       }
     }
   ],
-  "result": null
+  "result": {
+    "mode": "ai_estimate",
+    "scope": "sample",
+    "input_type": "transcript",
+    "speaking_parts": [
+      2
+    ],
+    "response_revision_id": "ea4a75326cb54c6dbbde3145fa7b82e6",
+    "verification_method": "Feedback AI dari teks respons yang dikirim Tata; dibandingkan cue card resmi Part 2. Tidak ada audio yang diterima/diperiksa.",
+    "criteria": {
+      "fluency_coherence": "Isi mencakup seluruh cue: phone, pemberian boyfriend, sekitar satu tahun, penggunaan harian dan kepentingan personal. Urutan dapat diikuti. Kecepatan, jeda dan fluency lisan belum dapat dinilai. Makna monetary value versus personal importance perlu diperjelas.",
+      "lexical_resource": "Kosakata banking, groceries, chatting dan memories relevan. Collocation/word form belum natural pada buy it to me, picture who has memories, money for buy, connectivity.",
+      "grammatical_range_accuracy": "Meaning umumnya dapat dipahami. Kesalahan terlihat pada past-time verb: boyfriend that buy it to me, I have this phone maybe a year ago; pilih bought it for me dan have had it for about a year. Perlu to buy, photos that hold memories dan contacts untuk makna yang dimaksud.",
+      "pronunciation": null
+    },
+    "uncertainty": "Sampel satu Part 2 dalam teks saja; asal transkripsi dan durasi belum diketahui. Tidak menilai pronunciation atau fluency lisan, tidak memberi band Speaking. Koreksi mengacu bentuk teks yang tersedia, tanpa mengasumsikan persis bunyi audio.",
+    "evidence": [],
+    "conditions": {
+      "actual_minutes": null,
+      "key_seen_before": null
+    },
+    "feedback": {
+      "strength": "Respons menjawab seluruh poin kartu dan memberi contoh konkret kegunaan phone: banking, groceries, chatting, photos dan contacts.",
+      "patterns": [
+        "Bentuk kata kerja untuk pengalaman lampau/durasi belum tepat: bought it for me; I have had this phone for about a year.",
+        "Pilihan frasa perlu lebih natural dan jelas: photos that hold memories; money to buy things; kontak personal. Bedakan monetary value dari sentimental/personal value tanpa mengasumsikan harga phone."
+      ],
+      "action": "Ulangi secara lisan bagian asal phone dan lama kepemilikan dalam 2–3 kalimat, gunakan bought it for me dan have had it for about a year. Bila dikirim, checkpoint sebagai revisi review terpisah.",
+      "next_task": "Writing International Tourism Task 2 micro-task: posisi + satu paragraf; cadangan Further Education Task 1 introduction + overview. Feedback aspek yang terlihat tanpa band task."
+    }
+  },
+  "graded_response_revision_id": "ea4a75326cb54c6dbbde3145fa7b82e6",
+  "completed_at": "2026-10-13T15:47:48+07:00"
 }
