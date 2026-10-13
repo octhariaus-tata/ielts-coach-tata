@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "id": "2026-10-13-listening-616b14552b51",
-  "status": "in_progress",
-  "phase": "awaiting_review",
+  "status": "completed",
+  "phase": "completed",
   "started_at": "2026-10-13T15:21:40+07:00",
   "skill": "Listening",
   "task_id": "listening-social-contact-short-answer",
@@ -141,5 +141,78 @@
       }
     }
   ],
-  "result": null
+  "result": {
+    "mode": "answers_key",
+    "scope": "snippet",
+    "response_revision_id": "5261444603d143ea820e4d5ffbca9f2d",
+    "score": {
+      "correct": 4,
+      "total": 6
+    },
+    "key_task_id": "listening-social-contact-short-answer",
+    "key_version_verified": true,
+    "key_url": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf#page=13",
+    "verification_method": "Jawaban awal chat dibandingkan dengan key dan transcript resmi PDF 2023, p12–13; references.py memverifikasi checksum/versi/nomor pada 13 Oktober 2026. Urutan dalam tiap pasangan bebas sesuai key.",
+    "answers": [
+      {
+        "number": "11",
+        "given": "languange",
+        "expected": "language",
+        "correct": false,
+        "proof": "Transcript p12 states language as one reason social contacts are difficult; key p13 language. Submitted languange adds n."
+      },
+      {
+        "number": "12",
+        "given": "custome",
+        "expected": "customs",
+        "correct": false,
+        "proof": "Transcript p12 states customs may be different; key p13 customs. Submitted custome differs in final letter; do not infer a hearing error from spelling alone."
+      },
+      {
+        "number": "13",
+        "given": "music groups",
+        "expected": "music groups",
+        "correct": true,
+        "proof": "Transcript p12 mentions joining music groups; key p13 music (groups), groups optional; Q13/14 either order."
+      },
+      {
+        "number": "14",
+        "given": "local history groups",
+        "expected": "local history groups",
+        "correct": true,
+        "proof": "Transcript p12 mentions a local history group; key p13 local history (groups), groups optional; Q13/14 either order."
+      },
+      {
+        "number": "15",
+        "given": "town hall",
+        "expected": "town hall",
+        "correct": true,
+        "proof": "Transcript p12 gives town hall as a place for information; key p13 accepts (the) town hall; Q15/16 either order. HTML space entity in raw message treated as formatting."
+      },
+      {
+        "number": "16",
+        "given": "public library",
+        "expected": "public library",
+        "correct": true,
+        "proof": "Transcript p12 gives public library as a place for information; key p13 accepts (the) (public) library/libraries; Q15/16 either order."
+      }
+    ],
+    "evidence": [],
+    "conditions": {
+      "actual_minutes": null,
+      "audio_plays": 3,
+      "key_seen_before": null
+    },
+    "feedback": {
+      "strength": "Empat jawaban isi lengkap benar: music groups, local history groups, town hall, public library.",
+      "patterns": [
+        "Ejaan jawaban 11–12 belum tepat: languange → language; custome → customs. Ini observasi attempt ini, belum kelemahan menetap atau bukti salah mendengar."
+      ],
+      "action": "Review 1 menit: tulis language dan customs masing-masing sekali tanpa melihat, lalu cek ejaan dan akhiran -s. Simpan sebagai review setelah key terekspos, bukan skor baru.",
+      "next_task": "Reading Marie Curie, True/False/Not Given Q1–3; cadangan Reading Development of Rockets Q7–10 sesuai rotasi."
+    },
+    "uncertainty": "Audio diputar 3 kali menurut laporan Tata; latihan dengan pengulangan, bukan pengukuran sekali putar. Paparan key sebelumnya dan durasi aktual belum diketahui; jangan simpulkan kenaikan band."
+  },
+  "graded_response_revision_id": "5261444603d143ea820e4d5ffbca9f2d",
+  "completed_at": "2026-10-13T15:31:34+07:00"
 }
