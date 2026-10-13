@@ -64,6 +64,9 @@ Lima latihan singkat empat skill tersimpan: Packham 3/8 (Q5 ambigu; putaran belu
 
 Present-simple set 01: **11/12**, respons awal + pemeriksaan setiap kalimat tersimpan di [evidence latihan](evidence/practice/2026-10-13-present-simple-set01.json). Materi buatan coach AI, sesudah penjelasan, contoh dan latihan terbimbing; bukan skor IELTS/CEFR atau bukti penguasaan yang bertahan. Q5 help → helps karena the guide tunggal. Perbaikan berikut: tulis ulang Q5; selanjutnya ajarkan do not/does not dengan contoh sebelum latihan. Hasil IELTS awal tidak diubah.
 
+
+Revisi Q5 diterima sesudah feedback: The guide helps visitors. Bukti review terpisah: evidence/practice/2026-10-13-present-simple-set01-review.json. Skor awal tetap 11/12; bukan pengukuran baru.
+
 <!-- managed-sessions:start -->
 ## Sesi baru — ringkasan dari sessions/
 

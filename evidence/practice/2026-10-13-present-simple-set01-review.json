@@ -1,0 +1,17 @@
+{
+  "id": "2026-10-13-present-simple-set01-review",
+  "kind": "supplemental_grammar_drill",
+  "purpose": "review",
+  "source_label": "coach_created_not_official_IELTS",
+  "text": "The guide helps visitors",
+  "provenance": {
+    "method": "learner_chat_text",
+    "reference": "Tata correction of Q5 in this chat, 13 October 2026, after coach explained the guide is singular and supplied helps."
+  },
+  "conditions": {
+    "assisted": true
+  },
+  "feedback": "Correct complete sentence; help + s matches third-person singular the guide.",
+  "original_response": "evidence/practice/2026-10-13-present-simple-set01.json",
+  "limits": "Review after feedback, not a new score or evidence of independent mastery. Initial 11/12 unchanged."
+}

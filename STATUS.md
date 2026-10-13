@@ -37,7 +37,7 @@ Tugas pedagogis berikut: mini-lesson verb forms/agreement; cadangan pedagogis: w
 
 ## Latihan tambahan terbaru — 13 Oktober 2026
 
-Present-simple set 01 buatan coach: 11/12 setelah materi/contoh/guided practice, tanpa band atau klaim mastery. Bukti: evidence/practice/2026-10-13-present-simple-set01.json. Koreksi satu kalimat Q5 (the guide helps visitors); berikutnya materi negatives do not/does not → contoh → guided → independent. Satu set ini bukan baseline IELTS; paket Listening resmi baru masih perlu preflight.
+Present-simple set 01 buatan coach: 11/12 setelah materi/contoh/guided practice, tanpa band atau klaim mastery. Bukti: evidence/practice/2026-10-13-present-simple-set01.json. Koreksi Q5 sudah diterima: The guide helps visitors, tersimpan sebagai review tanpa mengganti 11/12. Materi berikutnya siap di learning/coaching-notes/2026-10-13-present-simple-negatives-lesson.md: do not/does not → worked example → guided → independent. Satu set ini bukan baseline IELTS; paket Listening resmi baru masih perlu preflight.
 
 ## Cara memperbarui
 
