@@ -1,0 +1,27 @@
+{
+  "id": "2026-10-13-present-simple-questions-set01",
+  "kind": "supplemental_grammar_drill",
+  "source_label": "coach_created_not_official_IELTS",
+  "lesson": "learning/coaching-notes/2026-10-13-present-simple-questions-set01.md",
+  "phase": "working",
+  "response_revisions": [
+    {
+      "revision_id": "2026-10-13-questions-initial-partial-01",
+      "text": "1. Does your brother cook dinner ?\n2. Do children play outside ?",
+      "purpose": "initial_practice_partial",
+      "available_numbers": [
+        1,
+        2
+      ],
+      "provenance": {
+        "method": "learner_chat_text",
+        "reference": "Tata sent questions 1–2 then clarified eh belum selesai / kepencet / sorry / aku lanjut dulu ya in this chat on 13 October 2026. Preserve partial answers, no grading yet."
+      }
+    }
+  ],
+  "conditions": {
+    "actual_minutes": null,
+    "instructional_context": "After material, worked example and guided practice."
+  },
+  "limits": "Coach-created practice only; no IELTS/CEFR band or ability inference."
+}
