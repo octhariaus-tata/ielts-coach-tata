@@ -34,7 +34,8 @@ Jangan menandai laptop baru siap berdasarkan keberhasilan komputer ini. Bila off
 <!-- managed-sessions:start -->
 ## Keadaan sesi — dibaca dari sessions/
 
-- Sesi belajar aktif: tidak ada.
+- Sesi belajar aktif: 2026-10-13-listening-b009564c17b7.
 - Sesi belajar selesai: 0.
 - Tes sistem tidak dihitung sebagai kemajuan Tata.
+- 2026-10-13-listening-b009564c17b7: working (0 checkpoint tersimpan).
 <!-- managed-sessions:end -->

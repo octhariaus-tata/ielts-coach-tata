@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-listening-b009564c17b7",
+  "status": "in_progress",
+  "phase": "working",
+  "started_at": "2026-10-13T07:42:52+07:00",
+  "skill": "Listening",
+  "task_id": "listening-packham-form",
+  "kind": "practice",
+  "available_minutes": 20,
+  "material": {
+    "id": "listening-packham-form",
+    "skill": "Listening",
+    "role": "primary",
+    "provider": "IELTS.org (official IELTS Partners sample)",
+    "source_label": "official",
+    "title": "Packham’s Shipping Agency — customer quotation form",
+    "question_type": "form_completion",
+    "source_version": "IELTS Sample Tasks 2023; isolated prompt excerpt",
+    "source_pages": [
+      3
+    ],
+    "question_numbers": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "urls": {
+      "task": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf#page=3",
+      "prompt": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf#page=3",
+      "source": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf",
+      "index": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+      "key": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf#page=7",
+      "transcript": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf#page=4",
+      "audio": "https://ielts.org/cdn/Sample-tests/Listening/ielts-listening-sample-task-1-form-completion.mp3",
+      "reference": null
+    },
+    "local": {
+      "prompt": "materials/listening-packham-form.pdf",
+      "audio": "materials/listening-packham-form.mp3",
+      "prompt_sha256": "d25c8a054dcb4b77335ae55c2e6854559c0f2f5e73a52fc0cd68b9e4c9b011c1"
+    },
+    "verification": {
+      "date": "2026-10-12",
+      "timezone": "Asia/Jakarta",
+      "method": "Official PDF fetched HTTP 200; content and question/page ranges inspected; prompt excerpt reopened and rendered for QA",
+      "source_pdf": "verified",
+      "prompt_file": "verified",
+      "key": "verified",
+      "transcript": "verified",
+      "audio": "verified",
+      "audio_playback": "not_checked",
+      "browser_attempt_results": "not_checked",
+      "auto_score": "not_applicable",
+      "recording_capture": "not_applicable",
+      "audio_verification": "HTTP 200 audio/mpeg; downloaded ID3+MP3 parsed by afinfo without playback",
+      "audio_duration_seconds": 154.566531,
+      "local_correction_cache": "verified"
+    },
+    "key_pages": [
+      7
+    ],
+    "reference_pages": null,
+    "freshness": {
+      "status": "no_attempt_in_local_history",
+      "basis": "PROFILE.md, PROGRESS.md and AUDIT.md read on 2026-10-12; confirm learner has not seen key at session start",
+      "eligible_for_new_attempt": true
+    },
+    "delivery": "Give local prompt-only file; do not give bundled source, key or sample responses before done. Resolve relative local file path against the project root.",
+    "result_collection": {
+      "primary": "At initial attempt, learner answers directly in chat numbered 1–8, or writes on paper and sends a photo/screenshot. Never ask to retype all answers after done.",
+      "fallback": "screenshot of handwritten/typed numbered answers",
+      "current_browser_access": "not_checked"
+    },
+    "difficulty": {
+      "status": "not_estimated",
+      "note": "No official band or difficulty assigned to this extract."
+    },
+    "transcript_pages": [
+      4,
+      5,
+      6
+    ],
+    "suggested_session": {
+      "minutes": 20,
+      "type": "new official short exercise/pilot",
+      "coach_timing_estimate": "2 minutes read instruction, 1 minute scan form, about 2 minutes 35 seconds single play, 2 minutes finish/capture, 9 minutes feedback, remainder next action",
+      "score_policy": "Report /8 only; no IELTS band. Count audio play from learner report; coach never starts it."
+    },
+    "fallback_id": "listening-social-contact-short-answer",
+    "coach_reference": {
+      "schema_version": 1,
+      "path": "coach_refs/listening-packham-form.json",
+      "sha256": "e4709b55d857937f5a5990cf96b41e6578f44d802d00cc3e21aeaa9873cb6a52",
+      "visibility": "coach_only_after_done",
+      "verified_date": "2026-10-12",
+      "content": "exact key and transcript/passage excerpts; never attach in learner instructions",
+      "status": "verified"
+    }
+  },
+  "conditions": {},
+  "evidence": [],
+  "response_revisions": [],
+  "result": null
+}
