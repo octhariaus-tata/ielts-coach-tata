@@ -139,6 +139,19 @@
         "purpose": "attempt",
         "phase": "awaiting_review"
       }
+    },
+    {
+      "revision_id": "17fed179b69e4dfbae4a5129d2e6d91b",
+      "created_at": "2026-10-13T15:33:47+07:00",
+      "payload": {
+        "text": "1. language\n2. customs\n3. music groups\n4. local history groups\n5. town hall&#x20;\n6. public library",
+        "evidence": [],
+        "purpose": "review",
+        "provenance": {
+          "method": "learner_chat",
+          "reference": "Tata mengirim ulang enam jawaban Social Contact setelah key/feedback tersedia, 13 Oktober 2026. Penomoran 1–6 pada pesan ini merujuk urutan Q11–16 Social Contact, bukan jawaban Reading Marie Curie. Respons awal dan skor 4/6 dipertahankan."
+        }
+      }
     }
   ],
   "result": {
