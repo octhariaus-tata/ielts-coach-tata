@@ -2,7 +2,7 @@
   "schema_version": 1,
   "id": "2026-10-13-listening-616b14552b51",
   "status": "in_progress",
-  "phase": "working",
+  "phase": "awaiting_review",
   "started_at": "2026-10-13T15:21:40+07:00",
   "skill": "Listening",
   "task_id": "listening-social-contact-short-answer",
@@ -99,8 +99,32 @@
       "status": "verified"
     }
   },
-  "conditions": {},
+  "conditions": {
+    "actual_minutes": null,
+    "audio_plays": null,
+    "key_seen_before": null
+  },
   "evidence": [],
-  "response_revisions": [],
+  "response_revisions": [
+    {
+      "revision_id": "5261444603d143ea820e4d5ffbca9f2d",
+      "created_at": "2026-10-13T15:29:16+07:00",
+      "payload": {
+        "text": "11. languange\n12. custome\n13. music groups\n14. local history groups\n15. town hall&#x20;\n16. public library",
+        "evidence": [],
+        "conditions": {
+          "actual_minutes": null,
+          "audio_plays": null,
+          "key_seen_before": null
+        },
+        "provenance": {
+          "method": "learner_chat",
+          "reference": "Jawaban awal Tata 11–16 di chat ini, 13 Oktober 2026; teks mentah termasuk entity dipertahankan."
+        },
+        "purpose": "attempt",
+        "phase": "awaiting_review"
+      }
+    }
+  ],
   "result": null
 }
