@@ -37,8 +37,24 @@ def path(root, directory, name):
 
 
 def reference(root, value):
-    session.validate_evidence(root, [value])
+    validate_reference(root, value)
     return hashlib.sha256((Path(root) / value).read_bytes()).hexdigest()
+
+
+def validate_reference(root, value, check_files=True):
+    if not isinstance(value, str):
+        raise ValueError('Reference must be a relative path.')
+    relative = Path(value)
+    if relative.is_absolute() or '..' in relative.parts or not relative.parts or relative.parts[0] not in ('materials', 'evidence', 'learning', 'sessions', 'feedback'):
+        raise ValueError('Reference must be a project learning/material/evidence path.')
+    target = Path(root) / relative
+    for parent in (target,) + tuple(target.parents):
+        if parent == Path(root):
+            break
+        if parent.is_symlink():
+            raise ValueError('Reference cannot use a symlink.')
+    if check_files and not target.is_file():
+        raise ValueError('Reference file unavailable: ' + value)
 
 
 def require_text(value, label):
@@ -108,7 +124,7 @@ def validate_packet(root, packet):
         if not re.fullmatch(r'[a-f0-9]{64}', str(expected)):
             raise ValueError('Invalid source checksum.')
         # Changed sources make a packet stale, not invalid history.
-        session.validate_evidence(root, [name], check_files=False)
+        validate_reference(root, name, check_files=False)
     task_id = packet.get('official_task_id')
     if packet['source_label'] == 'official' and not task_id:
         raise ValueError('Official packets must reference a verified catalog task.')
@@ -121,6 +137,9 @@ def validate_packet(root, packet):
             raise ValueError('Upcoming official answers remain in correction caches, not Teacher packets.')
         if task['local']['prompt'] not in basis['files']:
             raise ValueError('Pin the exact official learner prompt.')
+        numbers = task.get('question_numbers', [])
+        if numbers and set(i['id'] for i in packet['independent']) != set(numbers):
+            raise ValueError('Official independent item IDs must match the exact catalog question range.')
     # Structural projection protects private sections; coach reviews semantic leaks.
     learner = {k: packet[k] for k in ('theory', 'strategy', 'worked_example', 'guided', 'independent')}
     serialized = json.dumps(learner).casefold()
@@ -161,7 +180,7 @@ def store_packet(root, packet):
             if json.loads(target.read_text()) != packet:
                 raise ValueError('Packet IDs are immutable; use a new version/ID.')
             return {'saved': True, 'duplicate': True, 'packet_id': packet['id']}
-        available = [p for p in packets(root) if p['id'] not in {r['packet_id'] for r in load(root)}]
+        available = [p for p in packets(root) if p['id'] not in {r['packet_id'] for r in load(root)} | retired(root)]
         if any(p['role'] == packet['role'] for p in available):
             raise ValueError('Only one prepared primary and one backup; consume or explicitly retire the old packet.')
         session.json_write(target, packet)
@@ -228,7 +247,7 @@ def validate(root, record):
         if attempt['task_id'] != packet.get('official_task_id'):
             raise ValueError('Linked attempt does not match official packet task.')
     for name in record.get('legacy_references', []):
-        session.validate_evidence(root, [name])
+        validate_reference(root, name)
     return record
 
 
@@ -245,6 +264,15 @@ def load(root):
 
 def find(root, lid):
     return next((r for r in load(root) if r['id'] == identifier(lid)), None) or _missing()
+
+
+def save(root, record):
+    """Validate transitions before atomic writes, then read durable bytes back."""
+    validate(root, record)
+    target = path(root, 'lessons', record['id'])
+    session.json_write(target, record)
+    if json.loads(target.read_text()) != record:
+        raise OSError('Lesson readback mismatch.')
 
 
 def _missing():
@@ -284,11 +312,15 @@ def summary(root, record):
     packet = packet_for(root, record)
     displays = [p for p in record['presentations'] if p['stage'] == record['stage']]
     content = displays[-1]['content'] if displays else stage_content(packet, record['stage'])
+    action = next_action(record)
+    linked = record.get('official_attempt_id')
+    if linked and record['stage'] == 'independent' and record['status'] != 'paused' and session.find_session(root, linked)['status'] == 'completed':
+        action = 'Resume lesson review using the saved response/result of completed official attempt ' + linked + '; do not replay or recreate it.'
     return {'id': record['id'], 'packet_id': record['packet_id'], 'main_skill': record['main_skill'],
             'objective': record['objective'], 'stage': record['stage'], 'status': record['status'],
             'available_minutes': record['available_minutes'], 'official_attempt_id': record.get('official_attempt_id'),
             'displayed_prompt': copy.deepcopy(content), 'counts': counts(record, packet),
-            'responses': copy.deepcopy(record['responses']), 'next_action': next_action(record)}
+            'responses': copy.deepcopy(record['responses']), 'next_action': action}
 
 
 def next_action(record):
@@ -304,7 +336,8 @@ def next_action(record):
 
 
 def current(root, official=None):
-    active = [r for r in load(root) if r['kind'] != 'system_test' and r['status'] != 'completed']
+    records = load(root)
+    active = [r for r in records if r['kind'] != 'system_test' and r['status'] != 'completed']
     official = official if official is not None else session.load_sessions(root)
     attempts = [r for r in official if r['kind'] != 'system_test' and r['status'] == 'in_progress']
     conflict = len(active) > 1 or len(attempts) > 1 or bool(active and attempts and active[0].get('official_attempt_id') != attempts[0]['id'])
@@ -313,13 +346,50 @@ def current(root, official=None):
                 'attempt_ids': [r['id'] for r in attempts], 'next_action': 'Reconcile active work without discarding any record.'}
     lesson = summary(root, active[0]) if active else None
     action = 'Continue official attempt ' + attempts[0]['id'] if attempts else lesson['next_action'] if lesson else None
+    if not action and (records or packets(root)):
+        import adaptation
+        ready = prepared(root, adaptation.analyze(root)['preferences']['effective'])
+        primary = next((p for p in ready if p['role'] == 'primary'), None)
+        if primary:
+            action = ('Refresh stale Teacher packet: ' if primary['stale_reasons'] else 'Start theory from prepared Teacher packet: ') + primary['id']
+        else:
+            action = 'Prepare an IELTS-led Teacher packet and one backup.'
     return {'current_lesson': lesson, 'next_action': action}
 
 
 def prepared(root, preferences):
-    used = {r['packet_id'] for r in load(root)}
+    used = {r['packet_id'] for r in load(root)} | retired(root)
     return [{'id': p['id'], 'role': p['role'], 'main_skill': p['main_skill'], 'objective': p['objective'],
              'stale_reasons': stale_reasons(root, p, preferences)} for p in packets(root) if p['id'] not in used]
+
+
+def retired(root):
+    ids = set()
+    for file in (Path(root) / 'learning' / 'packet-retirements').glob('*.json'):
+        value = json.loads(file.read_text())
+        identifier(value.get('packet_id'))
+        session.validate_provenance(value.get('provenance'))
+        require_text(value.get('reason'), 'retirement reason')
+        if path(root, 'packet-retirements', value['packet_id']) != file:
+            raise ValueError('Packet retirement filename mismatch.')
+        ids.add(value['packet_id'])
+    return ids
+
+
+def retire(root, packet_id, payload):
+    with session.mutation_lock(root):
+        if not any(p['id'] == packet_id for p in packets(root)):
+            raise ValueError('Packet does not exist.')
+        if any(r['packet_id'] == packet_id and r['status'] != 'completed' for r in load(root)):
+            raise ValueError('Preserve active lesson packet; retire prepared packets only.')
+        session.validate_provenance(payload.get('provenance'))
+        require_text(payload.get('reason'), 'reason')
+        target = path(root, 'packet-retirements', packet_id)
+        value = dict(packet_id=packet_id, reason=payload['reason'], provenance=payload['provenance'])
+        if target.exists() and json.loads(target.read_text()) != value:
+            raise ValueError('Preserve retirement history.')
+        session.json_write(target, value)
+        return {'saved': True, 'packet_id': packet_id, 'retired': True}
 
 
 def start(root, preferences, packet_id=None, minutes=None, migration=None):
@@ -342,6 +412,8 @@ def start(root, preferences, packet_id=None, minutes=None, migration=None):
         if type(budget) is not int or not 1 <= budget <= 180:
             raise ValueError('New lesson budget must be 1–180 minutes.')
         stamp = session.now()
+        import adaptation
+        preference_sources = adaptation.analyze(root)['preferences']['source_event_ids']
         lid = stamp[:10] + '-lesson-' + uuid.uuid4().hex[:12]
         record = {'schema_version': 1, 'id': lid, 'kind': 'learner', 'packet_id': packet['id'],
                   'packet_sha256': digest(packet), 'main_skill': packet['main_skill'],
@@ -349,19 +421,22 @@ def start(root, preferences, packet_id=None, minutes=None, migration=None):
                   'available_minutes': budget, 'started_at': stamp, 'stage': 'theory', 'status': 'active',
                   'responses': [], 'reviews': [], 'presentations': [], 'transitions': [],
                   'preferences': copy.deepcopy(preferences), 'official_attempt_id': None,
+                  'preference_source_event_ids': copy.deepcopy(preference_sources),
                   'provenance': {'method': 'coach_lesson_prepare', 'reference': 'Teacher packet ' + packet['id']}}
         if migration:
             session.validate_provenance(migration.get('provenance'))
             record.update(legacy_resume=True, available_minutes=None, stage=migration['stage'],
                           status='awaiting_response', provenance=migration['provenance'],
                           legacy_references=migration['references'])
-            for stage in STAGES[:STAGES.index(record['stage']) + 1]:
-                ids = [i['id'] for i in packet.get(stage, [])] if stage in ('guided', 'independent') else []
-                record['presentations'].append({'stage': stage, 'item_ids': ids,
-                                               'content': stage_content(packet, stage, ids), 'at': stamp,
-                                               'provenance': migration['provenance']})
+            # Reference earlier teaching; do not invent historical displays of a
+            # newly prepared packet. Only the actual unanswered prompt is pinned.
+            stage = record['stage']
+            ids = [i['id'] for i in packet.get(stage, [])] if stage in ('guided', 'independent') else []
+            record['presentations'].append({'stage': stage, 'item_ids': ids,
+                                           'content': stage_content(packet, stage, ids), 'at': stamp,
+                                           'provenance': migration['provenance']})
         validate(root, record)
-        session.json_write(path(root, 'lessons', lid), record)
+        save(root, record)
         session._rebuild(root)
         return {'created': True, 'resumed': False, 'lesson': summary(root, find(root, lid))}
 
@@ -391,7 +466,11 @@ def checkpoint(root, lid, payload):
         record = find(root, lid)
         packet = packet_for(root, record)
         validate_response(root, packet, payload)
-        existing = next((r for r in record['responses'] if r['payload'] == payload), None)
+        stage = 'review' if payload.get('purpose') == 'review' else record['stage']
+        context = len(record['presentations'])
+        existing = next((r for r in record['responses'] if r['payload'] == payload and
+                         (r['stage'] == stage and r.get('presentation_context') == context or
+                          record['stage'] in ('review', 'completed') and payload.get('purpose', 'attempt') == 'attempt')), None)
         if existing:
             session._rebuild(root)
             return {'saved': True, 'duplicate': True, 'response_id': existing['id'], 'lesson': summary(root, record)}
@@ -399,15 +478,24 @@ def checkpoint(root, lid, payload):
             raise ValueError('Deliver the material and example before collecting exercises.')
         if record['stage'] in ('review', 'completed') and payload.get('purpose') != 'review':
             raise ValueError('Post-feedback responses are separate review revisions.')
-        stage = 'review' if payload.get('purpose') == 'review' else record['stage']
+        reviewed_responses = [r for r in record['responses'] if r['stage'] == stage and
+                              any(v['payload']['response_id'] == r['id'] for v in record['reviews'])]
+        reviewed_items = {i for r in reviewed_responses for i in r['payload'].get('answers', {})}
+        if payload.get('purpose', 'attempt') == 'attempt' and (
+                set(payload.get('answers', {})) & reviewed_items or
+                not payload.get('answers') and any(r.get('presentation_context') == context for r in reviewed_responses)):
+            raise ValueError('Preserve reviewed item answers; post-feedback changes need purpose review. New pool items remain available.')
+        if stage == 'review' and not record['reviews']:
+            raise ValueError('Review revisions require previous feedback.')
         displayed = {i for p in record['presentations'] if p['stage'] == stage for i in p['item_ids']}
         if stage != 'review' and set(payload.get('answers', {})) - displayed:
             raise ValueError('Cannot submit items that were not presented.')
         rid = uuid.uuid4().hex
-        record['responses'].append({'id': rid, 'at': session.now(), 'stage': stage, 'payload': copy.deepcopy(payload)})
+        record['responses'].append({'id': rid, 'at': session.now(), 'stage': stage,
+                                    'presentation_context': context, 'payload': copy.deepcopy(payload)})
         if record['status'] != 'completed' and stage != 'review':
             record['status'] = {'partial': 'awaiting_response', 'complete': 'awaiting_review', 'paused': 'paused'}[payload['submission']]
-        session.json_write(path(root, 'lessons', lid), record)
+        save(root, record)
         session._rebuild(root)
         return {'saved': True, 'duplicate': False, 'response_id': rid, 'lesson': summary(root, find(root, lid))}
 
@@ -419,6 +507,9 @@ def validate_review(root, record, payload):
     response = next((r for r in record['responses'] if r['id'] == payload.get('response_id')), None)
     if not response or response['payload']['submission'] != 'complete':
         raise ValueError('Checkpoint a complete submission before reviewing.')
+    packet = packet_for(root, record)
+    if packet.get('official_task_id') and response['stage'] == 'independent' and not payload.get('official_result_reference'):
+        raise ValueError('Official independent review requires the validated linked official result, not drill grading.')
     ids = payload.get('item_ids')
     if not isinstance(ids, list) or len(ids) != len(set(ids)) or set(ids) - set(response['payload'].get('answers', {})):
         raise ValueError('Review only submitted items in the selected checkpoint.')
@@ -431,6 +522,18 @@ def validate_review(root, record, payload):
     criteria = payload.get('criteria', {})
     if not isinstance(criteria, dict) or set(criteria) - {'grammar', 'spelling', 'punctuation', 'task_fulfilment'}:
         raise ValueError('Keep drill criteria separate from IELTS band assessment.')
+    for criterion in criteria.values():
+        if isinstance(criterion, str):
+            require_text(criterion, 'criterion feedback')
+        elif isinstance(criterion, dict):
+            if set(criterion) - {'correct', 'total', 'notes'}:
+                raise ValueError('Drill criteria cannot contain band/pronunciation/mastery estimates.')
+            if 'correct' in criterion or 'total' in criterion:
+                session.validate_score(criterion)
+                if criterion['total'] > len(ids):
+                    raise ValueError('Drill score cannot exceed the reviewed response items.')
+        else:
+            raise ValueError('Criterion feedback must be text or a limited drill score.')
     if payload.get('official_result_reference'):
         if payload['official_result_reference'] != record.get('official_attempt_id'):
             raise ValueError('Official result reference must be the linked attempt.')
@@ -451,8 +554,9 @@ def review(root, lid, payload):
         if record['status'] in ('paused', 'awaiting_response'):
             raise ValueError('Do not review while the learner is paused or still answering.')
         record['reviews'].append({'at': session.now(), 'payload': copy.deepcopy(payload)})
-        record['status'] = 'active'
-        session.json_write(path(root, 'lessons', lid), record)
+        if record['status'] != 'completed':
+            record['status'] = 'active'
+        save(root, record)
         session._rebuild(root)
         return {'saved': True, 'duplicate': False, 'lesson': summary(root, find(root, lid))}
 
@@ -460,8 +564,6 @@ def review(root, lid, payload):
 def present(root, lid, payload):
     with session.mutation_lock(root):
         record = find(root, lid)
-        if record['status'] in ('completed', 'paused', 'awaiting_review'):
-            raise ValueError('Resume/review saved work before presenting another prompt.')
         packet = packet_for(root, record)
         ids = payload.get('item_ids')
         if ids is None:
@@ -472,11 +574,17 @@ def present(root, lid, payload):
         session.validate_provenance(payload.get('provenance'))
         display = {'stage': record['stage'], 'item_ids': ids, 'content': content, 'provenance': payload['provenance']}
         duplicate = next((p for p in record['presentations'] if all(p.get(k) == v for k, v in display.items())), None)
-        if not duplicate:
-            record['presentations'].append(dict(display, at=session.now()))
+        if duplicate:
+            session._rebuild(root)
+            return {'saved': True, 'duplicate': True, 'lesson': summary(root, record)}
+        if record['status'] in ('completed', 'paused', 'awaiting_review', 'awaiting_response'):
+            raise ValueError('Resume/review saved work before presenting another prompt.')
+        if record['stage'] == 'independent' and packet.get('official_task_id') and not record.get('official_attempt_id'):
+            raise ValueError('Link the official attempt before independent delivery.')
+        record['presentations'].append(dict(display, at=session.now()))
         if record['stage'] in ('guided', 'independent'):
             record['status'] = 'awaiting_response'
-        session.json_write(path(root, 'lessons', lid), record)
+        save(root, record)
         session._rebuild(root)
         return {'saved': True, 'duplicate': bool(duplicate), 'lesson': summary(root, find(root, lid))}
 
@@ -508,6 +616,8 @@ def advance(root, lid, payload):
                     any(r['id'] == v['payload']['response_id'] and r['stage'] == source for r in record['responses']) for v in record['reviews']):
                 raise ValueError('Review the complete exercise response before advancing.')
         if target == 'completed':
+            if packet_for(root, record).get('official_task_id') and not record.get('official_attempt_id'):
+                raise ValueError('Official lesson cannot complete without its linked validated attempt.')
             if record.get('official_attempt_id') and session.find_session(root, record['official_attempt_id'])['status'] != 'completed':
                 raise ValueError('Finish linked official attempt before completing lesson.')
             if not record['reviews']:
@@ -515,7 +625,7 @@ def advance(root, lid, payload):
         record['transitions'].append({'from': source, 'to': target, 'at': session.now(),
                                       'learner_requested_skip': skipping, 'provenance': payload['provenance']})
         record.update(stage=target, status='completed' if target == 'completed' else 'active')
-        session.json_write(path(root, 'lessons', lid), record)
+        save(root, record)
         session._rebuild(root)
         return {'saved': True, 'lesson': summary(root, find(root, lid))}
 
@@ -527,7 +637,7 @@ def link(root, lid, attempt_id):
             raise ValueError('Official attempt begins at independent stage only.')
         record['official_attempt_id'] = attempt_id
         validate(root, record)
-        session.json_write(path(root, 'lessons', lid), record)
+        save(root, record)
         session._rebuild(root)
 
 
@@ -536,8 +646,16 @@ def teacher_brief(root, preferences, skill, task_type, objective):
     require_text(task_type, 'IELTS task type')
     if skill not in session.SKILLS:
         raise ValueError('Teacher brief requires one main IELTS skill.')
+    completed = [r for r in session.load_sessions(root) if r['kind'] != 'system_test' and r['status'] == 'completed']
+    observations = [{'session_id': r['id'], 'skill': r['skill'], 'scope': r['result']['scope'],
+                     'conditions': r['conditions'], 'feedback': r['result']['feedback'],
+                     'limits': r['result'].get('uncertainty', 'Short practice is not an IELTS band.')}
+                    for r in sorted(completed, key=lambda r: r['completed_at'])[-8:]]
     return {'main_skill': skill, 'ielts_task_type': task_type, 'objective': objective,
             'preferences': copy.deepcopy(preferences), 'prepared_short_items': [20, 30],
+            'learning_context': {'target_overall': 6.5, 'minimum_each_skill': '6.0 temporary/unverified requirement',
+                                 'observations_from_completed_records': observations,
+                                 'limits': 'Source-scoped feedback only, not a fresh band or stable weakness diagnosis.'},
             'planning_minutes': {'theory': 5, 'example': 5, 'guided': 8, 'independent': 17, 'review': 5},
             'basis': {'preferences_sha256': digest(preferences), 'files': {}},
             'delegation': 'One bounded read-only Teacher prepares a packet. Main coach validates, delivers, grades and writes.',

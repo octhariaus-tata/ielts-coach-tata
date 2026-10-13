@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "id": "tata-reading-evidence-v2",
+  "version": "2",
+  "role": "backup",
+  "main_skill": "Reading",
+  "ielts_task_type": "true_false_not_given_reasoning",
+  "objective": "Check all parts of a statement against evidence, separating support, contradiction and missing information.",
+  "source_label": "coach_created",
+  "practice_kind": "short_drill",
+  "theory": "AI-created IELTS-style written reasoning preparation, not an official Reading test. TRUE means the whole statement is supported; FALSE means contradiction; NOT GIVEN means neither supported nor contradicted. Do not substitute outside knowledge or plausible guesses. Missing detail is not automatically false.",
+  "strategy": "Check who/what/when/quantity/comparison/cause. Give textual evidence for TRUE/FALSE; identify the missing detail for NOT GIVEN.",
+  "worked_example": {
+    "prompt": "Leo cycles to work every weekday. Claim: He cycles because he wants to save money.",
+    "answer": "NOT GIVEN",
+    "reasoning": "Frequency is stated; his reason is not."
+  },
+  "guided": [
+    {
+      "id": "g1",
+      "prompt": "A workshop starts at 2 p.m. and finishes at 3 p.m. Claim: It lasts two hours. Choose TFNG and explain.",
+      "hint": "Compare start/end times with duration."
+    }
+  ],
+  "independent": [
+    {
+      "id": "q1",
+      "prompt": "Text: The gallery opened in 2004. Its first exhibition displayed paintings by local artists. Statement: The gallery's first exhibition featured local artists' paintings. Choose TRUE/FALSE/NOT GIVEN; give evidence or identify the missing detail.",
+      "optional": false
+    },
+    {
+      "id": "q2",
+      "prompt": "Text: The walking tour starts at 9 a.m. and ends at 11 a.m. Statement: The walking tour lasts three hours. Choose TRUE/FALSE/NOT GIVEN; give evidence or identify the missing detail.",
+      "optional": false
+    },
+    {
+      "id": "q3",
+      "prompt": "Text: Priya works at the visitor centre and gives visitors maps. Statement: Priya enjoys her job. Choose TRUE/FALSE/NOT GIVEN; give evidence or identify the missing detail.",
+      "optional": false
+    },
+    {
+      "id": "q4",
+      "prompt": "Text: The cafe serves breakfast every day except Monday. Statement: The cafe serves breakfast on Monday. Choose TRUE/FALSE/NOT GIVEN; give evidence or identify the missing detail.",
+      "optional": false
+    },
+    {
+      "id": "q5",
+      "prompt": "Text: Every hostel room has a desk. Statement: All hostel rooms contain a desk. Choose TRUE/FALSE/NOT GIVEN; give evidence or identify the missing detail.",
+      "optional": false
+    },
+    {
+      "id": "q6",
+      "prompt": "Text: The council built a cycle path beside the river last year. Statement: It cost less than the council expected. Choose TRUE/FALSE/NOT GIVEN; give evidence or identify the missing detail.",
+      "optional": false
+    },
+    {
+      "id": "q7",
+      "prompt": "Text: Train tickets are cheaper online than at the station. Statement: Tickets cost more at the station than online. Choose TRUE/FALSE/NOT GIVEN; give evidence or identify the missing detail.",
+      "optional": false
+    },
+    {
+      "id": "q8",
+      "prompt": "Text: Nora has lived in town for six years and travels to work by bus. Statement: Nora moved to town because of her job. Choose TRUE/FALSE/NOT GIVEN; give evidence or identify the missing detail.",
+      "optional": false
+    },
+    {
+      "id": "q9",
+      "prompt": "Text: The library closes at 6 p.m. on weekdays and 4 p.m. on Saturdays. Statement: The library closes at the same time on those days. Choose TRUE/FALSE/NOT GIVEN; give evidence or identify the missing detail.",
+      "optional": false
+    },
+    {
+      "id": "q10",
+      "prompt": "Text: The hotel provides free Wi-Fi in all bedrooms. Statement: Guests can use bedroom Wi-Fi without payment. Choose TRUE/FALSE/NOT GIVEN; give evidence or identify the missing detail.",
+      "optional": false
+    },
+    {
+      "id": "q11",
+      "prompt": "Text: The market sells fruit and vegetables grown by local farmers. Statement: The market also sells imported cheese. Choose TRUE/FALSE/NOT GIVEN; give evidence or identify the missing detail.",
+      "optional": false
+    },
+    {
+      "id": "q12",
+      "prompt": "Text: Only adults may join the evening photography course. Statement: Children may join the course. Choose TRUE/FALSE/NOT GIVEN; give evidence or identify the missing detail.",
+      "optional": false
+    },
+    {
+      "id": "q13",
+      "prompt": "Text: The pool reopened after repairs on 12 June. Statement: Repairs happened before the pool reopened. Choose TRUE/FALSE/NOT GIVEN; give evidence or identify the missing detail.",
+      "optional": false
+    },
+    {
+      "id": "q14",
+      "prompt": "Text: Tickets for the performance sold out within two days. Statement: It sold tickets faster than last year's performance. Choose TRUE/FALSE/NOT GIVEN; give evidence or identify the missing detail.",
+      "optional": false
+    },
+    {
+      "id": "q15",
+      "prompt": "Text: The village has two schools: one primary and one secondary. Statement: The village has three schools. Choose TRUE/FALSE/NOT GIVEN; give evidence or identify the missing detail.",
+      "optional": false
+    },
+    {
+      "id": "q16",
+      "prompt": "Text: Passengers must book the airport bus in advance. Statement: Advance booking is required. Choose TRUE/FALSE/NOT GIVEN; give evidence or identify the missing detail.",
+      "optional": false
+    },
+    {
+      "id": "q17",
+      "prompt": "Text: Maya chose a hotel close to the beach. Her room had a balcony. Statement: Her room had a sea view. Choose TRUE/FALSE/NOT GIVEN; give evidence or identify the missing detail.",
+      "optional": false
+    },
+    {
+      "id": "q18",
+      "prompt": "Text: The museum is closed to visitors throughout January. Statement: Visitors can enter during January. Choose TRUE/FALSE/NOT GIVEN; give evidence or identify the missing detail.",
+      "optional": true
+    },
+    {
+      "id": "q19",
+      "prompt": "Text: Visitors receive a printed map at no extra charge. Statement: There is no additional fee for a printed map. Choose TRUE/FALSE/NOT GIVEN; give evidence or identify the missing detail.",
+      "optional": true
+    },
+    {
+      "id": "q20",
+      "prompt": "Text: The shuttle leaves every thirty minutes. Statement: It leaves every fifteen minutes. Choose TRUE/FALSE/NOT GIVEN; give evidence or identify the missing detail.",
+      "optional": true
+    }
+  ],
+  "coach_only": {
+    "answers": {
+      "g1": {
+        "accepted": [
+          "FALSE"
+        ],
+        "explanation": "The workshop lasts one hour."
+      },
+      "q1": {
+        "accepted": [
+          "TRUE"
+        ],
+        "explanation": "First exhibition and local artists are directly stated."
+      },
+      "q2": {
+        "accepted": [
+          "FALSE"
+        ],
+        "explanation": "The stated times give two hours."
+      },
+      "q3": {
+        "accepted": [
+          "NOT GIVEN"
+        ],
+        "explanation": "Feelings about the job are not stated."
+      },
+      "q4": {
+        "accepted": [
+          "FALSE"
+        ],
+        "explanation": "Except Monday excludes it."
+      },
+      "q5": {
+        "accepted": [
+          "TRUE"
+        ],
+        "explanation": "Every and all express the same coverage."
+      },
+      "q6": {
+        "accepted": [
+          "NOT GIVEN"
+        ],
+        "explanation": "No cost or expected budget is supplied."
+      },
+      "q7": {
+        "accepted": [
+          "TRUE"
+        ],
+        "explanation": "The comparison directly supports it."
+      },
+      "q8": {
+        "accepted": [
+          "NOT GIVEN"
+        ],
+        "explanation": "The reason for moving is not stated."
+      },
+      "q9": {
+        "accepted": [
+          "FALSE"
+        ],
+        "explanation": "6 and 4 are different."
+      },
+      "q10": {
+        "accepted": [
+          "TRUE"
+        ],
+        "explanation": "Free means no payment."
+      },
+      "q11": {
+        "accepted": [
+          "NOT GIVEN"
+        ],
+        "explanation": "Cheese is neither included nor excluded."
+      },
+      "q12": {
+        "accepted": [
+          "FALSE"
+        ],
+        "explanation": "Only adults excludes children."
+      },
+      "q13": {
+        "accepted": [
+          "TRUE"
+        ],
+        "explanation": "After repairs establishes the order."
+      },
+      "q14": {
+        "accepted": [
+          "NOT GIVEN"
+        ],
+        "explanation": "Last year is not compared."
+      },
+      "q15": {
+        "accepted": [
+          "FALSE"
+        ],
+        "explanation": "Two contradicts three."
+      },
+      "q16": {
+        "accepted": [
+          "TRUE"
+        ],
+        "explanation": "Must book and required have the same meaning."
+      },
+      "q17": {
+        "accepted": [
+          "NOT GIVEN"
+        ],
+        "explanation": "A balcony near the beach does not establish a sea view."
+      },
+      "q18": {
+        "accepted": [
+          "FALSE"
+        ],
+        "explanation": "Closed throughout contradicts entry."
+      },
+      "q19": {
+        "accepted": [
+          "TRUE"
+        ],
+        "explanation": "No extra charge directly supports it."
+      },
+      "q20": {
+        "accepted": [
+          "FALSE"
+        ],
+        "explanation": "Thirty contradicts fifteen."
+      }
+    },
+    "rubric": "Assess only the displayed/submitted scope. Separate grammar, spelling, punctuation and fulfilment. Coach-created support practice; no IELTS band, CEFR or mastery claim. Preserve initial responses and post-feedback revisions."
+  },
+  "basis": {
+    "preferences_sha256": "1b2fdff4e7d184aa232536aff181fc5da25f73ec6ee8d8564a509959e964bddb",
+    "files": {
+      "learning/coaching-notes/2026-10-13-english-review.md": "62adf328ebf2fe8608f60be817bfe99f494420a3df7705029091762a30daaace"
+    }
+  },
+  "provenance": {
+    "method": "teacher_agent_reviewed_by_main_coach",
+    "reference": "Actual bounded Teacher delegate /root/teacher_packets, 13 October 2026, read-only preparation; main coach checked scenarios/keys and pinned verified preference snapshot."
+  }
+}

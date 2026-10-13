@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-lesson-fe844fc5d679",
+  "kind": "learner",
+  "packet_id": "tata-short-answers-v1",
+  "packet_sha256": "3a548b42512ba0b98c34d2c1c6c9e129217c6e9875973f2c74c29ae5d55c2a55",
+  "main_skill": "Speaking",
+  "objective": "Match pronouns and do/does in short answers before developing fuller IELTS Speaking answers.",
+  "ielts_task_type": "part1_short_answers_support",
+  "available_minutes": null,
+  "started_at": "2026-10-13T21:22:52+07:00",
+  "stage": "guided",
+  "status": "awaiting_response",
+  "responses": [],
+  "reviews": [],
+  "presentations": [
+    {
+      "stage": "guided",
+      "item_ids": [
+        "g1"
+      ],
+      "content": {
+        "items": [
+          {
+            "id": "g1",
+            "prompt": "Do you use your phone for banking?",
+            "hint": "Answer truthfully using a short answer. Hint: I'm asking you, so your answer starts with I."
+          }
+        ],
+        "source_label": "coach_created"
+      },
+      "at": "2026-10-13T21:22:52+07:00",
+      "provenance": {
+        "method": "legacy_chat_recovery",
+        "reference": "Unanswered final guided prompt from this chat 13 October 2026: Do you use your phone for banking? Previous material/example referenced in saved lesson notes. Original lesson budget unrecorded; preserved null. No learner response invented."
+      }
+    }
+  ],
+  "transitions": [],
+  "preferences": {
+    "available_minutes": 40,
+    "lesson_language": "en",
+    "teaching_sequence": "teach_first",
+    "practice_volume": "adaptive",
+    "short_drill_items": [
+      20,
+      30
+    ],
+    "completion_mode": "natural"
+  },
+  "official_attempt_id": null,
+  "provenance": {
+    "method": "legacy_chat_recovery",
+    "reference": "Unanswered final guided prompt from this chat 13 October 2026: Do you use your phone for banking? Previous material/example referenced in saved lesson notes. Original lesson budget unrecorded; preserved null. No learner response invented."
+  },
+  "legacy_resume": true,
+  "legacy_references": [
+    "learning/coaching-notes/2026-10-13-present-simple-short-answers-lesson.md",
+    "evidence/practice/2026-10-13-present-simple-questions-set01.json"
+  ],
+  "preference_source_event_ids": {
+    "available_minutes": "2026-10-13-learner-teaching-confirmed",
+    "lesson_language": "2026-10-13-learner-teaching-confirmed",
+    "teaching_sequence": "2026-10-13-learner-teaching-confirmed",
+    "practice_volume": "2026-10-13-learner-teaching-confirmed",
+    "short_drill_items": "2026-10-13-learner-teaching-confirmed",
+    "completion_mode": "2026-10-13-learner-teaching-confirmed"
+  }
+}

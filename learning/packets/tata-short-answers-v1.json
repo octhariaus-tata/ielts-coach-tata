@@ -1,0 +1,267 @@
+{
+  "schema_version": 1,
+  "id": "tata-short-answers-v1",
+  "version": "1",
+  "role": "primary",
+  "main_skill": "Speaking",
+  "ielts_task_type": "part1_short_answers_support",
+  "objective": "Match pronouns and do/does in short answers before developing fuller IELTS Speaking answers.",
+  "source_label": "coach_created",
+  "practice_kind": "short_drill",
+  "theory": "Use Yes/No + pronoun + do/does or don't/doesn't. Does she...? Yes, she does. / No, she doesn't. Do they...? Yes, they do. / No, they don't. Do you...? Reply I. This is coach-created grammar preparation, not an IELTS Speaking assessment; in real Speaking, add a relevant explanation. Prepared items are a pool, not homework debt.",
+  "strategy": "Find who the question is about, choose its pronoun, match do/does and use the given yes/no fact. Fictional scenarios are not personal facts about Tata.",
+  "worked_example": {
+    "prompt": "Does your brother cook dinner?",
+    "answer": "Yes, he does. / No, he doesn't.",
+    "reasoning": "Brother becomes he; match does and choose according to the facts."
+  },
+  "guided": [
+    {
+      "id": "g1",
+      "prompt": "Do you use your phone for banking?",
+      "hint": "Answer truthfully using a short answer. Hint: I'm asking you, so your answer starts with I."
+    }
+  ],
+  "independent": [
+    {
+      "id": "q1",
+      "prompt": "Fact: The fictional speaker carries a reusable bottle. Question: Do you carry a reusable bottle?",
+      "optional": false
+    },
+    {
+      "id": "q2",
+      "prompt": "Fact: A fictional visitor does not collect postcards. Question: Do you collect postcards?",
+      "optional": false
+    },
+    {
+      "id": "q3",
+      "prompt": "Fact: Your fictional sister works at a clinic. Question: Does your sister work at a clinic?",
+      "optional": false
+    },
+    {
+      "id": "q4",
+      "prompt": "Fact: Your fictional brother does not drive to work. Question: Does your brother drive to work?",
+      "optional": false
+    },
+    {
+      "id": "q5",
+      "prompt": "Fact: The fictional museum opens on Sundays. Question: Does the museum open on Sundays?",
+      "optional": false
+    },
+    {
+      "id": "q6",
+      "prompt": "Fact: The fictional buses do not stop at the airport. Question: Do the buses stop at the airport?",
+      "optional": false
+    },
+    {
+      "id": "q7",
+      "prompt": "Fact: Your fictional group studies together. Question: Do we study together?",
+      "optional": false
+    },
+    {
+      "id": "q8",
+      "prompt": "Fact: Your fictional group does not need a taxi. Question: Do we need a taxi?",
+      "optional": false
+    },
+    {
+      "id": "q9",
+      "prompt": "Fact: The fictional tourists buy local food. Question: Do the tourists buy local food?",
+      "optional": false
+    },
+    {
+      "id": "q10",
+      "prompt": "Fact: The fictional hotel does not provide bicycles. Question: Does the hotel provide bicycles?",
+      "optional": false
+    },
+    {
+      "id": "q11",
+      "prompt": "Fact: Your fictional parents enjoy walking. Question: Do your parents enjoy walking?",
+      "optional": false
+    },
+    {
+      "id": "q12",
+      "prompt": "Fact: Your fictional friend Anna (she/her) does not eat meat. Question: Does Anna eat meat?",
+      "optional": false
+    },
+    {
+      "id": "q13",
+      "prompt": "Fact: Your fictional friend Ben (he/him) speaks Spanish. Question: Does Ben speak Spanish?",
+      "optional": false
+    },
+    {
+      "id": "q14",
+      "prompt": "Fact: The fictional laptop does not have a camera. Question: Does the laptop have a camera?",
+      "optional": false
+    },
+    {
+      "id": "q15",
+      "prompt": "Fact: The fictional shops close at six. Question: Do the shops close at six?",
+      "optional": false
+    },
+    {
+      "id": "q16",
+      "prompt": "Fact: The fictional speaker does not watch television. Question: Do you watch television?",
+      "optional": false
+    },
+    {
+      "id": "q17",
+      "prompt": "Fact: The fictional speaker's phone stores photos. Question: Does your phone store photos?",
+      "optional": false
+    },
+    {
+      "id": "q18",
+      "prompt": "Fact: The fictional students do not live near campus. Question: Do the students live near campus?",
+      "optional": true
+    },
+    {
+      "id": "q19",
+      "prompt": "Fact: Your fictional teacher (she/her) gives examples. Question: Does your teacher give examples?",
+      "optional": true
+    },
+    {
+      "id": "q20",
+      "prompt": "Fact: Your fictional group uses reusable bags. Question: Do we use reusable bags?",
+      "optional": true
+    }
+  ],
+  "coach_only": {
+    "answers": {
+      "g1": {
+        "accepted": [
+          "Yes, I do.",
+          "No, I don't."
+        ],
+        "explanation": "Choose truthfully; both forms are grammatical."
+      },
+      "q1": {
+        "accepted": [
+          "Yes, I do."
+        ],
+        "explanation": "Reply I to addressed you."
+      },
+      "q2": {
+        "accepted": [
+          "No, I don't."
+        ],
+        "explanation": "Reply I, using negative do."
+      },
+      "q3": {
+        "accepted": [
+          "Yes, she does."
+        ],
+        "explanation": "Sister becomes she."
+      },
+      "q4": {
+        "accepted": [
+          "No, he doesn't."
+        ],
+        "explanation": "Brother becomes he."
+      },
+      "q5": {
+        "accepted": [
+          "Yes, it does."
+        ],
+        "explanation": "Museum becomes it."
+      },
+      "q6": {
+        "accepted": [
+          "No, they don't."
+        ],
+        "explanation": "Buses are plural."
+      },
+      "q7": {
+        "accepted": [
+          "Yes, we do."
+        ],
+        "explanation": "Reply as a group member."
+      },
+      "q8": {
+        "accepted": [
+          "No, we don't."
+        ],
+        "explanation": "We takes do."
+      },
+      "q9": {
+        "accepted": [
+          "Yes, they do."
+        ],
+        "explanation": "Tourists are plural."
+      },
+      "q10": {
+        "accepted": [
+          "No, it doesn't."
+        ],
+        "explanation": "Hotel becomes it."
+      },
+      "q11": {
+        "accepted": [
+          "Yes, they do."
+        ],
+        "explanation": "Parents become they."
+      },
+      "q12": {
+        "accepted": [
+          "No, she doesn't."
+        ],
+        "explanation": "Use the given pronoun."
+      },
+      "q13": {
+        "accepted": [
+          "Yes, he does."
+        ],
+        "explanation": "Use the given pronoun."
+      },
+      "q14": {
+        "accepted": [
+          "No, it doesn't."
+        ],
+        "explanation": "Laptop becomes it."
+      },
+      "q15": {
+        "accepted": [
+          "Yes, they do."
+        ],
+        "explanation": "Shops become they."
+      },
+      "q16": {
+        "accepted": [
+          "No, I don't."
+        ],
+        "explanation": "Addressed speaker replies I."
+      },
+      "q17": {
+        "accepted": [
+          "Yes, it does."
+        ],
+        "explanation": "Phone becomes it."
+      },
+      "q18": {
+        "accepted": [
+          "No, they don't."
+        ],
+        "explanation": "Students are plural."
+      },
+      "q19": {
+        "accepted": [
+          "Yes, she does."
+        ],
+        "explanation": "Use the given pronoun."
+      },
+      "q20": {
+        "accepted": [
+          "Yes, we do."
+        ],
+        "explanation": "Reply as a member of the group."
+      }
+    },
+    "rubric": "Assess only the displayed/submitted scope. Separate grammar, spelling, punctuation and fulfilment. Coach-created support practice; no IELTS band, CEFR or mastery claim. Preserve initial responses and post-feedback revisions."
+  },
+  "basis": {
+    "preferences_sha256": "1b2fdff4e7d184aa232536aff181fc5da25f73ec6ee8d8564a509959e964bddb",
+    "files": {}
+  },
+  "provenance": {
+    "method": "teacher_agent_reviewed_by_main_coach",
+    "reference": "Actual bounded Teacher delegate /root/teacher_packets, 13 October 2026, read-only preparation; main coach checked scenarios/keys and pinned verified preference snapshot."
+  }
+}

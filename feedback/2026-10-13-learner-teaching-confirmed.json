@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-learner-teaching-confirmed",
+  "created_at": "2026-10-13T21:21:19.268488+07:00",
+  "payload": {
+    "event_id": "2026-10-13-learner-teaching-confirmed",
+    "kind": "learner",
+    "actor": "learner",
+    "category": "preference",
+    "scope": "global",
+    "text": "Use 40 minutes\n20–30 items (Recommended)\nIELTS-led lessons (Recommended)\nReview naturally (Recommended)\nAdapt to skill/time (Recommended)\nOne coach voice (Recommended)\nPrepare ahead (Recommended)",
+    "signals": {
+      "available_minutes": 40,
+      "lesson_language": "en",
+      "teaching_sequence": "teach_first",
+      "practice_volume": "adaptive",
+      "short_drill_items": [
+        20,
+        30
+      ],
+      "completion_mode": "natural"
+    },
+    "provenance": {
+      "method": "direct_human_choices_and_implementation_authorization",
+      "reference": "Tata selections in request_user_input in this chat, 13 October 2026; English/teaching-first source feedback/2026-10-13-learner-english-teaching-sequence.json; subsequent PLEASE IMPLEMENT THIS PLAN authorizes these exact defaults. This appended interpretation preserves earlier raw feedback."
+    }
+  },
+  "payload_sha256": "37ac124fc2f2bdb92130edddcfe9c17ff934642deac746049d7c83b3b4c91ad3",
+  "session_snapshots": {},
+  "rule_version": "adaptation-1.3"
+}

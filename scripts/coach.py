@@ -16,6 +16,7 @@ import session
 import sync as git_sync
 import references
 import adaptation
+import lessons
 
 CAPABILITIES = ('audio_playback', 'screenshot_capture', 'speaking_audio')
 STATES = ('passed', 'failed', 'not_tested')
@@ -144,6 +145,8 @@ def coaching_brief(root, records=None, skill=None, minutes=None):
     hypotheses = report['recurring_hypotheses']
     if skill:
         hypotheses = [h for h in hypotheses if h.get('skill') == skill]
+    lesson_state = lessons.current(root, official=records)
+    prepared = lessons.prepared(root, report['preferences']['effective'])
     return {'rule_version': report['rule_version'],
             'input_session_ids': report['input_session_ids'],
             'input_feedback_ids': report['input_feedback_ids'],
@@ -160,7 +163,10 @@ def coaching_brief(root, records=None, skill=None, minutes=None):
             'access_issues': report['access_issues'],
             'improvement_decisions': report['experiments'],
             'learning_readiness': report['readiness'], 'time_budget_minutes': minutes,
-            'action': 'Coach memilih satu tugas baru dan menguji hipotesis; jangan mengubah band/target dari kepuasan pengguna.'}
+            'current_lesson': lesson_state.get('current_lesson'), 'prepared_queue': prepared,
+            'waiting': lesson_state.get('waiting'),
+            'next_action': lesson_state.get('next_action') or ('Prepare the primary Teacher lesson.' if prepared else 'Prepare an IELTS-led Teacher packet and one backup.'),
+            'action': lesson_state.get('next_action') or 'Teach material and worked example before guided and independent practice; preserve evidence.'}
 
 
 def task_checks(root, task):
@@ -252,11 +258,39 @@ def prepare(root, task_id=None, minutes=None, kind='practice'):
         raise ValueError('Ada beberapa sesi aktif; coach perlu rekonsiliasi.')
     if active:
         item = active[0]
+        work = lessons.current(root, official=records)
+        if work.get('waiting'):
+            return dict(work, created=False, sync=sync_result)
         task = item.get('material')
         return {'created': False, 'resumed': True, 'session': item, 'sync': sync_result,
                 'packet': references.learner_packet(task) if task else None,
                 'readiness': readiness(root, task, sync_result), 'queue': queue(root, records),
                 'coaching_brief': coaching_brief(root, records, item['skill'], minutes)}
+    if kind != 'system_test':
+        work = lessons.current(root, official=records)
+        if work.get('waiting'):
+            return dict(work, created=False, sync=sync_result)
+        current_lesson = work.get('current_lesson')
+        if current_lesson:
+            record = lessons.find(root, current_lesson['id'])
+            lp = lessons.packet_for(root, record)
+            # A verified official attempt is created only at independent stage.
+            if record['stage'] == 'independent' and lp.get('official_task_id'):
+                if record.get('official_attempt_id') and session.find_session(root, record['official_attempt_id'])['status'] == 'completed':
+                    return {'created': False, 'resumed': True, 'lesson': current_lesson, 'sync': sync_result,
+                            'coaching_brief': coaching_brief(root, records, record['main_skill'], record['available_minutes'])}
+                if task_id and task_id != lp['official_task_id']:
+                    raise ValueError('Resume the lesson task; do not silently switch official tasks.')
+                task_id = lp['official_task_id']
+            else:
+                return {'created': False, 'resumed': True, 'lesson': current_lesson, 'sync': sync_result,
+                        'coaching_brief': coaching_brief(root, records, record['main_skill'], record['available_minutes'])}
+        elif adaptation_report['preferences']['effective'].get('teaching_sequence') == 'teach_first':
+            if sync_result.get('behind') or sync_result.get('conflicts') or sync_result.get('status') == 'conflict':
+                return {'created': False, 'waiting': 'reconciliation', 'sync': sync_result}
+            result = lessons.start(root, adaptation_report['preferences']['effective'], minutes=minutes)
+            result.update(sync=sync_result, coaching_brief=coaching_brief(root, records))
+            return result
     if sync_result.get('behind') or sync_result.get('conflicts') or sync_result.get('status') == 'conflict':
         return {'created': False, 'waiting': 'reconciliation', 'sync': sync_result}
     if kind == 'system_test':
@@ -277,6 +311,8 @@ def prepare(root, task_id=None, minutes=None, kind='practice'):
         return {'created': False, 'waiting': 'materials', 'checks': checks, 'sync': sync_result,
                 'backup_task_id': planned['backup_task_id']}
     created = session.start(root, task['id'], task['skill'], kind, minutes)
+    if kind != 'system_test' and work.get('current_lesson'):
+        lessons.link(root, work['current_lesson']['id'], created['session']['id'])
     # Starting a session modifies tracked files after pull; it is no longer clean.
     current_sync = local_sync(root)
     packet = references.learner_packet(task)
@@ -407,6 +443,66 @@ def status(root, observation=None, verify_sync=False):
             'coaching_brief': coaching_brief(root, records, task.get('skill') if task else None)}
 
 
+def lesson(root, action, lid=None, payload=None, minutes=None, defer_sync=False):
+    """Teacher packet/lesson API. Returned lesson views exclude coach-only answers."""
+    root = Path(root).resolve()
+    preferences = adaptation.analyze(root)['preferences']['effective']
+    if action == 'inspect':
+        return {'lesson': lessons.summary(root, lessons.find(root, lid)) if lid else lessons.current(root),
+                'coaching_brief': coaching_brief(root)}
+    if action == 'teacher-brief':
+        payload = payload or {}
+        return lessons.teacher_brief(root, preferences, payload.get('main_skill'),
+                                     payload.get('ielts_task_type'), payload.get('objective'))
+    payload = payload or {}
+    if action == 'packet':
+        result = lessons.store_packet(root, payload)
+    elif action == 'retire-packet':
+        result = lessons.retire(root, lid, payload)
+    elif action == 'prepare':
+        pulled = sync_action(root, 'pull')
+        preferences = adaptation.analyze(root)['preferences']['effective']
+        work = lessons.current(root)
+        if (pulled.get('behind') or pulled.get('conflicts') or pulled.get('status') == 'conflict') and not work.get('current_lesson'):
+            return {'waiting': 'reconciliation', 'sync': pulled}
+        result = lessons.start(root, preferences, packet_id=payload.get('packet_id'), minutes=minutes)
+        result['sync'] = pulled
+    elif action == 'migrate':
+        result = lessons.start(root, preferences, packet_id=payload['packet_id'], migration=payload)
+    elif action == 'checkpoint':
+        result = lessons.checkpoint(root, lid, payload)
+    elif action == 'present':
+        record = lessons.find(root, lid)
+        packet = lessons.packet_for(root, record)
+        if packet.get('official_task_id'):
+            task = next(t for t in catalog(root)['tasks'] if t['id'] == packet['official_task_id'])
+            checks = task_checks(root, task)
+            if any(c['status'] != 'passed' for c in checks.values()):
+                return {'waiting': 'materials', 'checks': checks}
+            if record['stage'] == 'independent' and not record.get('official_attempt_id'):
+                created = session.start(root, task['id'], task['skill'], 'practice',
+                                        record['available_minutes'] or preferences.get('available_minutes', 40))
+                lessons.link(root, lid, created['session']['id'])
+        result = lessons.present(root, lid, payload)
+    elif action == 'review':
+        result = lessons.review(root, lid, payload)
+    elif action in ('advance', 'complete'):
+        if action == 'complete':
+            payload = dict(payload, stage='completed')
+        result = lessons.advance(root, lid, payload)
+    else:
+        raise ValueError('Unknown lesson operation.')
+    result['coaching_brief'] = coaching_brief(root)
+    if result.get('waiting'):
+        return result
+    if defer_sync:
+        result.update(synced=False, sync_pending=True)
+    else:
+        sync_result = sync_action(root, 'push', 'Simpan teaching lesson ' + (lid or result.get('packet_id', '')))
+        result.update(sync=sync_result, synced=sync_result.get('status') == 'synced' and sync_result.get('remote_verified') is True)
+    return result
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
@@ -426,6 +522,13 @@ def main():
     p.add_argument('--verify-sync', action='store_true')
     p = commands.add_parser('feedback')
     p.add_argument('--input', type=Path, required=True)
+    p = commands.add_parser('lesson')
+    p.add_argument('action', choices=('teacher-brief', 'packet', 'retire-packet', 'prepare', 'migrate', 'inspect',
+                                      'present', 'checkpoint', 'review', 'advance', 'complete'))
+    p.add_argument('--id')
+    p.add_argument('--input', type=Path)
+    p.add_argument('--minutes', type=int)
+    p.add_argument('--defer-sync', action='store_true', help='Local checkpoint/readback first; sync at the same lesson milestone.')
     args = parser.parse_args()
     try:
         if args.command == 'prepare':
@@ -436,6 +539,9 @@ def main():
             output = complete(args.root, args.id, read_json(args.result) if args.result else None)
         elif args.command == 'feedback':
             output = feedback(args.root, read_json(args.input))
+        elif args.command == 'lesson':
+            output = lesson(args.root, args.action, args.id, read_json(args.input) if args.input else None,
+                            args.minutes, args.defer_sync)
         else:
             output = status(args.root, read_json(args.observe) if args.observe else None, args.verify_sync)
         print(json.dumps(output, ensure_ascii=False, indent=2))

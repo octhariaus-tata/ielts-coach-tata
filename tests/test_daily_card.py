@@ -36,6 +36,17 @@ class DailyCardTests(unittest.TestCase):
         self.assertNotIn('transcript', card)
         self.assertNotIn('band', card)
 
+    def test_daily_card_resumes_teacher_lesson_instead_of_new_calendar_task(self):
+        import test_lessons
+        env=test_lessons.LessonTests('test_startup_resumes_same_banking_prompt_without_official_attempt')
+        env.setUp()
+        try:
+            env.start();env.present();env.advance('example');env.present();env.advance('guided');env.present()
+            card=daily_card.build(env.root,dt.date(2026,10,13))
+            self.assertEqual(card['action'],'resume_lesson');self.assertEqual(card['lesson_id'],env.lid)
+            self.assertEqual(card['minutes'],40);self.assertFalse(card['attempt_created'])
+        finally:env.doCleanups()
+
     def test_unfinished_attempt_is_resumed_not_replaced_by_calendar(self):
         record = self.env.prepare()
         path = self.root / 'sessions' / (record['id'] + '.json')

@@ -34,6 +34,11 @@ def run(root, message='Sinkronisasi otomatis IELTS Coach Tata'):
     try:
         if not root.is_dir() or (root / '.local').is_symlink():
             raise ValueError('Folder project/cache tidak tersedia atau tidak aman.')
+        if (root / '.local' / 'implementation-pending.json').exists():
+            result.update(status='busy', deferred=True, error='implementation_validation_pending',
+                          message='Implementation is awaiting validation; backup deferred without publishing intermediate changes.')
+            save_run(root, result)
+            return result, 0
         # Lock order: session -> Git, shared with coach.sync_action. Both locks
         # are nonblocking, so another writer defers rather than waiting forever.
         with session.mutation_lock(root):

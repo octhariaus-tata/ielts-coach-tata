@@ -83,3 +83,7 @@ Indikator kesiapan belajar juga konservatif: minimal dua materi baru dengan hasi
 - Sengketa terbuka menahan seluruh penilaian terkait dari analisis kemampuan, tanpa mengganti skor awal.
 - Eksperimen tanpa baseline/outcome sebanding tidak dapat dianggap `adopted`; `inconclusive` tetap hasil yang sah.
 - Data adaptasi ikut repo privat; credential, pengaturan akun, kesiapan perangkat dan skill lain tetap di luar whitelist.
+
+## Teaching preferences v1.3 — approved 13 October 2026
+
+Signals tambahan: lesson_language en/id, teaching_sequence teach_first, practice_volume adaptive, short_drill_items [20,30], completion_mode natural/explicit_done. Actor learner dan scope tetap wajib; scope lesson memakai lesson_id nyata pada learning/lessons tanpa ID IELTS palsu. Precedence aktif: lesson → linked/session → global; budget resume disimpan dan tidak ditimpa preference baru. Feedback lama tetap utuh; interpretasi baru menyebut sumber keputusan learner. Teacher/lesson state bukan analisis kemampuan dan tidak memajukan rotasi dari sessions. Grammar/spelling/punctuation/task fulfilment terpisah; tidak ada band dalam review lesson.

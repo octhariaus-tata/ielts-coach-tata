@@ -1,0 +1,8 @@
+{
+  "packet_id": "tata-listening-precision-v1",
+  "reason": "Pin reviewed learner-context source after independent Astra review; preserve original packet version.",
+  "provenance": {
+    "method": "main_coach_review",
+    "reference": "Astra forward rehearsal 13 October 2026 noted empty source pins; coordinator pins relevant saved source without changing active legacy packet."
+  }
+}

@@ -25,10 +25,10 @@ Attempt furnitur 0/7 yang muncul di riwayat belum dipakai sebagai baseline: kont
 
 | Skill | Data terakhir | Status |
 | --- | --- | --- |
-| Listening | Skor lama 5.0; trial kecil 1/3 | Skor lama dilaporkan pengguna; trial tidak dikonversi ke band |
-| Reading | Skor lama 5.5 | Belum ada diagnostik baru |
-| Writing | Skor lama 6.0 | Belum ada diagnostik baru |
-| Speaking | Skor lama 5.5 | Belum ada diagnostik baru |
+| Listening | Skor lama 5.0; Packham3/8, Social Contact4/6 | Skor lama dilaporkan; jawaban+key praktik terverifikasi, Q5 Packham ambigu; Social Contact3 plays, bukan baseline /40 |
+| Reading | Skor lama5.5; Marie Curie2/3 | Cuplikan jawaban+key, belum /40 atau band terkini |
+| Writing | Skor lama6.0; Tourism97 kata awal + revisi | Feedback aspek micro-task, bukan band task/overall |
+| Speaking | Skor lama5.5; phone Part2 teks + revisi | Feedback terbatas; pronunciation/fluency audio belum dinilai |
 
 ## Format entri berikutnya — diisi coach
 
@@ -86,3 +86,11 @@ Set pertanyaan buatan coach: **12/12 untuk struktur pertanyaan**, semua Do/Does,
 | [2026-10-13-speaking-683f3d42db99](sessions/2026-10-13-speaking-683f3d42db99.json) | Speaking | practice | Feedback AI terbatas | ai_estimate |
 | [2026-10-13-writing-9ce1ee9f8c8b](sessions/2026-10-13-writing-9ce1ee9f8c8b.json) | Writing | practice | Feedback AI terbatas | ai_estimate |
 <!-- managed-sessions:end -->
+
+<!-- managed-lessons:start -->
+## Supplementary teaching lessons — not IELTS band assessments
+
+| Lesson | Stage | Prepared | Presented | Submitted | Reviewed |
+| --- | --- | --- | --- | --- | --- |
+| 2026-10-13-lesson-fe844fc5d679 | guided | 20 | 0 | 0 | 0 |
+<!-- managed-lessons:end -->

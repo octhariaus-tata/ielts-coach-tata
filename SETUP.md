@@ -113,3 +113,7 @@ Pengaturan ini memakai buffer maksimal 50 MiB untuk menghindari pengiriman chunk
 Coach menyimpan checkpoint/hasil pada laptop yang sama, membaca ulang, dan menandai **belum tersinkron**. Hasil tersimpan tetap sah sebagai catatan lokal meski push gagal; retry hanya menjalankan sinkronisasi, bukan menilai ulang. Lanjutkan attempt dengan **“Lanjut”** pada perangkat itu. Latihan lokal dapat dilanjutkan saat offline bila semua bahan yang diperlukan lengkap; cache koreksi yang tidak cocok/tidak lengkap membuat review menunggu. Saat koneksi kembali, coach menyinkronkan dan memastikan push berhasil sebelum Tata pindah laptop. Jika akses GitHub ditolak, jelaskan kendala autentikasi atau izin yang benar-benar terlihat; jangan menganggap akun Codex memberi akses GitHub otomatis.
 
 Jangan mengedit folder mirror `.codex/.chatgpt-projects/`, sumber sinkron lain, pengaturan akun atau permissions. Izin automasi berlaku pada heartbeat backup per jam yang diminta; jangan memasang layanan, membuat automasi lain atau mengirim pesan sebagai bagian setup ini.
+
+## Teacher skill v1.3
+
+Tambahkan pemeriksaan project-local .agents/skills/ielts-teacher/SKILL.md dan agents/openai.yaml. Skill berada di project ini; tidak perlu mengubah akun, software atau skill global. Startup coach.py prepare/lesson inspect menyambung stage aktif dari learning/lessons. Default baru 40 menit berasal dari feedback learner terstruktur; timing legacy yang tidak tercatat tetap null.

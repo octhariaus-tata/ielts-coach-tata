@@ -1,0 +1,46 @@
+{
+  "kind": "system_test",
+  "date_local": "2026-10-13",
+  "timezone": "Asia/Jakarta",
+  "learner_progress": false,
+  "implementation_version": "adaptation-1.3",
+  "provenance": {
+    "method": "main_coach_tool_observation_and_independent_agent_rehearsal",
+    "report": "learning/coaching-notes/2026-10-13-teacher-implementation-report.md",
+    "teacher_delegate": "/root/teacher_packets",
+    "reviewer": "/root/astra_workflow_rehearsal",
+    "reviewer_model": "gpt-6-astra"
+  },
+  "full_suite": {
+    "command": "python3 -m unittest discover -s tests",
+    "tests": 179,
+    "elapsed_seconds": 74.607,
+    "status": "passed",
+    "lesson_tests": 24
+  },
+  "independent_rehearsal": {
+    "status": "passed",
+    "remaining_blockers": 0,
+    "found_and_fixed_state_defects": 6,
+    "production_learner_records_mutated_by_reviewer": false
+  },
+  "original_evidence_integrity": {
+    "source_commit": "6b7da4de8ed7f7ee61233694c6847d18e0c765af",
+    "checked_files": 20,
+    "changed_original_files": []
+  },
+  "resume": {
+    "lesson_id": "2026-10-13-lesson-fe844fc5d679",
+    "stage": "guided",
+    "status": "awaiting_response",
+    "available_minutes": null,
+    "pending_prompt": "Do you use your phone for banking?",
+    "status_and_brief_agree": true
+  },
+  "limits": [
+    "System validation is not learner progress, IELTS band or readiness evidence.",
+    "Prepared packets are coach-created teaching drills; official Listening transfer material must be replenished and preflighted.",
+    "PyYAML-dependent generic skill validator unavailable; metadata checked directly.",
+    "Remote publication is verified separately by the synchronizer after push."
+  ]
+}

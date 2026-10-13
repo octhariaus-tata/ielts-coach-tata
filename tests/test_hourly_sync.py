@@ -71,6 +71,14 @@ class HourlySyncTests(unittest.TestCase):
         self.assertFalse((self.root / 'feedback').exists())
         self.assertFalse((self.root / 'learning').exists())
 
+    def test_unverified_implementation_hold_defers_without_publishing(self):
+        folder=self.root/'.local';folder.mkdir()
+        (folder/'implementation-pending.json').write_text('{"state":"pending_validation"}')
+        before=(self.root/'STATUS.md').read_bytes()
+        out,code=hourly.run(self.root)
+        self.assertEqual(code,0);self.assertTrue(out['deferred']);self.assertFalse(out['synced'])
+        self.synchronize.assert_not_called();self.assertEqual((self.root/'STATUS.md').read_bytes(),before)
+
     def test_offline_run_preserves_completed_record_and_reports_unsynced(self):
         record = self.system_record()
         path = hourly.session.session_path(self.root, record['id'])

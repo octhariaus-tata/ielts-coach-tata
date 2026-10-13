@@ -45,6 +45,7 @@ def build(root, day):
                        key=lambda r: (r['completed_at'], r['id']))
     mode, planned_skill, planned_minutes = WEEK[day.weekday()]
     catalog = coach.catalog(root)
+    lesson_state = coach.lessons.current(root, official=records)
     card = {'schema_version': 1, 'date': day.isoformat(), 'day': DAY_NAMES[day.weekday()],
             'generated_at': session.now(), 'timezone': 'Asia/Jakarta', 'target_available_time': '09:00',
             'planned_mode': mode, 'planned_skill': planned_skill,
@@ -52,6 +53,17 @@ def build(root, day):
             'input_feedback_ids': report['input_feedback_ids'],
             'rule_version': report['rule_version'], 'attempt_created': False,
             'source_limit': 'Local snapshot; coach rechecks source, readiness and sync when Tata says mulai.'}
+    if lesson_state.get('waiting'):
+        return dict(card, action='coach_attention', minutes=0, reason=lesson_state['next_action'])
+    if lesson_state.get('current_lesson'):
+        lesson = lesson_state['current_lesson']
+        return dict(card, action='resume_lesson', lesson_id=lesson['id'], skill=lesson['main_skill'],
+                    minutes=lesson['available_minutes'], phase=lesson['stage'], topic=lesson['objective'],
+                    next_action=lesson_state['next_action'], learner_prompt=lesson['displayed_prompt'])
+    if report['preferences']['effective'].get('teaching_sequence') == 'teach_first' and mode == 'study' and not active:
+        prepared = coach.lessons.prepared(root, report['preferences']['effective'])
+        return dict(card, action='prepare_lesson', minutes=report['preferences']['effective'].get('available_minutes', 40),
+                    prepared_queue=prepared, next_action='Ketik mulai untuk materi → contoh → guided → independent → review.')
     if mode == 'rest':
         return dict(card, action='rest', minutes=0, topic='Akhir pekan: tidak ada tugas terjadwal.',
                     learner_instruction='Tidak ada tugas wajib atau utang tugas.')

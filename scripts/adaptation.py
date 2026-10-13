@@ -131,6 +131,8 @@ def events(root, directory):
         if directory == 'feedback':
             normalized = normalize_feedback(payload)
             cite_sessions(root, [normalized['session_id']] if normalized.get('session_id') else [], normalized['kind'])
+            if normalized['scope'] == 'lesson':
+                validate_lesson_scope(root, normalized)
         elif directory == 'feedback/resolutions':
             identifier(value.get('feedback_id'))
             normalized = normalize_resolution(root, value['feedback_id'], payload, check_files=False)
@@ -196,6 +198,17 @@ def normalize_feedback(payload):
     return value
 
 
+def validate_lesson_scope(root, payload):
+    # Envelope-only here avoids recursive full lesson -> preference validation.
+    import lessons
+    file = lessons.path(root, 'lessons', payload['lesson_id'])
+    if not file.is_file():
+        raise ValueError('Lesson-scoped feedback must reference an existing lesson.')
+    value = json.loads(file.read_text(encoding='utf-8'))
+    if value.get('id') != payload['lesson_id'] or value.get('kind') != payload['kind']:
+        raise ValueError('Lesson reference/kind mismatch.')
+
+
 def record_feedback(root, payload):
     root = Path(root).resolve()
     value = normalize_feedback(payload)
@@ -203,10 +216,7 @@ def record_feedback(root, payload):
     sid = value.get('session_id')
     with session.mutation_lock(root):
         if value['scope'] == 'lesson':
-            import lessons
-            lesson = lessons.find(root, value['lesson_id'])
-            if lesson['kind'] != value['kind']:
-                raise ValueError('Learner/system-test lesson scopes must remain separate.')
+            validate_lesson_scope(root, value)
         duplicate = existing_event(root, 'feedback', eid, value)
         if duplicate:
             return duplicate

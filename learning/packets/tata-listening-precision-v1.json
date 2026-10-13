@@ -1,0 +1,280 @@
+{
+  "schema_version": 1,
+  "id": "tata-listening-precision-v1",
+  "version": "1",
+  "role": "primary",
+  "main_skill": "Listening",
+  "ielts_task_type": "form_completion_written_preparation",
+  "objective": "Prepare for Listening form completion through answer-type prediction, spellings, plurals, decimals and units.",
+  "source_label": "coach_created",
+  "practice_kind": "short_drill",
+  "theory": "This is coach-created written preparation, NOT an audio Listening assessment. Predict names/numbers/dates/places from field labels. Preserve decimals and units: 100 cm = 1 m; 100 pence = £1. Follow the word limit and check plurals. These 20 written items cannot prove listening comprehension.",
+  "strategy": "Label → predict answer type → record information → check spelling, decimal, unit, plural and word limit.",
+  "worked_example": {
+    "prompt": "A written note gives width one metre and twenty-five centimetres. Write decimal metres with the unit.",
+    "answer": "1.25 m",
+    "reasoning": "25 cm = 0.25 m; add one metre."
+  },
+  "guided": [
+    {
+      "id": "g1",
+      "prompt": "A written note gives height one metre and sixty centimetres. Write decimal metres with the unit.",
+      "hint": "Convert 60 cm then add one metre. Include m."
+    }
+  ],
+  "independent": [
+    {
+      "id": "q1",
+      "prompt": "Write eighty-five centimetres as a decimal in metres. Include the unit.",
+      "optional": false
+    },
+    {
+      "id": "q2",
+      "prompt": "Write forty centimetres as a decimal in metres. Include the unit.",
+      "optional": false
+    },
+    {
+      "id": "q3",
+      "prompt": "Write one point eight metres in centimetres. Include the unit.",
+      "optional": false
+    },
+    {
+      "id": "q4",
+      "prompt": "Write two and a half kilograms using digits. Include the unit.",
+      "optional": false
+    },
+    {
+      "id": "q5",
+      "prompt": "Write thirty-six pounds and fifty pence using digits and the pound symbol.",
+      "optional": false
+    },
+    {
+      "id": "q6",
+      "prompt": "Write one thousand two hundred pounds using digits and the pound symbol.",
+      "optional": false
+    },
+    {
+      "id": "q7",
+      "prompt": "A made-up surname is spelled R-O-W-A-N. Write it.",
+      "optional": false
+    },
+    {
+      "id": "q8",
+      "prompt": "A made-up street name is spelled B-R-I-D-G-E-W-O-O-D. Write it.",
+      "optional": false
+    },
+    {
+      "id": "q9",
+      "prompt": "A fictional postcode is spelled L-S-two; space; seven-Q-R. Write it with letters and digits.",
+      "optional": false
+    },
+    {
+      "id": "q10",
+      "prompt": "A booking code is spelled J-eight-L-zero-P. Write it without spaces.",
+      "optional": false
+    },
+    {
+      "id": "q11",
+      "prompt": "The box contains three ___ (book). Write only the missing word.",
+      "optional": false
+    },
+    {
+      "id": "q12",
+      "prompt": "The centre offers two ___ (class). Write only the missing word.",
+      "optional": false
+    },
+    {
+      "id": "q13",
+      "prompt": "Visitors can learn about local ___ (custom). Write only the missing word.",
+      "optional": false
+    },
+    {
+      "id": "q14",
+      "prompt": "The clubs provide several ___ (activity). Write only the missing word.",
+      "optional": false
+    },
+    {
+      "id": "q15",
+      "prompt": "Correct the spelling of the word for communication through words: langauge.",
+      "optional": false
+    },
+    {
+      "id": "q16",
+      "prompt": "Correct the spelling of a building for borrowing books: libary.",
+      "optional": false
+    },
+    {
+      "id": "q17",
+      "prompt": "Field Family name: ___. Predict type: surname / date / price.",
+      "optional": false
+    },
+    {
+      "id": "q18",
+      "prompt": "Field Room capacity: ___ people. Predict type: number / street name / material.",
+      "optional": true
+    },
+    {
+      "id": "q19",
+      "prompt": "Field Arrival date: ___. Predict type: weight / date / surname.",
+      "optional": true
+    },
+    {
+      "id": "q20",
+      "prompt": "NO MORE THAN TWO WORDS. Information desk is inside the central library. Complete Information desk location: ___ using the building name only.",
+      "optional": true
+    }
+  ],
+  "coach_only": {
+    "answers": {
+      "g1": {
+        "accepted": [
+          "1.6 m",
+          "1.60 m",
+          "1.6 metres",
+          "1.6 meters"
+        ],
+        "explanation": "60 cm = 0.6 m."
+      },
+      "q1": {
+        "accepted": [
+          "0.85 m",
+          "0.85 metres",
+          "0.85 meters"
+        ],
+        "explanation": "85 / 100 = 0.85 m."
+      },
+      "q2": {
+        "accepted": [
+          "0.4 m",
+          "0.40 m",
+          "0.4 metres",
+          "0.4 meters"
+        ],
+        "explanation": "40 / 100 = 0.4 m."
+      },
+      "q3": {
+        "accepted": [
+          "180 cm",
+          "180 centimetres",
+          "180 centimeters"
+        ],
+        "explanation": "Multiply 1.8 by 100."
+      },
+      "q4": {
+        "accepted": [
+          "2.5 kg",
+          "2.5 kilograms"
+        ],
+        "explanation": "Half is 0.5."
+      },
+      "q5": {
+        "accepted": [
+          "£36.50"
+        ],
+        "explanation": "100 pence equals one pound."
+      },
+      "q6": {
+        "accepted": [
+          "£1,200",
+          "£1200"
+        ],
+        "explanation": "The symbol supplies the currency."
+      },
+      "q7": {
+        "accepted": [
+          "Rowan",
+          "ROWAN"
+        ],
+        "explanation": "Keep the supplied letter order."
+      },
+      "q8": {
+        "accepted": [
+          "Bridgewood",
+          "BRIDGEWOOD"
+        ],
+        "explanation": "Keep both o letters."
+      },
+      "q9": {
+        "accepted": [
+          "LS2 7QR"
+        ],
+        "explanation": "Preserve letters/digits and space."
+      },
+      "q10": {
+        "accepted": [
+          "J8L0P"
+        ],
+        "explanation": "Eight and zero are digits."
+      },
+      "q11": {
+        "accepted": [
+          "books"
+        ],
+        "explanation": "Three needs a plural."
+      },
+      "q12": {
+        "accepted": [
+          "classes"
+        ],
+        "explanation": "Class forms its plural with -es."
+      },
+      "q13": {
+        "accepted": [
+          "customs"
+        ],
+        "explanation": "Customs refers to local traditions."
+      },
+      "q14": {
+        "accepted": [
+          "activities"
+        ],
+        "explanation": "Consonant + y becomes -ies."
+      },
+      "q15": {
+        "accepted": [
+          "language"
+        ],
+        "explanation": "Check the letter order."
+      },
+      "q16": {
+        "accepted": [
+          "library"
+        ],
+        "explanation": "The spelling is l-i-b-r-a-r-y."
+      },
+      "q17": {
+        "accepted": [
+          "surname"
+        ],
+        "explanation": "Family name means surname."
+      },
+      "q18": {
+        "accepted": [
+          "number"
+        ],
+        "explanation": "Capacity in people needs a number."
+      },
+      "q19": {
+        "accepted": [
+          "date"
+        ],
+        "explanation": "The label requests a date."
+      },
+      "q20": {
+        "accepted": [
+          "central library"
+        ],
+        "explanation": "The building name is two words."
+      }
+    },
+    "rubric": "Assess only the displayed/submitted scope. Separate grammar, spelling, punctuation and fulfilment. Coach-created support practice; no IELTS band, CEFR or mastery claim. Preserve initial responses and post-feedback revisions."
+  },
+  "basis": {
+    "preferences_sha256": "1b2fdff4e7d184aa232536aff181fc5da25f73ec6ee8d8564a509959e964bddb",
+    "files": {}
+  },
+  "provenance": {
+    "method": "teacher_agent_reviewed_by_main_coach",
+    "reference": "Actual bounded Teacher delegate /root/teacher_packets, 13 October 2026, read-only preparation; main coach checked scenarios/keys and pinned verified preference snapshot."
+  }
+}
