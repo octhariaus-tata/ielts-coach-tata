@@ -1,0 +1,22 @@
+{
+  "id": "2026-10-13-present-simple-questions-guided-01",
+  "kind": "guided_learning",
+  "source_label": "coach_created_not_official_IELTS",
+  "text": "Does your sister work in a hospital ?",
+  "purpose": "guided_practice",
+  "provenance": {
+    "method": "learner_chat_text",
+    "reference": "Tata response in this chat, 13 October 2026, to transform My sister works in a hospital into a question, after material, worked example and hint my sister = she."
+  },
+  "conditions": {
+    "assisted": true
+  },
+  "lesson": "learning/coaching-notes/2026-10-13-present-simple-questions-lesson.md",
+  "limits": "Supported grammar practice, not official IELTS or independent ability evidence.",
+  "feedback": {
+    "grammar_correct": true,
+    "subject_preserved": false,
+    "explanation": "Does + singular subject + base verb work is correct. My changed to your; natural when asking the coach, but a strict transformation keeps my. Correct original transformation: Does my sister work in a hospital? Remove the space before question mark in standard English punctuation.",
+    "next_task": "One independent set of 12 question transformations, explicitly preserving original subjects."
+  }
+}

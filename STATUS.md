@@ -41,6 +41,8 @@ Present-simple set 01 buatan coach: 11/12 setelah materi/contoh/guided practice,
 
 Guided negatives diterima benar: Tourism doesn't help local businesses. Bukti evidence/guided/2026-10-13-present-simple-negatives-01.json. Set 12 kalimat negatif sudah direview: 12/12 untuk struktur grammar, typo cuastomers/Thet dicatat terpisah pada evidence/practice/2026-10-13-present-simple-negatives-set01.json. Materi berikutnya siap: learning/coaching-notes/2026-10-13-present-simple-questions-lesson.md; Do/Does questions → worked example → guided → independent. Drill buatan coach, bukan attempt IELTS.
 
+Guided questions diterima: Does your sister work in a hospital ? — grammar benar; my → your adalah perubahan referen, tepat bila bertanya kepada coach tetapi tugas transformasi mempertahankan my. Bukti evidence/guided/2026-10-13-present-simple-questions-01.json. Tugas pedagogis sekarang: 12 pertanyaan mandiri, subject asli dipertahankan, learning/coaching-notes/2026-10-13-present-simple-questions-set01.md; respons belum diterima.
+
 ## Cara memperbarui
 
 Coach memperbarui kesiapan setelah ada bukti. Status sesi berasal dari catatan `sessions/`; gunakan alat sesi untuk membuat, melanjutkan dan menutup attempt, lalu baca ulang record serta ringkasannya. “Done” berulang memakai ID semula. Simpan hasil lokal dahulu; ubah klaim sinkronisasi hanya setelah status Git dan push benar-benar diperiksa.
