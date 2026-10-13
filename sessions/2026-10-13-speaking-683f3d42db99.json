@@ -101,6 +101,19 @@
           "reference": "Respons bahasa Inggris Tata di chat ini pada 13 Oktober 2026 untuk Speaking Part 2 phone. Hanya teks yang diterima; asal dictation/transcription dan durasi tidak diketahui, tidak ada file audio tersedia untuk diperiksa."
         }
       }
+    },
+    {
+      "revision_id": "033b5ab80f1f4f3ca01cce9b1627f81b",
+      "created_at": "2026-10-13T15:52:24+07:00",
+      "payload": {
+        "text": "Something that I own, which is very important to me, is my phone. I got it from my boyfriend. My boyfriend bought it for me. I've had this phone for about a year. I use this phone for everything. For example, for groceries, for chatting, for social media, for banking, and maybe to do an entertainment, like watching a movie, or just listening to music. Of course, I always use this phone to do a job every day on my daily life. And I think it's not valuable in terms of the money, because the phone is very important to me. Everything I have is on my phone. So, for example, photos, they hold special memories to me, and I can use my phone to keep my money on the mobile banking, and then I can use it to buy something. And of course, I always use my phone to chat with everyone on my contact for connectivity with other people. So it's not easy to replace my phone with other things.",
+        "evidence": [],
+        "purpose": "review",
+        "provenance": {
+          "method": "learner_chat_text",
+          "reference": "Revisi Tata di chat ini 13 Oktober 2026 setelah feedback Speaking phone. Hanya teks tersedia, tanpa audio. Perbaikan bought it for me dan have had ... for about a year terlihat. Bukan attempt independen atau bukti naik band; respons awal dipertahankan."
+        }
+      }
     }
   ],
   "result": {
