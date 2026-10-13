@@ -1,0 +1,21 @@
+{
+  "id": "2026-10-13-present-simple-guided-01",
+  "recorded_at": "2026-10-13T16:25:42.255032+07:00",
+  "kind": "guided_learning",
+  "source_label": "coach_created_not_official_IELTS",
+  "lesson": "learning/coaching-notes/2026-10-13-present-simple-lesson.md",
+  "text": "Tourism hepls local businesses.",
+  "provenance": {
+    "method": "learner_chat_text",
+    "reference": "Tata response in this chat, 13 October 2026, to guided Tourism ___ (help) local businesses, after coach identified singular subject."
+  },
+  "conditions": {
+    "assisted": true
+  },
+  "feedback": {
+    "verb_form": "Third-person singular ending -s selected in hepls; intended helps apparent from prompt.",
+    "spelling": "hepls → helps (p and l transposed)",
+    "next_step": "One new independent coach-created present-simple sentence, without answer shown."
+  },
+  "limits": "Guided practice after explanation and worked example; no IELTS score/band or independent ability inference. Original IELTS attempts unchanged."
+}
