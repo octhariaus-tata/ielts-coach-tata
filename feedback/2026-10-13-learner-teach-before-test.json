@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-learner-teach-before-test",
+  "created_at": "2026-10-13T16:09:59.244216+07:00",
+  "payload": {
+    "event_id": "2026-10-13-learner-teach-before-test",
+    "kind": "learner",
+    "actor": "learner",
+    "category": "preference",
+    "scope": "global",
+    "text": "coba ukur dulu dari semua yang aku kerjakan tadi, karna aku ngerasa kamu ga ngasih penjelasan tapi langsung mengujiku, bagaimana aku bisa menjawab tanpa diberi, materi, example, and trick to answer the question",
+    "signals": {},
+    "provenance": {
+      "method": "learner_chat",
+      "reference": "Pesan Tata di chat ini 13 Oktober 2026 sesudah revisi Writing Tourism. Permintaan review seluruh hasil dan pengajaran berupa materi/contoh/strategi sebelum latihan; raw scope luas tanpa menebak durasi atau preferred_feedback_style terstruktur."
+    }
+  },
+  "payload_sha256": "3c616c12b8ef0f2553826dbdf0c0693225b1f3c2c1eeb81e18d58195af4ebb5c",
+  "session_snapshots": {},
+  "rule_version": "adaptation-1.2"
+}
