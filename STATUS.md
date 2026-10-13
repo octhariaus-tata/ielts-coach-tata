@@ -39,6 +39,6 @@ Jangan menandai laptop baru siap berdasarkan keberhasilan komputer ini. Bila off
 - Sesi belajar aktif: 2026-10-13-writing-9ce1ee9f8c8b.
 - Sesi belajar selesai: 4.
 - Tes sistem tidak dihitung sebagai kemajuan Tata.
-- 2026-10-13-writing-9ce1ee9f8c8b: working (1 checkpoint tersimpan).
+- 2026-10-13-writing-9ce1ee9f8c8b: awaiting_review (2 checkpoint tersimpan).
 - Tugas berikutnya: Writing International Tourism Task 2 micro-task: posisi + satu paragraf; cadangan Further Education Task 1 introduction + overview. Feedback aspek yang terlihat tanpa band task.
 <!-- managed-sessions:end -->
