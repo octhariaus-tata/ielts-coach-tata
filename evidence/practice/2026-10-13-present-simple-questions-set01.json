@@ -3,7 +3,7 @@
   "kind": "supplemental_grammar_drill",
   "source_label": "coach_created_not_official_IELTS",
   "lesson": "learning/coaching-notes/2026-10-13-present-simple-questions-set01.md",
-  "phase": "working",
+  "phase": "reviewed",
   "response_revisions": [
     {
       "revision_id": "2026-10-13-questions-initial-partial-01",
@@ -17,11 +17,105 @@
         "method": "learner_chat_text",
         "reference": "Tata sent questions 1–2 then clarified eh belum selesai / kepencet / sorry / aku lanjut dulu ya in this chat on 13 October 2026. Preserve partial answers, no grading yet."
       }
+    },
+    {
+      "revision_id": "2026-10-13-questions-initial-complete-01",
+      "text": "1. Does your brother cook dinner ?\n2. Do children play outside ?\n3. Does a bus stop near the hotel ?\n4. Do we share our photos ?\n5. Does this museum open every day ?\n6. Do I need a new phone ?\n7. Do they learn english together ?\n8. Does a tour guide explain the rules ?\n9. Do you work on Saturdays ?\n10. Does My laptop run quickly ?\n11. Do local shops close early ?\n12. Does she enjoy reading ?",
+      "purpose": "initial_practice_complete",
+      "available_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "provenance": {
+        "method": "learner_chat_text",
+        "reference": "Tata complete first submission of questions 1–12 in this chat, 13 October 2026; earlier accidental partial submission preserved separately."
+      }
     }
   ],
   "conditions": {
     "actual_minutes": null,
     "instructional_context": "After material, worked example and guided practice."
   },
-  "limits": "Coach-created practice only; no IELTS/CEFR band or ability inference."
+  "limits": "Coach-created practice only; no IELTS/CEFR band or ability inference.",
+  "result": {
+    "score": {
+      "correct": 12,
+      "total": 12,
+      "scope": "question_grammar_only"
+    },
+    "response_revision_id": "2026-10-13-questions-initial-complete-01",
+    "verification_method": "Coach checks auxiliary agreement, order, subject preservation and base verb against all 12 original statements; capitalization/punctuation assessed separately. Not official IELTS key.",
+    "expected_sentences": [
+      "Does your brother cook dinner?",
+      "Do children play outside?",
+      "Does a bus stop near the hotel?",
+      "Do we share our photos?",
+      "Does this museum open every day?",
+      "Do I need a new phone?",
+      "Do they learn English together?",
+      "Does a tour guide explain the rules?",
+      "Do you work on Saturdays?",
+      "Does my laptop run quickly?",
+      "Do local shops close early?",
+      "Does she enjoy reading?"
+    ],
+    "language_conventions": [
+      {
+        "numbers": [
+          7
+        ],
+        "given": "english",
+        "expected": "English",
+        "reason": "Names of languages take capital letters."
+      },
+      {
+        "numbers": [
+          10
+        ],
+        "given": "My",
+        "expected": "my",
+        "reason": "Possessive determiner within sentence uses lowercase; I remains capitalized when present."
+      },
+      {
+        "numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "given": "space before ?",
+        "expected": "no space before ?",
+        "reason": "Standard English punctuation attaches ? to the preceding word."
+      }
+    ],
+    "feedback": {
+      "strength": "All 12 question structures use correct Do/Does, original subject and base verb.",
+      "patterns": [
+        "Capitalization: English versus english; my within sentence versus My.",
+        "Punctuation: remove space before question mark."
+      ],
+      "action": "Check capital letters and question-mark spacing before sending the next set.",
+      "next_task": "Short answers to present-simple questions: material → worked example → one guided personal question → independent practice."
+    },
+    "band": null,
+    "limits": "Drill accuracy after instruction, not IELTS/CEFR or evidence of long-term mastery."
+  }
 }

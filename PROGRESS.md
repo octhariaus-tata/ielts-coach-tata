@@ -71,6 +71,10 @@ Revisi Q5 diterima sesudah feedback: The guide helps visitors. Bukti review terp
 
 Set negatif buatan coach: **12/12 untuk struktur grammar saja** (don't/doesn't + base verb); dua typo terpisah, cuastomers → customers dan Thet → They. Respons pertama dan pemeriksaan: [drill negatives](evidence/practice/2026-10-13-present-simple-negatives-set01.json). Bukan skor IELTS/CEFR atau klaim mastery. Berikutnya ajarkan pertanyaan Do/Does dengan material, worked example, guided dan independent; grammar dan ejaan diperiksa terpisah.
 
+## 13 Oktober 2026 — grammar questions tambahan
+
+Set pertanyaan buatan coach: **12/12 untuk struktur pertanyaan**, semua Do/Does, urutan subjek dan base verb tepat. English perlu huruf besar, my dalam kalimat huruf kecil, tanpa spasi sebelum ?. Respons penuh dan partial sebelumnya disimpan terpisah pada [drill questions](evidence/practice/2026-10-13-present-simple-questions-set01.json). Bukan band atau klaim mastery. Berikutnya ajarkan short answers, dengan contoh dan satu guided sebelum latihan mandiri.
+
 <!-- managed-sessions:start -->
 ## Sesi baru — ringkasan dari sessions/
 
