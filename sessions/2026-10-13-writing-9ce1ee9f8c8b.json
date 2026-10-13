@@ -127,6 +127,19 @@
           "reference": "Tulisan awal Tata di chat ini 13 Oktober 2026 untuk micro-task International Tourism; teks dan campuran bahasa dipertahankan. Waktu aktual dan bantuan eksternal belum diketahui."
         }
       }
+    },
+    {
+      "revision_id": "68cce7cac2e945eda46fe3798d233e14",
+      "created_at": "2026-10-13T16:07:15+07:00",
+      "payload": {
+        "text": "I believe the advantages of international tourism outweigh its disadvantages. \nTourism help the local economy grow. For example, foreign tourist buy local products. They can promote our merchandise to their country.",
+        "evidence": [],
+        "purpose": "review",
+        "provenance": {
+          "method": "learner_chat_text",
+          "reference": "Revisi Tata untuk micro-task Tourism di chat ini 13 Oktober 2026 setelah feedback. Posisi advantages outweigh disadvantages sudah eksplisit dan can promote sudah bentuk dasar. Tourism help dan foreign tourist masih perlu helps/tourists. Teks awal dipertahankan; bukan attempt independen/band baru."
+        }
+      }
     }
   ],
   "result": {
