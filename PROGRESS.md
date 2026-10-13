@@ -61,4 +61,5 @@ Kesalahan tidak boleh disimpulkan dari skor total saja. Untuk jawaban lengkap ya
 | --- | --- | --- | --- | --- |
 | [2026-10-13-listening-616b14552b51](sessions/2026-10-13-listening-616b14552b51.json) | Listening | practice | 4/6 | answers_key |
 | [2026-10-13-listening-b009564c17b7](sessions/2026-10-13-listening-b009564c17b7.json) | Listening | practice | 3/8 | answers_key |
+| [2026-10-13-reading-c3d297229593](sessions/2026-10-13-reading-c3d297229593.json) | Reading | practice | 2/3 | answers_key |
 <!-- managed-sessions:end -->

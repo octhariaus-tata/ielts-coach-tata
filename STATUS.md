@@ -36,9 +36,8 @@ Jangan menandai laptop baru siap berdasarkan keberhasilan komputer ini. Bila off
 <!-- managed-sessions:start -->
 ## Keadaan sesi — dibaca dari sessions/
 
-- Sesi belajar aktif: 2026-10-13-reading-c3d297229593.
-- Sesi belajar selesai: 2.
+- Sesi belajar aktif: tidak ada.
+- Sesi belajar selesai: 3.
 - Tes sistem tidak dihitung sebagai kemajuan Tata.
-- 2026-10-13-reading-c3d297229593: awaiting_review (1 checkpoint tersimpan).
-- Tugas berikutnya: Reading Marie Curie, True/False/Not Given Q1–3; cadangan Reading Development of Rockets Q7–10 sesuai rotasi.
+- Tugas berikutnya: Speaking An Important Possession, Part 2; cadangan Hometown and Accommodation, Part 1. Rekaman hanya dinilai bila audio asli tersedia dan diperiksa; transcript-only mendapat feedback terbatas tanpa pronunciation/band.
 <!-- managed-sessions:end -->

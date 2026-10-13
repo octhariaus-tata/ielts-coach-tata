@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "id": "2026-10-13-reading-c3d297229593",
-  "status": "in_progress",
-  "phase": "awaiting_review",
+  "status": "completed",
+  "phase": "completed",
   "started_at": "2026-10-13T15:31:47+07:00",
   "skill": "Reading",
   "task_id": "reading-marie-curie-tfng",
@@ -116,5 +116,56 @@
       }
     }
   ],
-  "result": null
+  "result": {
+    "mode": "answers_key",
+    "scope": "snippet",
+    "response_revision_id": "0d5a7248cdf84bba95864f411989662e",
+    "score": {
+      "correct": 2,
+      "total": 3
+    },
+    "key_task_id": "reading-marie-curie-tfng",
+    "key_version_verified": true,
+    "key_url": "https://ielts.org/cdn/Sample-tests/ielts-academic-reading-sample-tasks-2023.pdf#page=14",
+    "verification_method": "Jawaban awal Tata di chat dibandingkan key p14 dan teks/soal p12–13 dari cache resmi versi yang sama, lolos checksum/provenance/rentang pada references.py 13 Oktober 2026.",
+    "answers": [
+      {
+        "number": "1",
+        "given": "False",
+        "expected": "FALSE",
+        "correct": true,
+        "proof": "P12: Nobel Physics 1903 bersama Pierre dan Becquerel; Nobel Chemistry 1911 dimenangi Marie sendiri (sole winner). Klaim husband joint winner of both bertentangan."
+      },
+      {
+        "number": "2",
+        "given": "True",
+        "expected": "NOT GIVEN",
+        "correct": false,
+        "proof": "P12 menyebut ingatan luar biasa sejak kecil dan medali sekolah pada usia 16; tidak menyatakan kapan Marie mulai tertarik pada sains. Klaim minat sains sejak kecil tidak cukup informasi."
+      },
+      {
+        "number": "3",
+        "given": "True",
+        "expected": "TRUE",
+        "correct": true,
+        "proof": "P12: Marie membiayai studi Bronia dengan kesepakatan bantuan balik untuk pendidikannya; janji dipenuhi pada 1891 dan Marie pergi ke Sorbonne. Mendukung kontribusi saudari."
+      }
+    ],
+    "evidence": [],
+    "conditions": {
+      "actual_minutes": null,
+      "key_seen_before": null
+    },
+    "feedback": {
+      "strength": "Jawaban 1 dan 3 tepat: membedakan pemenang bersama dari pemenang tunggal serta memahami hubungan bantuan biaya pendidikan. Alasan Tata sendiri belum dikirim, jadi kekuatan dilaporkan dari jawaban benar saja.",
+      "patterns": [
+        "Pada soal 2, TRUE dipilih untuk informasi yang tidak dinyatakan: ingatan hebat sejak kecil tidak membuktikan minat sains sejak kecil. Satu soal adalah fokus latihan, bukan kelemahan menetap."
+      ],
+      "action": "Sebelum memilih TRUE, temukan bukti untuk seluruh klaim, termasuk waktu when she was a child. Jika informasi waktunya tidak tersedia dan tidak ada kontradiksi, gunakan NOT GIVEN.",
+      "next_task": "Speaking An Important Possession, Part 2; cadangan Hometown and Accommodation, Part 1. Rekaman hanya dinilai bila audio asli tersedia dan diperiksa; transcript-only mendapat feedback terbatas tanpa pronunciation/band."
+    },
+    "uncertainty": "Cuplikan 3 soal tanpa band; durasi aktual dan paparan key sebelum attempt belum diketahui. Tidak ada kalimat bukti dari Tata; jangan mengasumsikan strategi atau kenaikan kemampuan."
+  },
+  "graded_response_revision_id": "0d5a7248cdf84bba95864f411989662e",
+  "completed_at": "2026-10-13T15:41:28+07:00"
 }
