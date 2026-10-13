@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "id": "2026-10-13-listening-b009564c17b7",
-  "status": "in_progress",
-  "phase": "awaiting_review",
+  "status": "completed",
+  "phase": "completed",
   "started_at": "2026-10-13T07:42:52+07:00",
   "skill": "Listening",
   "task_id": "listening-packham-form",
@@ -130,5 +130,93 @@
       }
     }
   ],
-  "result": null
+  "result": {
+    "mode": "answers_key",
+    "scope": "snippet",
+    "response_revision_id": "69832e7b5c9e497d83747ec46db30a3a",
+    "score": {
+      "correct": 3,
+      "total": 8
+    },
+    "key_task_id": "listening-packham-form",
+    "key_version_verified": true,
+    "key_url": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf#page=7",
+    "verification_method": "Jawaban awal chat dicocokkan dengan cache resmi versi PDF 2023; checksum/source/rentang lolos references.py 13 Oktober 2026; prompt PDF diperiksa visual. Skor coach, bukan examiner. Q5 dinilai sesuai teks yang tersedia, masih ambigu.",
+    "answers": [
+      {
+        "number": "1",
+        "given": "Mkeae",
+        "expected": "Mkere",
+        "correct": false,
+        "proof": "Transcript p4: surname spelled M-K-E-R-E; key p7 Mkere."
+      },
+      {
+        "number": "2",
+        "given": "Westell",
+        "expected": "Westall",
+        "correct": false,
+        "proof": "Transcript p5: college spelled W-E-S-T-A-L-L; key p7 Westall. Extra repeated numbering in raw message treated as formatting, not part of answer."
+      },
+      {
+        "number": "3",
+        "given": "BS89TU",
+        "expected": "BS8 9PU",
+        "correct": false,
+        "proof": "Transcript p5 and key p7: BS8 9PU. Spaces are not the error; submitted T differs from P."
+      },
+      {
+        "number": "4",
+        "given": "7,5",
+        "expected": "0.75 m / 75 cm",
+        "correct": false,
+        "proof": "Transcript p5: width 0.75m. Submitted 7,5 interpreted as decimal 7.5, with no unit; does not match key p7 0.75 m or 75 cm."
+      },
+      {
+        "number": "5",
+        "given": ",5",
+        "expected": "0.5 m / 50 cm",
+        "correct": false,
+        "proof": "Transcript p5: height 0.5m. Raw ,5 remains ambiguous and lacks the metre/cm unit required by listed key variants; not awarded on present evidence. No inferred missing character."
+      },
+      {
+        "number": "6",
+        "given": "books",
+        "expected": "books",
+        "correct": true,
+        "proof": "Transcript p5: some books; key p7 permits books for Q6/7 in either order."
+      },
+      {
+        "number": "7",
+        "given": "toys",
+        "expected": "toys",
+        "correct": true,
+        "proof": "Transcript p5: some toys; key p7 permits toys for Q6/7 in either order."
+      },
+      {
+        "number": "8",
+        "given": "1700 pounds",
+        "expected": "1,700",
+        "correct": true,
+        "proof": "Transcript p6: clothes/books 1500 pounds plus toys 200 pounds, total 1700 pounds. Numeric value matches key p7 1,700; pounds explicitly names the same currency and is within word limit. Prompt inspected visually: no conflicting unit beside blank. Accepted as same numeric value, not an examiner decision."
+      }
+    ],
+    "evidence": [],
+    "conditions": {
+      "actual_minutes": null,
+      "audio_plays": null,
+      "key_seen_before": null
+    },
+    "feedback": {
+      "strength": "Menangkap dua isi kotak (books, toys) dan total nilai £1,700 dengan benar.",
+      "patterns": [
+        "Pada attempt ini, ejaan detail belum tepat: Mkere, Westall, BS8 9PU. Belum disimpulkan sebagai kelemahan menetap.",
+        "Ukuran perlu angka desimal dan satuan yang tepat: 0.75 m untuk width, 0.5 m untuk height. Nomor 5 ,5 ambigu dan tanpa satuan."
+      ],
+      "action": "Review singkat: tulis kembali tiga ejaan serta dua ukuran yang benar, lalu tandai angka desimal dan satuannya. Ini revisi sesudah key terlihat, bukan attempt baru.",
+      "next_task": "Listening Making Social Contact in the UK, Q11–16, sesuai alur tambahan hari ini; verifikasi paket sebelum attempt baru. Sesudah itu Reading Marie Curie; cadangan Rockets sesuai rotasi."
+    },
+    "uncertainty": "Jumlah putaran audio, waktu aktual, dan paparan key sebelum attempt belum dikonfirmasi; tidak dipakai untuk inferensi perkembangan kemampuan. Nomor 5 tetap ,5 sebagaimana input."
+  },
+  "graded_response_revision_id": "69832e7b5c9e497d83747ec46db30a3a",
+  "completed_at": "2026-10-13T15:19:32+07:00"
 }

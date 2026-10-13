@@ -59,5 +59,5 @@ Kesalahan tidak boleh disimpulkan dari skor total saja. Untuk jawaban lengkap ya
 
 | ID | Skill | Jenis | Hasil | Status bukti |
 | --- | --- | --- | --- | --- |
-| — | — | — | Belum ada latihan baru selesai | — |
+| [2026-10-13-listening-b009564c17b7](sessions/2026-10-13-listening-b009564c17b7.json) | Listening | practice | 3/8 | answers_key |
 <!-- managed-sessions:end -->

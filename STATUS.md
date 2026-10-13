@@ -36,8 +36,8 @@ Jangan menandai laptop baru siap berdasarkan keberhasilan komputer ini. Bila off
 <!-- managed-sessions:start -->
 ## Keadaan sesi — dibaca dari sessions/
 
-- Sesi belajar aktif: 2026-10-13-listening-b009564c17b7.
-- Sesi belajar selesai: 0.
+- Sesi belajar aktif: tidak ada.
+- Sesi belajar selesai: 1.
 - Tes sistem tidak dihitung sebagai kemajuan Tata.
-- 2026-10-13-listening-b009564c17b7: awaiting_review (1 checkpoint tersimpan).
+- Tugas berikutnya: Listening Making Social Contact in the UK, Q11–16, sesuai alur tambahan hari ini; verifikasi paket sebelum attempt baru. Sesudah itu Reading Marie Curie; cadangan Rockets sesuai rotasi.
 <!-- managed-sessions:end -->
