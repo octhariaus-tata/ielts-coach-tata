@@ -2,7 +2,7 @@
   "schema_version": 1,
   "id": "2026-10-13-speaking-683f3d42db99",
   "status": "in_progress",
-  "phase": "working",
+  "phase": "awaiting_review",
   "started_at": "2026-10-13T15:42:37+07:00",
   "skill": "Speaking",
   "task_id": "speaking-important-object-part2",
@@ -78,8 +78,30 @@
       "score_policy": "AI estimate with evidence/uncertainty for adequate audio sample; transcript-only cannot assess pronunciation or reliable fluency timing. Not an official examiner result."
     }
   },
-  "conditions": {},
+  "conditions": {
+    "actual_minutes": null,
+    "key_seen_before": null
+  },
   "evidence": [],
-  "response_revisions": [],
+  "response_revisions": [
+    {
+      "revision_id": "ea4a75326cb54c6dbbde3145fa7b82e6",
+      "created_at": "2026-10-13T15:47:11+07:00",
+      "payload": {
+        "text": "Okay, I will answer. The something that I own, which is very important to me, is my phone. I got it from my boyfriend that buy it to me. I have this phone maybe a year ago. I use this phone for everything, like for banking, for groceries, and for chatting with other people to make a connection and to do a job, of course. I think it's not valuable in terms of the money because the phone is very important to me. Everything I have is on my phone. For example, a picture who has some memories, money for buy anything, and contact, like for the connectivity with other people. It's not easy to replace my phone with the other thing in the world.",
+        "evidence": [],
+        "purpose": "attempt",
+        "phase": "awaiting_review",
+        "conditions": {
+          "actual_minutes": null,
+          "key_seen_before": null
+        },
+        "provenance": {
+          "method": "learner_chat_text",
+          "reference": "Respons bahasa Inggris Tata di chat ini pada 13 Oktober 2026 untuk Speaking Part 2 phone. Hanya teks yang diterima; asal dictation/transcription dan durasi tidak diketahui, tidak ada file audio tersedia untuk diperiksa."
+        }
+      }
+    }
+  ],
   "result": null
 }
