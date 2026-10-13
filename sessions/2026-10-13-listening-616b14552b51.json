@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-listening-616b14552b51",
+  "status": "in_progress",
+  "phase": "working",
+  "started_at": "2026-10-13T15:21:40+07:00",
+  "skill": "Listening",
+  "task_id": "listening-social-contact-short-answer",
+  "kind": "practice",
+  "available_minutes": 20,
+  "material": {
+    "id": "listening-social-contact-short-answer",
+    "skill": "Listening",
+    "role": "backup",
+    "provider": "IELTS.org (official IELTS Partners sample)",
+    "source_label": "official",
+    "title": "Making Social Contact in the UK — short-answer questions",
+    "question_type": "short_answer_questions",
+    "source_version": "IELTS Sample Tasks 2023; isolated prompt excerpt",
+    "source_pages": [
+      11
+    ],
+    "question_numbers": [
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16"
+    ],
+    "urls": {
+      "task": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf#page=11",
+      "prompt": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf#page=11",
+      "source": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf",
+      "index": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+      "key": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf#page=13",
+      "transcript": "https://ielts.org/cdn/Sample-tests/ielts-listening-sample-tasks-2023.pdf#page=12",
+      "audio": "https://ielts.org/cdn/Sample-tests/Listening/ielts-listening-sample-task-3-short-answer-questions.mp3",
+      "reference": null
+    },
+    "local": {
+      "prompt": "materials/listening-social-contact-short-answer.pdf",
+      "audio": "materials/listening-social-contact-short-answer.mp3",
+      "prompt_sha256": "2d35e526aae3ca180daa5663b52641f2dbec43f975ab6e833967b9ca1c344401"
+    },
+    "verification": {
+      "date": "2026-10-12",
+      "timezone": "Asia/Jakarta",
+      "method": "Exact official PDF checksum matched source version; prompt p11, transcript p12 and key p13 read; prompt excerpt reopened and visually rendered; no answer pages copied.",
+      "source_pdf": "verified",
+      "prompt_file": "verified",
+      "key": "verified",
+      "transcript": "verified",
+      "audio": "verified",
+      "audio_playback": "not_checked",
+      "browser_attempt_results": "not_checked",
+      "auto_score": "not_applicable",
+      "recording_capture": "not_applicable",
+      "audio_verification": "Official recording link inspected in exact source PDF p12; official CDN HTTP 200 audio/mpeg; downloaded ID3+MP3 parsed by afinfo without playback",
+      "audio_duration_seconds": 92.592,
+      "local_correction_cache": "verified"
+    },
+    "key_pages": [
+      13
+    ],
+    "reference_pages": null,
+    "freshness": {
+      "status": "no_attempt_in_local_history",
+      "basis": "PROFILE.md, PROGRESS.md and AUDIT.md read on 2026-10-12; no recorded attempt/exposure for this task. Confirm learner has not seen key at session start.",
+      "eligible_for_new_attempt": true
+    },
+    "delivery": "Give local prompt-only PDF and local audio; Tata presses Play herself. Withhold full source PDF, key and transcript until done. Check playback support on the learning laptop without starting recording for Tata.",
+    "result_collection": {
+      "primary": "At initial attempt, learner answers directly in chat numbered 11–16, or writes on paper and sends a photo/screenshot. Never ask to retype all answers after done.",
+      "fallback": "screenshot of handwritten/typed numbered answers",
+      "current_browser_access": "not_checked"
+    },
+    "difficulty": {
+      "status": "not_estimated",
+      "note": "No official band or difficulty assigned to this extract."
+    },
+    "transcript_pages": [
+      12
+    ],
+    "suggested_session": {
+      "minutes": 20,
+      "type": "new official short exercise/pilot",
+      "coach_timing_estimate": "2 minutes instructions, 1 minute scan, about 1 minute 33 seconds one play, 2 minutes finish/capture, 10 minutes feedback and one correction, remainder next action",
+      "score_policy": "Report /6 only; no IELTS band. Respect order-independent pairs exactly as key p13 permits; count play from learner report, coach never starts it."
+    },
+    "fallback_id": null,
+    "coach_reference": {
+      "schema_version": 1,
+      "path": "coach_refs/listening-social-contact-short-answer.json",
+      "sha256": "46c0adc11e953a4544735ce15bb49bfa51a5f0f9f990120e30d3f11aee9f024b",
+      "visibility": "coach_only_after_done",
+      "verified_date": "2026-10-12",
+      "content": "exact key and transcript/passage excerpts; never attach in learner instructions",
+      "status": "verified"
+    }
+  },
+  "conditions": {},
+  "evidence": [],
+  "response_revisions": [],
+  "result": null
+}

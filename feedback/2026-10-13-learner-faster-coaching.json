@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-learner-faster-coaching",
+  "created_at": "2026-10-13T15:21:58.932252+07:00",
+  "payload": {
+    "event_id": "2026-10-13-learner-faster-coaching",
+    "kind": "learner",
+    "actor": "learner",
+    "category": "preference",
+    "scope": "global",
+    "text": "lanjut dong, jangan terlalu lama mikirnya sat set kan kamu tutor aku, kalo kelamaan mikir aku kehilangan mood belajar, terus next nya mau apa ini ?",
+    "signals": {},
+    "provenance": {
+      "method": "learner_chat",
+      "reference": "Pesan Tata di chat ini pada 13 Oktober 2026 setelah review Packham; permintaan alur coaching lebih cepat. Tidak mengasumsikan durasi belajar baru."
+    }
+  },
+  "payload_sha256": "5ae70b5e45dba5a9b103c62f0fffc05976e36b59e34bb4fd98cc6ed0bee6a9a4",
+  "session_snapshots": {},
+  "rule_version": "adaptation-1.2"
+}
