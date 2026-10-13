@@ -36,9 +36,8 @@ Jangan menandai laptop baru siap berdasarkan keberhasilan komputer ini. Bila off
 <!-- managed-sessions:start -->
 ## Keadaan sesi — dibaca dari sessions/
 
-- Sesi belajar aktif: 2026-10-13-writing-9ce1ee9f8c8b.
-- Sesi belajar selesai: 4.
+- Sesi belajar aktif: tidak ada.
+- Sesi belajar selesai: 5.
 - Tes sistem tidak dihitung sebagai kemajuan Tata.
-- 2026-10-13-writing-9ce1ee9f8c8b: awaiting_review (2 checkpoint tersimpan).
-- Tugas berikutnya: Writing International Tourism Task 2 micro-task: posisi + satu paragraf; cadangan Further Education Task 1 introduction + overview. Feedback aspek yang terlihat tanpa band task.
+- Tugas berikutnya: Satu revisi micro-task Tourism 3–4 kalimat untuk menerapkan feedback; sesudah review lanjut rotasi Listening dengan paket resmi baru yang perlu dipreflight, bukan retake bank yang key-nya telah terekspos.
 <!-- managed-sessions:end -->

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "id": "2026-10-13-writing-9ce1ee9f8c8b",
-  "status": "in_progress",
-  "phase": "awaiting_review",
+  "status": "completed",
+  "phase": "completed",
   "started_at": "2026-10-13T15:52:38+07:00",
   "skill": "Writing",
   "task_id": "writing-tourism-task2",
@@ -129,5 +129,35 @@
       }
     }
   ],
-  "result": null
+  "result": {
+    "mode": "ai_estimate",
+    "scope": "partial",
+    "response_revision_id": "7c24184aa5804af4baf309d73df2cf59",
+    "verification_method": "Feedback AI dari tulisan asli tersimpan (97 kata dengan pemisahan spasi), dibandingkan pertanyaan resmi Task 2 tourism serta pengarahan micro-task posisi + paragraf. Tidak ada band task.",
+    "response_word_count": 97,
+    "criteria": {
+      "task_response": "Ada posisi pro tourism dan contoh ekonomi konkret: pembelian produk lokal/merchandise serta promosi setelah pulang. Namun I am not agree with this opinion tidak menyebut posisi perbandingan disadvantages versus advantages. Kalimat terakhir tentang tindakan diri sendiri melindungi habitat belum menjelaskan mengapa manfaat lebih besar daripada kerugian. Respons micro-task, bukan esai utuh.",
+      "coherence_cohesion": "Contoh didahului For example dan berhubungan dengan alasan ekonomi. Kalimat contoh sangat panjang dengan beberapa klausa, tanda baca tidak tepat dan referen their/They; hubungan kalimat environmental protection ke argumen utama belum cukup dijelaskan.",
+      "lexical_resource": "Merchandise, habitats dan environment relevan. Word form economic/economy tertukar; economic become turning tidak natural. Dan adalah kata Indonesia dalam respons Inggris; pilih and. Penggunaan comeback sebagai verba dua kata kembali perlu come back/return.",
+      "grammatical_range_accuracy": "Bentuk has/have untuk travelers, Tourist/Tourists, I am not agree/I do not agree; setelah can gunakan verba dasar make/promote. Masalah pronoun their/they dan relative clause which is help/which helps membuat contoh sulit diikuti."
+    },
+    "uncertainty": "Micro-task 97 kata, bukan Writing Task 2 lengkap. Feedback hanya aspek terlihat dari teks; durasi aktual dan asal bantuan belum diketahui. Tidak menilai band task atau band Writing keseluruhan.",
+    "evidence": [],
+    "conditions": {
+      "actual_minutes": null,
+      "key_seen_before": null,
+      "task_scope": "micro_task"
+    },
+    "feedback": {
+      "strength": "Contoh wisatawan membeli produk lokal mendukung alasan manfaat ekonomi dan memberi argumen yang konkret.",
+      "patterns": [
+        "Posisi belum menjawab perbandingan secara eksplisit: disadvantages outweigh advantages, bukan sekadar agree/disagree. Kalimat lingkungan belum membuktikan perbandingan.",
+        "Bentuk kata/verb perlu tepat: I do not agree, tourism helps the local economy, tourists buy local products, they can promote. Klausa contoh perlu dipisah agar lebih jelas."
+      ],
+      "action": "Review 3 menit: tulis ulang 3–4 kalimat yang menyatakan advantages outweigh disadvantages, satu alasan ekonomi, satu contoh dan kaitannya dengan posisi. Gunakan economy serta can + verba dasar. Simpan revisi terpisah sesudah feedback, bukan attempt/band baru.",
+      "next_task": "Satu revisi micro-task Tourism 3–4 kalimat untuk menerapkan feedback; sesudah review lanjut rotasi Listening dengan paket resmi baru yang perlu dipreflight, bukan retake bank yang key-nya telah terekspos."
+    }
+  },
+  "graded_response_revision_id": "7c24184aa5804af4baf309d73df2cf59",
+  "completed_at": "2026-10-13T16:04:19+07:00"
 }
