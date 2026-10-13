@@ -16,7 +16,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import session
 
-RULE_VERSION = 'adaptation-1.2'
+RULE_VERSION = 'adaptation-1.3'
 CATEGORIES = ('preference', 'access', 'difficulty', 'scoring_dispute')
 METRICS = ('response_capture', 'completion', 'transfer_accuracy', 'feedback_usefulness')
 ROTATION = ('Listening', 'Reading', 'Speaking', 'Writing')
@@ -157,7 +157,7 @@ def events(root, directory):
 
 
 def normalize_feedback(payload):
-    fields(payload, ('event_id', 'kind', 'actor', 'text', 'category', 'session_id', 'scope', 'signals', 'provenance'),
+    fields(payload, ('event_id', 'kind', 'actor', 'text', 'category', 'session_id', 'lesson_id', 'scope', 'signals', 'provenance'),
            ('event_id', 'text', 'category', 'provenance'))
     value = copy.deepcopy(payload)
     eid = identifier(value['event_id'])
@@ -169,13 +169,24 @@ def normalize_feedback(payload):
     session.validate_provenance(value['provenance'])
     sid = value.get('session_id')
     value.setdefault('scope', 'session' if sid else 'global')
-    if value['scope'] not in ('global', 'session') or (value['scope'] == 'session' and not sid):
+    if value['scope'] not in ('global', 'session', 'lesson') or (value['scope'] == 'session' and not sid):
         raise ValueError('Feedback sesi memerlukan session_id.')
+    if value['scope'] == 'lesson':
+        identifier(value.get('lesson_id'))
+    elif value.get('lesson_id'):
+        raise ValueError('lesson_id requires lesson scope.')
     if value['category'] == 'scoring_dispute' and (not sid or value['scope'] != 'session'):
         raise ValueError('Scoring dispute harus menunjuk session_id dengan scope session; feedback umum tetap kategori preference.')
     signals = value.setdefault('signals', {})
-    if not isinstance(signals, dict) or set(signals) - {'preferred_feedback_style', 'available_minutes', 'difficulty'}:
+    if not isinstance(signals, dict) or set(signals) - {'preferred_feedback_style', 'available_minutes', 'difficulty',
+            'lesson_language', 'teaching_sequence', 'practice_volume', 'completion_mode', 'short_drill_items'}:
         raise ValueError('Signals hanya boleh memuat preferensi yang eksplisit.')
+    for key, allowed in {'lesson_language': ('en', 'id'), 'teaching_sequence': ('teach_first',),
+                         'practice_volume': ('adaptive',), 'completion_mode': ('natural', 'explicit_done')}.items():
+        if key in signals and signals[key] not in allowed:
+            raise ValueError('Invalid explicit teaching preference: ' + key)
+    if 'short_drill_items' in signals and signals['short_drill_items'] != [20, 30]:
+        raise ValueError('Short drill prepared range is [20, 30], not a universal task size.')
     if 'preferred_feedback_style' in signals and signals['preferred_feedback_style'] not in ('concise', 'detailed'):
         raise ValueError('Gaya feedback harus concise atau detailed.')
     if 'available_minutes' in signals and (type(signals['available_minutes']) is not int or not 1 <= signals['available_minutes'] <= 180):
@@ -191,6 +202,11 @@ def record_feedback(root, payload):
     eid = value['event_id']
     sid = value.get('session_id')
     with session.mutation_lock(root):
+        if value['scope'] == 'lesson':
+            import lessons
+            lesson = lessons.find(root, value['lesson_id'])
+            if lesson['kind'] != value['kind']:
+                raise ValueError('Learner/system-test lesson scopes must remain separate.')
         duplicate = existing_event(root, 'feedback', eid, value)
         if duplicate:
             return duplicate
@@ -455,7 +471,7 @@ def analyze(root, records=None):
     disputes, quarantine_reasons = quarantine(root, feedback, resolutions, records)
     learner_feedback = [e for e in feedback if e['payload']['kind'] == 'learner']
     active = [r for r in records if r['status'] == 'in_progress' and r['kind'] != 'system_test']
-    globals_, scoped, sources = {}, {}, {}
+    globals_, scoped, lesson_scoped, sources = {}, {}, {}, {}
     for event in learner_feedback:
         value = event['payload']
         if value.get('actor', 'unspecified') != 'learner':
@@ -466,9 +482,21 @@ def analyze(root, records=None):
         elif value.get('session_id') in {r['id'] for r in active}:
             scoped.setdefault(value['session_id'], {}).update(value.get('signals', {}))
             sources.update({value['session_id'] + ':' + k: event['id'] for k in value.get('signals', {})})
+        elif value['scope'] == 'lesson':
+            lesson_scoped.setdefault(value['lesson_id'], {}).update(value.get('signals', {}))
+            sources.update({value['lesson_id'] + ':' + k: event['id'] for k in value.get('signals', {})})
     effective = dict(globals_)
     if len(active) == 1:
         effective.update(scoped.get(active[0]['id'], {}))
+    # Read only the lesson envelope here: lessons validates the full packet, and
+    # calling it here would recursively enter preference analysis.
+    active_lessons = []
+    for file in (root / 'learning' / 'lessons').glob('*.json'):
+        item = json.loads(file.read_text(encoding='utf-8'))
+        if item.get('kind') == 'learner' and item.get('status') != 'completed':
+            active_lessons.append(item)
+    if len(active_lessons) == 1:
+        effective.update(lesson_scoped.get(active_lessons[0]['id'], {}))
     learning = sorted([r for r in records if r['status'] == 'completed' and r['kind'] != 'system_test'],
                       key=lambda r: (r['completed_at'], r['id']))
     exclusions = dict(quarantine_reasons)
@@ -548,7 +576,8 @@ def analyze(root, records=None):
             'experiments': ledger,
             'feedback_counts': {category: sum(e['payload']['category'] == category for e in learner_feedback) for category in CATEGORIES},
             'system_test_feedback_count': sum(e['payload']['kind'] == 'system_test' for e in feedback),
-            'preferences': {'global': globals_, 'by_session': scoped, 'effective': effective, 'source_event_ids': sources},
+            'preferences': {'global': globals_, 'by_session': scoped, 'by_lesson': lesson_scoped,
+                            'effective': effective, 'source_event_ids': sources},
             'unresolved_disputes': disputes,
             'access_issues': [{'feedback_id': e['id'], 'session_id': e['payload'].get('session_id'),
                                'text': e['payload']['text'], 'provenance': e['payload']['provenance']}

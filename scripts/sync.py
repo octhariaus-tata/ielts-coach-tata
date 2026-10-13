@@ -21,6 +21,8 @@ TOP_LEVEL = frozenset({
 })
 DIRECTORIES = frozenset({"sessions", "evidence", "materials", "coach_refs", "feedback", "learning", "scripts", "tests"})
 SKILL_FILES = frozenset({
+    ".agents/skills/ielts-teacher/SKILL.md",
+    ".agents/skills/ielts-teacher/agents/openai.yaml",
     ".agents/skills/ielts-coach/SKILL.md",
     ".agents/skills/ielts-coach/agents/openai.yaml",
     ".agents/skills/ielts-github-sync/SKILL.md",

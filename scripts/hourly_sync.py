@@ -38,6 +38,9 @@ def run(root, message='Sinkronisasi otomatis IELTS Coach Tata'):
         # are nonblocking, so another writer defers rather than waiting forever.
         with session.mutation_lock(root):
             records = session.load_sessions(root)
+            import lessons
+            lessons.load(root)
+            lessons.packets(root)
             adaptation.analyze(root, records=records)
             catalog = json.loads((root / 'materials.json').read_text(encoding='utf-8'))
             for task in catalog['tasks']:

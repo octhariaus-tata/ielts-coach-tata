@@ -252,10 +252,35 @@ def _rebuild(root):
             s['id'], s.get('phase', 'working'), len(s.get('response_revisions', []))))
     if len(active) > 1:
         state.append('- Ada lebih dari satu sesi aktif; coach harus rekonsiliasi sebelum memulai sesi baru.')
-    if completed:
+    import lessons
+    lesson_state = lessons.current(root, official=items)
+    if lesson_state.get('next_action'):
+        state.append('- Tugas berikutnya: ' + lesson_state['next_action'])
+        current_lesson = lesson_state.get('current_lesson')
+        if current_lesson:
+            state.append('- Lesson {}: {} / {}; budget {}.'.format(current_lesson['id'],
+                current_lesson['stage'], current_lesson['status'], current_lesson['available_minutes']))
+    elif completed:
         latest = max(completed, key=lambda s: s['completed_at'])
         state.append('- Tugas berikutnya: ' + latest['result']['feedback']['next_task'])
     managed_section(root / 'STATUS.md', '\n'.join(state))
+    if lessons.load(root):
+        lesson_lines = ['## Supplementary teaching lessons — not IELTS band assessments', '',
+                       '| Lesson | Stage | Prepared | Presented | Submitted | Reviewed |',
+                       '| --- | --- | --- | --- | --- | --- |']
+        for lesson in lessons.load(root):
+            count = lessons.counts(lesson, lessons.packet_for(root, lesson))
+            lesson_lines.append('| {} | {} | {} | {} | {} | {} |'.format(lesson['id'], lesson['stage'],
+                count['prepared'], count['presented'], count['submitted'], count['reviewed']))
+        # A separate derived section avoids mixing drills into IELTS rotation.
+        begin, end = '<!-- managed-lessons:start -->', '<!-- managed-lessons:end -->'
+        text = (root / 'PROGRESS.md').read_text(encoding='utf-8')
+        block = begin + '\n' + '\n'.join(lesson_lines) + '\n' + end
+        if begin in text and end in text:
+            text = text[:text.index(begin)] + block + text[text.index(end) + len(end):]
+        else:
+            text += '\n' + block + '\n'
+        atomic_write(root / 'PROGRESS.md', text)
 
 
 def rebuild(root):
