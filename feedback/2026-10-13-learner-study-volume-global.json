@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-learner-study-volume-global",
+  "created_at": "2026-10-13T08:28:21.870791+07:00",
+  "payload": {
+    "event_id": "2026-10-13-learner-study-volume-global",
+    "kind": "learner",
+    "actor": "learner",
+    "category": "preference",
+    "scope": "global",
+    "text": "ok please remember for all future run as well to bring enouggh question for a proper study session",
+    "signals": {},
+    "provenance": {
+      "method": "learner chat message",
+      "reference": "Current chat, 13 October 2026: explicit ongoing preference after agreement on 14 Listening questions across two exercises with review"
+    }
+  },
+  "payload_sha256": "8d07a259e3b76fd28819ebc37e734690bf998746c9d4a43b075c2c014e5df41f",
+  "session_snapshots": {},
+  "rule_version": "adaptation-1.2"
+}
