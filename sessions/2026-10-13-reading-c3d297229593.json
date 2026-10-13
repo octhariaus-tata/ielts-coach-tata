@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-reading-c3d297229593",
+  "status": "in_progress",
+  "phase": "working",
+  "started_at": "2026-10-13T15:31:47+07:00",
+  "skill": "Reading",
+  "task_id": "reading-marie-curie-tfng",
+  "kind": "practice",
+  "available_minutes": 20,
+  "material": {
+    "id": "reading-marie-curie-tfng",
+    "skill": "Reading",
+    "role": "primary",
+    "provider": "IELTS.org (official IELTS Partners sample)",
+    "source_label": "official",
+    "title": "Marie Curie — identifying information",
+    "question_type": "true_false_not_given",
+    "source_version": "IELTS Sample Tasks 2023; isolated prompt excerpt",
+    "source_pages": [
+      12,
+      13
+    ],
+    "question_numbers": [
+      "1",
+      "2",
+      "3"
+    ],
+    "urls": {
+      "task": "https://ielts.org/cdn/Sample-tests/ielts-academic-reading-sample-tasks-2023.pdf#page=12",
+      "prompt": "https://ielts.org/cdn/Sample-tests/ielts-academic-reading-sample-tasks-2023.pdf#page=12",
+      "source": "https://ielts.org/cdn/Sample-tests/ielts-academic-reading-sample-tasks-2023.pdf",
+      "index": "https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test",
+      "key": "https://ielts.org/cdn/Sample-tests/ielts-academic-reading-sample-tasks-2023.pdf#page=14",
+      "transcript": null,
+      "audio": null,
+      "reference": null
+    },
+    "local": {
+      "prompt": "materials/reading-marie-curie-tfng.pdf",
+      "audio": null,
+      "prompt_sha256": "5d0ad54ec7689655f0c60bd3dc81bf740aff67437848e9d25e4f4c8e3f89a965"
+    },
+    "verification": {
+      "date": "2026-10-12",
+      "timezone": "Asia/Jakarta",
+      "method": "Official PDF fetched HTTP 200; content and question/page ranges inspected; prompt excerpt reopened and rendered for QA",
+      "source_pdf": "verified",
+      "prompt_file": "verified",
+      "key": "verified",
+      "transcript": "not_applicable",
+      "audio": "not_applicable",
+      "audio_playback": "not_applicable",
+      "browser_attempt_results": "not_checked",
+      "auto_score": "not_applicable",
+      "recording_capture": "not_applicable",
+      "local_correction_cache": "verified"
+    },
+    "key_pages": [
+      14
+    ],
+    "reference_pages": null,
+    "freshness": {
+      "status": "no_attempt_in_local_history",
+      "basis": "PROFILE.md, PROGRESS.md and AUDIT.md read on 2026-10-12; confirm learner has not seen key at session start",
+      "eligible_for_new_attempt": true
+    },
+    "delivery": "Give local prompt-only file; do not give bundled source, key or sample responses before done. Resolve relative local file path against the project root.",
+    "result_collection": {
+      "primary": "learner screenshot of numbered answers",
+      "fallback": "screenshot of handwritten/typed numbered answers",
+      "current_browser_access": "not_checked"
+    },
+    "difficulty": {
+      "status": "not_estimated",
+      "note": "No official band or difficulty assigned to this extract."
+    },
+    "suggested_session": {
+      "minutes": 20,
+      "type": "new official short exercise",
+      "coach_timing_estimate": "2 minutes instruction, 8 minutes read/answer, 7 minutes feedback with text evidence, 3 minutes one correction",
+      "score_policy": "Report correct/number read only; no IELTS band."
+    },
+    "coach_reference": {
+      "schema_version": 1,
+      "path": "coach_refs/reading-marie-curie-tfng.json",
+      "sha256": "6ae6ffe79f9f50c9556e43d1c4b873ce88e26a10dacfc3c8765f079c896baddd",
+      "visibility": "coach_only_after_done",
+      "verified_date": "2026-10-12",
+      "content": "exact key and transcript/passage excerpts; never attach in learner instructions",
+      "status": "verified"
+    }
+  },
+  "conditions": {},
+  "evidence": [],
+  "response_revisions": [],
+  "result": null
+}

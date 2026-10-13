@@ -36,8 +36,9 @@ Jangan menandai laptop baru siap berdasarkan keberhasilan komputer ini. Bila off
 <!-- managed-sessions:start -->
 ## Keadaan sesi — dibaca dari sessions/
 
-- Sesi belajar aktif: tidak ada.
+- Sesi belajar aktif: 2026-10-13-reading-c3d297229593.
 - Sesi belajar selesai: 2.
 - Tes sistem tidak dihitung sebagai kemajuan Tata.
+- 2026-10-13-reading-c3d297229593: working (0 checkpoint tersimpan).
 - Tugas berikutnya: Reading Marie Curie, True/False/Not Given Q1–3; cadangan Reading Development of Rockets Q7–10 sesuai rotasi.
 <!-- managed-sessions:end -->
