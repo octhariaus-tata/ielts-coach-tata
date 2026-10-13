@@ -101,7 +101,7 @@
   },
   "conditions": {
     "actual_minutes": null,
-    "audio_plays": null,
+    "audio_plays": 3,
     "key_seen_before": null
   },
   "evidence": [],
@@ -120,6 +120,21 @@
         "provenance": {
           "method": "learner_chat",
           "reference": "Jawaban awal Tata 11–16 di chat ini, 13 Oktober 2026; teks mentah termasuk entity dipertahankan."
+        },
+        "purpose": "attempt",
+        "phase": "awaiting_review"
+      }
+    },
+    {
+      "revision_id": "d122d5a4f38b4d0485034d3af9abb0d3",
+      "created_at": "2026-10-13T15:30:11+07:00",
+      "payload": {
+        "conditions": {
+          "audio_plays": 3
+        },
+        "provenance": {
+          "method": "learner_chat",
+          "reference": "Tata menjawab \"3 kali\" di chat ini pada 13 Oktober 2026 saat ditanya jumlah putaran audio Social Contact."
         },
         "purpose": "attempt",
         "phase": "awaiting_review"
