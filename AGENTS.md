@@ -53,6 +53,10 @@ Repo privat yang dituju adalah `octhariaus-tata/ielts-coach-tata`, branch utama 
 
 Project ChatGPT cloud, riwayat chat Codex, dan folder lokal tidak otomatis tersinkron satu sama lain. Login Codex yang sama tidak membuktikan credential GitHub tersedia pada laptop itu. Jangan memakai ZIP atau folder lama sebagai versi utama setelah repo aktif tanpa merekonsiliasi perbedaannya terlebih dahulu.
 
+### Laptop tetap aktif saat bekerja
+
+Sesuai permintaan pengguna 13 Oktober 2026, pada macOS aktifkan pencegahan idle sleep sementara sebagai default saat coach menjalankan pekerjaan di project ini. Gunakan `/usr/bin/caffeinate -i -t 7200` dalam sesi proses yang dikelola, lalu verifikasi assertion milik proses tersebut melalui `pmset -g assertions`. Catat handle sesi/PID di konteks kerja; perpanjang sebelum timeout bila pekerjaan masih berjalan, dan hentikan hanya proses caffeinate yang dimulai untuk pekerjaan itu ketika pekerjaan selesai. Jika assertion untuk pekerjaan yang sama sudah aktif, gunakan kembali tanpa membuat duplikat. Timeout dua jam menjadi batas pengaman bila pekerjaan terputus. Layar boleh mati; penutupan lid atau shutdown tidak dicegah. Jangan mengubah pengaturan daya permanen atau membuat automation baru untuk aturan ini. Bila tidak tersedia atau verifikasi gagal, laporkan kendalanya; jangan mengklaim laptop pasti tetap aktif.
+
 ### Sinkronisasi oleh coach
 
 1. Sebelum sesi, jalankan pemeriksaan status lalu pull melalui `scripts/sync.py`. Gunakan pembaruan fast-forward yang aman; jangan reset, force-push, atau menimpa perubahan lokal untuk membuat pull berhasil.

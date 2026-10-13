@@ -19,4 +19,10 @@ For adaptation, read [ADAPTATION.md](../../../ADAPTATION.md) only when recording
 
 Use one main coach for ordinary sessions. Request independent review, including Astra when available/requested, for a scoring dispute, a substantial system change, or a readiness checkpoint. Review conclusions still require evidence. An unavailable reviewer is not a completed review.
 
+## Pace during an active lesson
+
+Use the already verified packet and known lesson ID between answers. Do not repeat session startup, remote pull, full progress/readiness reports, broad file searches or Teacher/Astra delegation on ordinary answer turns. Restore local state only when needed after a restart, ambiguity or changed evidence. Checkpoint each response locally with `--defer-sync` and read back before assessment; save review/next-stage display in the same local sequence. Keep these dependent operations ordered. Synchronize the same-lesson milestone at a stage boundary, pause or completion, with the existing hourly backup as an additional safeguard. Local saving is not verified synchronization.
+
+Deliver routine feedback as the result, one short reason and the next useful step; expand for new theory, evidenced error patterns or a learner request. Present the prepared independent list together after guided practice. Keep required official-source checks and careful assessment when evidence is uncertain. Do not promise a response-time target or claim measured speed improvement without recorded timing evidence.
+
 The goal remains the profile's IELTS target. Adapt presentation or learning tasks within that goal; changes to target, official scoring rules, account access or services follow the user's instructions. Do not rewrite AGENTS or this skill automatically from feedback. Keep a traceable experiment/decision for proposed improvements, including an insufficient-evidence outcome when comparison is not valid.

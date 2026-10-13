@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-13-learner-response-latency",
+  "created_at": "2026-10-13T22:18:44.169472+07:00",
+  "payload": {
+    "event_id": "2026-10-13-learner-response-latency",
+    "kind": "learner",
+    "actor": "learner",
+    "category": "preference",
+    "scope": "global",
+    "text": "ok also can you make the study session more efficient? for example today i need to wait a long time for your answer, have you improved that?",
+    "signals": {},
+    "provenance": {
+      "method": "learner_chat",
+      "reference": "Tata message in this chat, 13 October 2026, requesting efficient ongoing study sessions and asking whether response delays have improved. No measured timing or new time budget inferred."
+    }
+  },
+  "payload_sha256": "158a108a6322ac9813c30ede7c41ffe959da39df62d497ba7de49a87d48c5627",
+  "session_snapshots": {},
+  "rule_version": "adaptation-1.3"
+}
