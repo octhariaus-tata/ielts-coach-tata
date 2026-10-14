@@ -9,10 +9,56 @@
   "ielts_task_type": "part1_short_answers_support",
   "available_minutes": null,
   "started_at": "2026-10-13T21:22:52+07:00",
-  "stage": "guided",
+  "stage": "independent",
   "status": "awaiting_response",
-  "responses": [],
-  "reviews": [],
+  "responses": [
+    {
+      "id": "697aad667e1c4c95b03052c267aa2fb7",
+      "at": "2026-10-14T19:07:38+07:00",
+      "stage": "guided",
+      "presentation_context": 1,
+      "payload": {
+        "text": "Yes, I do",
+        "answers": {
+          "g1": "Yes, I do"
+        },
+        "submission": "complete",
+        "provenance": {
+          "method": "learner_chat",
+          "reference": "Tata message 14 October 2026: Yes, I do"
+        }
+      }
+    }
+  ],
+  "reviews": [
+    {
+      "at": "2026-10-14T19:07:53+07:00",
+      "payload": {
+        "response_id": "697aad667e1c4c95b03052c267aa2fb7",
+        "item_ids": [
+          "g1"
+        ],
+        "feedback": {
+          "strength": "Correct: Yes, I do. You matched I with do.",
+          "patterns": [],
+          "action": "Keep matching the pronoun and do/does; add a full stop in writing.",
+          "next_task": "Answer the prepared independent short-answer list using the fictional facts."
+        },
+        "criteria": {
+          "grammar": {
+            "correct": 1,
+            "total": 1,
+            "notes": "I matches do."
+          },
+          "punctuation": "Add a final full stop in writing."
+        },
+        "provenance": {
+          "method": "main_coach_chat_review",
+          "reference": "14 October 2026 guided answer checked against tata-short-answers-v1; independent list delivered in next coach message."
+        }
+      }
+    }
+  ],
   "presentations": [
     {
       "stage": "guided",
@@ -34,9 +80,155 @@
         "method": "legacy_chat_recovery",
         "reference": "Unanswered final guided prompt from this chat 13 October 2026: Do you use your phone for banking? Previous material/example referenced in saved lesson notes. Original lesson budget unrecorded; preserved null. No learner response invented."
       }
+    },
+    {
+      "stage": "independent",
+      "item_ids": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q12",
+        "q13",
+        "q14",
+        "q15",
+        "q16",
+        "q17",
+        "q18",
+        "q19",
+        "q20"
+      ],
+      "content": {
+        "items": [
+          {
+            "id": "q1",
+            "prompt": "Fact: The fictional speaker carries a reusable bottle. Question: Do you carry a reusable bottle?",
+            "optional": false
+          },
+          {
+            "id": "q2",
+            "prompt": "Fact: A fictional visitor does not collect postcards. Question: Do you collect postcards?",
+            "optional": false
+          },
+          {
+            "id": "q3",
+            "prompt": "Fact: Your fictional sister works at a clinic. Question: Does your sister work at a clinic?",
+            "optional": false
+          },
+          {
+            "id": "q4",
+            "prompt": "Fact: Your fictional brother does not drive to work. Question: Does your brother drive to work?",
+            "optional": false
+          },
+          {
+            "id": "q5",
+            "prompt": "Fact: The fictional museum opens on Sundays. Question: Does the museum open on Sundays?",
+            "optional": false
+          },
+          {
+            "id": "q6",
+            "prompt": "Fact: The fictional buses do not stop at the airport. Question: Do the buses stop at the airport?",
+            "optional": false
+          },
+          {
+            "id": "q7",
+            "prompt": "Fact: Your fictional group studies together. Question: Do we study together?",
+            "optional": false
+          },
+          {
+            "id": "q8",
+            "prompt": "Fact: Your fictional group does not need a taxi. Question: Do we need a taxi?",
+            "optional": false
+          },
+          {
+            "id": "q9",
+            "prompt": "Fact: The fictional tourists buy local food. Question: Do the tourists buy local food?",
+            "optional": false
+          },
+          {
+            "id": "q10",
+            "prompt": "Fact: The fictional hotel does not provide bicycles. Question: Does the hotel provide bicycles?",
+            "optional": false
+          },
+          {
+            "id": "q11",
+            "prompt": "Fact: Your fictional parents enjoy walking. Question: Do your parents enjoy walking?",
+            "optional": false
+          },
+          {
+            "id": "q12",
+            "prompt": "Fact: Your fictional friend Anna (she/her) does not eat meat. Question: Does Anna eat meat?",
+            "optional": false
+          },
+          {
+            "id": "q13",
+            "prompt": "Fact: Your fictional friend Ben (he/him) speaks Spanish. Question: Does Ben speak Spanish?",
+            "optional": false
+          },
+          {
+            "id": "q14",
+            "prompt": "Fact: The fictional laptop does not have a camera. Question: Does the laptop have a camera?",
+            "optional": false
+          },
+          {
+            "id": "q15",
+            "prompt": "Fact: The fictional shops close at six. Question: Do the shops close at six?",
+            "optional": false
+          },
+          {
+            "id": "q16",
+            "prompt": "Fact: The fictional speaker does not watch television. Question: Do you watch television?",
+            "optional": false
+          },
+          {
+            "id": "q17",
+            "prompt": "Fact: The fictional speaker's phone stores photos. Question: Does your phone store photos?",
+            "optional": false
+          },
+          {
+            "id": "q18",
+            "prompt": "Fact: The fictional students do not live near campus. Question: Do the students live near campus?",
+            "optional": true
+          },
+          {
+            "id": "q19",
+            "prompt": "Fact: Your fictional teacher (she/her) gives examples. Question: Does your teacher give examples?",
+            "optional": true
+          },
+          {
+            "id": "q20",
+            "prompt": "Fact: Your fictional group uses reusable bags. Question: Do we use reusable bags?",
+            "optional": true
+          }
+        ],
+        "source_label": "coach_created"
+      },
+      "provenance": {
+        "method": "main_coach_chat_review",
+        "reference": "14 October 2026 guided answer checked against tata-short-answers-v1; independent list delivered in next coach message."
+      },
+      "at": "2026-10-14T19:07:54+07:00"
     }
   ],
-  "transitions": [],
+  "transitions": [
+    {
+      "from": "guided",
+      "to": "independent",
+      "at": "2026-10-14T19:07:53+07:00",
+      "learner_requested_skip": false,
+      "provenance": {
+        "method": "main_coach_chat_review",
+        "reference": "14 October 2026 guided answer checked against tata-short-answers-v1; independent list delivered in next coach message."
+      }
+    }
+  ],
   "preferences": {
     "available_minutes": 40,
     "lesson_language": "en",

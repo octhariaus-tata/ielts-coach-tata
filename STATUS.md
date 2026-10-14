@@ -19,6 +19,6 @@ Earlier operational details, preference history and obsolete next-task notes are
 - Sesi belajar aktif: tidak ada.
 - Sesi belajar selesai: 5.
 - Tes sistem tidak dihitung sebagai kemajuan Tata.
-- Tugas berikutnya: Continue the displayed guided prompt; wait for the learner response.
-- Lesson 2026-10-13-lesson-fe844fc5d679: guided / awaiting_response; budget None.
+- Tugas berikutnya: Continue the displayed independent prompt; wait for the learner response.
+- Lesson 2026-10-13-lesson-fe844fc5d679: independent / awaiting_response; budget None.
 <!-- managed-sessions:end -->
