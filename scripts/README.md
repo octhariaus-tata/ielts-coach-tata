@@ -167,6 +167,8 @@ Structured learner preference scope lesson uses a real lesson_id. Only active sc
 
 ## Lightweight scorecard
 
+For the user-authorized 10-exchange response-flow trial, follow [Faster coaching without sacrificing quality](../learning/coaching-notes/2026-10-14-faster-coaching-trial.md). Use existing local lesson operations, deliver substantive feedback and the next prompt before boundary backup, and preserve careful assessment. The 30-second aim is not a guarantee; coarse screenshots do not populate exact latency metrics. No new CLI or automation is required.
+
 `python3 scripts/coach.py scorecard` writes and reads back `learning/scorecards/current.json` locally. `status` includes the same scorecard; completed official attempts and teaching lessons refresh it before their existing milestone synchronization. Ordinary checkpoint/review/present operations do not run KPI reporting. No agent, schedule, external analytics or new grading source is added.
 
 `tracking.json` pins the rollout boundary: prior main completions remain historical learning evidence but do not count toward new-workflow four-lesson reviews. Each four-main-lesson block gets one preserved report; retries do not create duplicate reports. Official attempt+linked lesson count once after both finish. Coach-created short drills are supplementary. Coverage shows the actual skills and missing skills, not an automatic failure for an explained deviation.

@@ -1,5 +1,7 @@
 # IELTS Coach Tata — current operational status
 
+Active operational trial, authorized 14 October 2026: [Faster coaching without sacrificing quality](learning/coaching-notes/2026-10-14-faster-coaching-trial.md). Use this procedure on ordinary answer turns: local checkpoint/readback and careful review first; deliver feedback plus the next task before boundary backup. Aim for 30 seconds on simple guided answers, without rushing uncertain assessments. Trial starts at 0/10; exact latency remains unmeasured. Preserve the current pending Listening prompt.
+
 Updated 13 October 2026, Asia/Jakarta. Teacher workflow v1.3 implemented locally; test/reviewer and remote verification are recorded in the implementation report. System checks are not learner progress or IELTS readiness.
 
 - Goal: IELTS Academic overall 6.5; each-skill 6.0 remains a temporary unverified requirement.

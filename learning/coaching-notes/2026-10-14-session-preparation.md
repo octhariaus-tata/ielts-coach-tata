@@ -1,5 +1,7 @@
 # Preparation for the next study session
 
+Update 14 October 2026: the legacy short-answer lesson is completed. Current lesson is `2026-10-14-lesson-8860ea9c36d7`, guided / awaiting_response, budget 40 minutes. Follow [the authorized faster-coaching trial](2026-10-14-faster-coaching-trial.md); original preparation below is retained as history.
+
 Prepared 13 October 2026 for tomorrow, 14 October, Asia/Jakarta. This is preparation, not a scheduled automation or completed study session.
 
 1. Restore lesson `2026-10-13-lesson-fe844fc5d679` at guided / awaiting_response: “Do you use your phone for banking?” Preserve the unknown legacy duration. Give only the required short-answer reminder, then wait for Tata's truthful answer.

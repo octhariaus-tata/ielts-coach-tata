@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-learner-response-speed-screenshot",
+  "created_at": "2026-10-14T20:20:11.784167+07:00",
+  "payload": {
+    "event_id": "2026-10-14-learner-response-speed-screenshot",
+    "kind": "learner",
+    "actor": "learner",
+    "category": "preference",
+    "scope": "global",
+    "signals": {},
+    "text": "I have feedback for today session. I think you can improve your answer speed. For example, I will send you a screenshot where I answer the question and then you work one minute to reply my answer, basically. Please share your plan, how you want to improve this, like what success metric will you do, and give your suggestion and discuss with Astra also.\n\ngrill me before start",
+    "provenance": {
+      "method": "learner_chat",
+      "reference": "Exact Tata feedback in this chat, 14 October 2026. Screenshot: evidence/workflow/2026-10-14-short-answer-worked-1m.png. Ongoing workflow explicitly approved in subsequent PLEASE IMPLEMENT THIS PLAN message; no lesson budget or assessment changed."
+    }
+  },
+  "payload_sha256": "15f6ce2ea7ec62a246fb0cdbc861abaa18fd8964b21ed94ecb4ee5f6d45cc44e",
+  "session_snapshots": {},
+  "rule_version": "adaptation-1.3"
+}
