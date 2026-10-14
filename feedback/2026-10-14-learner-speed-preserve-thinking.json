@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-learner-speed-preserve-thinking",
+  "created_at": "2026-10-14T20:20:21.482355+07:00",
+  "payload": {
+    "event_id": "2026-10-14-learner-speed-preserve-thinking",
+    "kind": "learner",
+    "actor": "learner",
+    "category": "preference",
+    "scope": "global",
+    "signals": {},
+    "text": "the goal is to make it fast without losing quality thinking",
+    "provenance": {
+      "method": "learner_chat",
+      "reference": "Exact Tata feedback in this chat, 14 October 2026. Screenshot: evidence/workflow/2026-10-14-short-answer-worked-1m.png. Ongoing workflow explicitly approved in subsequent PLEASE IMPLEMENT THIS PLAN message; no lesson budget or assessment changed."
+    }
+  },
+  "payload_sha256": "8357b71e99dc6e35a62c340d0587eddf758e82607af80f0c7e5c0105958e2c2c",
+  "session_snapshots": {},
+  "rule_version": "adaptation-1.3"
+}
