@@ -19,5 +19,6 @@ Earlier operational details, preference history and obsolete next-task notes are
 - Sesi belajar aktif: tidak ada.
 - Sesi belajar selesai: 5.
 - Tes sistem tidak dihitung sebagai kemajuan Tata.
-- Tugas berikutnya: Start theory from prepared Teacher packet: tata-listening-precision-v2
+- Tugas berikutnya: Continue the displayed guided prompt; wait for the learner response.
+- Lesson 2026-10-14-lesson-8860ea9c36d7: guided / awaiting_response; budget 40.
 <!-- managed-sessions:end -->

@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-14-lesson-8860ea9c36d7",
+  "kind": "learner",
+  "packet_id": "tata-listening-precision-v2",
+  "packet_sha256": "c95d0ed6a62b4b7e07390db6f01412faf7da46e97f939d844216be65bb19b587",
+  "main_skill": "Listening",
+  "objective": "Prepare for Listening form completion through answer-type prediction, spellings, plurals, decimals and units.",
+  "ielts_task_type": "form_completion_written_preparation",
+  "available_minutes": 40,
+  "started_at": "2026-10-14T19:21:24+07:00",
+  "stage": "guided",
+  "status": "awaiting_response",
+  "responses": [],
+  "reviews": [],
+  "presentations": [
+    {
+      "stage": "theory",
+      "item_ids": [],
+      "content": {
+        "material": "This is coach-created written preparation, NOT an audio Listening assessment. Predict names/numbers/dates/places from field labels. Preserve decimals and units: 100 cm = 1 m; 100 pence = £1. Follow the word limit and check plurals. These 20 written items cannot prove listening comprehension.",
+        "strategy": "Label → predict answer type → record information → check spelling, decimal, unit, plural and word limit."
+      },
+      "provenance": {
+        "method": "main_coach_chat_delivery",
+        "reference": "14 October 2026 Listening written preparation: theory, worked example and guided prompt delivered together in coach message."
+      },
+      "at": "2026-10-14T19:21:40+07:00"
+    },
+    {
+      "stage": "example",
+      "item_ids": [],
+      "content": {
+        "prompt": "A written note gives width one metre and twenty-five centimetres. Write decimal metres with the unit.",
+        "answer": "1.25 m",
+        "reasoning": "25 cm = 0.25 m; add one metre."
+      },
+      "provenance": {
+        "method": "main_coach_chat_delivery",
+        "reference": "14 October 2026 Listening written preparation: theory, worked example and guided prompt delivered together in coach message."
+      },
+      "at": "2026-10-14T19:21:40+07:00"
+    },
+    {
+      "stage": "guided",
+      "item_ids": [
+        "g1"
+      ],
+      "content": {
+        "items": [
+          {
+            "id": "g1",
+            "prompt": "A written note gives height one metre and sixty centimetres. Write decimal metres with the unit.",
+            "hint": "Convert 60 cm then add one metre. Include m."
+          }
+        ],
+        "source_label": "coach_created"
+      },
+      "provenance": {
+        "method": "main_coach_chat_delivery",
+        "reference": "14 October 2026 Listening written preparation: theory, worked example and guided prompt delivered together in coach message."
+      },
+      "at": "2026-10-14T19:21:41+07:00"
+    }
+  ],
+  "transitions": [
+    {
+      "from": "theory",
+      "to": "example",
+      "at": "2026-10-14T19:21:40+07:00",
+      "learner_requested_skip": false,
+      "provenance": {
+        "method": "main_coach_chat_delivery",
+        "reference": "14 October 2026 Listening written preparation: theory, worked example and guided prompt delivered together in coach message."
+      }
+    },
+    {
+      "from": "example",
+      "to": "guided",
+      "at": "2026-10-14T19:21:40+07:00",
+      "learner_requested_skip": false,
+      "provenance": {
+        "method": "main_coach_chat_delivery",
+        "reference": "14 October 2026 Listening written preparation: theory, worked example and guided prompt delivered together in coach message."
+      }
+    }
+  ],
+  "preferences": {
+    "available_minutes": 40,
+    "lesson_language": "en",
+    "teaching_sequence": "teach_first",
+    "practice_volume": "adaptive",
+    "short_drill_items": [
+      20,
+      30
+    ],
+    "completion_mode": "natural"
+  },
+  "official_attempt_id": null,
+  "preference_source_event_ids": {
+    "available_minutes": "2026-10-13-learner-teaching-confirmed",
+    "lesson_language": "2026-10-13-learner-teaching-confirmed",
+    "teaching_sequence": "2026-10-13-learner-teaching-confirmed",
+    "practice_volume": "2026-10-13-learner-teaching-confirmed",
+    "short_drill_items": "2026-10-13-learner-teaching-confirmed",
+    "completion_mode": "2026-10-13-learner-teaching-confirmed"
+  },
+  "provenance": {
+    "method": "coach_lesson_prepare",
+    "reference": "Teacher packet tata-listening-precision-v2"
+  }
+}

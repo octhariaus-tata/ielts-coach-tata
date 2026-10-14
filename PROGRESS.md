@@ -93,4 +93,5 @@ Set pertanyaan buatan coach: **12/12 untuk struktur pertanyaan**, semua Do/Does,
 | Lesson | Stage | Prepared | Presented | Submitted | Reviewed |
 | --- | --- | --- | --- | --- | --- |
 | 2026-10-13-lesson-fe844fc5d679 | completed | 20 | 20 | 20 | 20 |
+| 2026-10-14-lesson-8860ea9c36d7 | guided | 20 | 0 | 0 | 0 |
 <!-- managed-lessons:end -->
