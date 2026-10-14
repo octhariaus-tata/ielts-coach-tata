@@ -1,7 +1,7 @@
 {
   "version": "scorecard-1",
   "derived": true,
-  "generated_at": "2026-10-13T22:43:24+07:00",
+  "generated_at": "2026-10-14T19:20:14+07:00",
   "source_sha256": {
     "feedback/2026-10-12-owner-system-design.json": "0cfc2537eeaaf5b3dbeeb4e32f59db048f1e0145d153a8c7324b69424b4d5517",
     "feedback/2026-10-13-learner-english-teaching-sequence.json": "3b82ef09b16aba8373e1cf086b2e9c29a930d5ac0dbf7f4fadfe8821eee67d00",
@@ -12,7 +12,7 @@
     "feedback/2026-10-13-learner-study-volume-global.json": "e955d7792338e9a0781187410e43badc6d84e39d0de2fe5ae51effd6b62dd171",
     "feedback/2026-10-13-learner-teach-before-test.json": "8c6ba42fac2a31efb39db709e801b6b490073ca239f5be8ca5b60c8043a454f7",
     "feedback/2026-10-13-learner-teaching-confirmed.json": "6e84a14261535bd216a12e4ff751352d21a648b365e604f6ecf9e83fbe5e0570",
-    "learning/lessons/2026-10-13-lesson-fe844fc5d679.json": "01d960e544d6619f80892b396f200cf8a95ef87edcb1e8f5b57c897b197bfe82",
+    "learning/lessons/2026-10-13-lesson-fe844fc5d679.json": "54e2184872322f54a9a2f3ad88cc076cba18684ee16cf174b4e74eb477e66f03",
     "learning/packets/tata-short-answers-v1.json": "dff49e0dbd5f635988e88ca07856173210ca1e1edf7081a0ca8e85cfcf47ac70",
     "learning/scorecards/tracking.json": "b8972d469ec90f4e6d4d1fdb54aa938b851f0ca28c59d16d9459bdc3958d3ca7",
     "sessions/2026-10-12-listening-1729392fd5b8.json": "d125f6f77670b318c45f5306a8c829aae1c62acd88c8af5418928a70e656e90e",
@@ -141,19 +141,21 @@
   },
   "teaching": {
     "documented_sequence": 0,
-    "assessed_completed_lessons": 0,
+    "assessed_completed_lessons": 1,
     "explicit_skips": [],
-    "insufficient_delivery_evidence": [],
+    "insufficient_delivery_evidence": [
+      "2026-10-13-lesson-fe844fc5d679"
+    ],
     "limit": "Presentation records support documented delivery, not proof of learner comprehension."
   },
   "practice": [
     {
       "lesson_id": "2026-10-13-lesson-fe844fc5d679",
-      "status": "awaiting_response",
+      "status": "completed",
       "prepared": 20,
-      "presented": 0,
-      "submitted": 0,
-      "reviewed": 0,
+      "presented": 20,
+      "submitted": 20,
+      "reviewed": 20,
       "homework_debt": 0
     }
   ],

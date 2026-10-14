@@ -9,8 +9,8 @@
   "ielts_task_type": "part1_short_answers_support",
   "available_minutes": null,
   "started_at": "2026-10-13T21:22:52+07:00",
-  "stage": "review",
-  "status": "active",
+  "stage": "completed",
+  "status": "completed",
   "responses": [
     {
       "id": "697aad667e1c4c95b03052c267aa2fb7",
@@ -62,6 +62,43 @@
         "provenance": {
           "method": "learner_chat",
           "reference": "Tata full numbered submission, 14 October 2026; preserved exact spelling and punctuation."
+        }
+      }
+    },
+    {
+      "id": "18e483265e1d43bfa84d62b15cb947ce",
+      "at": "2026-10-14T19:19:59+07:00",
+      "stage": "review",
+      "presentation_context": 3,
+      "payload": {
+        "text": "8 No, we don't",
+        "answers": {
+          "q8": "No, we don't"
+        },
+        "submission": "partial",
+        "purpose": "review",
+        "provenance": {
+          "method": "learner_chat",
+          "reference": "14 October 2026 first correction message: 8 No, we don't"
+        }
+      }
+    },
+    {
+      "id": "3d5b31b7d2e84835a43ba0f1c3579d03",
+      "at": "2026-10-14T19:19:59+07:00",
+      "stage": "review",
+      "presentation_context": 3,
+      "payload": {
+        "text": "8 No, we don't\n18 No, they don't",
+        "answers": {
+          "q8": "No, we don't",
+          "q18": "No, they don't"
+        },
+        "submission": "complete",
+        "purpose": "review",
+        "provenance": {
+          "method": "learner_chat",
+          "reference": "14 October 2026 separate review messages: 8 No, we don't; then 18 No, they don't. Post-feedback corrections; original answers preserved."
         }
       }
     }
@@ -145,6 +182,38 @@
         "provenance": {
           "method": "main_coach_packet_review",
           "reference": "14 October 2026; saved first submission compared item-by-item with tata-short-answers-v1 fictional facts and coach-only key."
+        }
+      }
+    },
+    {
+      "at": "2026-10-14T19:20:14+07:00",
+      "payload": {
+        "response_id": "3d5b31b7d2e84835a43ba0f1c3579d03",
+        "item_ids": [
+          "q8",
+          "q18"
+        ],
+        "feedback": {
+          "strength": "Both corrections are correct: No, we don’t; No, they don’t.",
+          "patterns": [],
+          "action": "Check the fact’s positive/negative meaning before selecting Yes/No.",
+          "next_task": "Listening form-completion precision lesson; prepared Reading evidence lesson as backup."
+        },
+        "criteria": {
+          "grammar": {
+            "correct": 2,
+            "total": 2,
+            "notes": "Post-feedback revisions, not a fresh assessment."
+          },
+          "task_fulfilment": {
+            "correct": 2,
+            "total": 2,
+            "notes": "Both match negative facts."
+          }
+        },
+        "provenance": {
+          "method": "main_coach_review",
+          "reference": "14 October 2026; Q8 and Q18 post-feedback revisions match the negative facts in tata-short-answers-v1. Original 18/20 retained."
         }
       }
     }
@@ -338,6 +407,16 @@
       "provenance": {
         "method": "main_coach_packet_review",
         "reference": "14 October 2026; saved first submission compared item-by-item with tata-short-answers-v1 fictional facts and coach-only key."
+      }
+    },
+    {
+      "from": "review",
+      "to": "completed",
+      "at": "2026-10-14T19:20:14+07:00",
+      "learner_requested_skip": false,
+      "provenance": {
+        "method": "main_coach_review",
+        "reference": "14 October 2026; Q8 and Q18 post-feedback revisions match the negative facts in tata-short-answers-v1. Original 18/20 retained."
       }
     }
   ],
