@@ -9,8 +9,8 @@
   "ielts_task_type": "part1_short_answers_support",
   "available_minutes": null,
   "started_at": "2026-10-13T21:22:52+07:00",
-  "stage": "independent",
-  "status": "awaiting_response",
+  "stage": "review",
+  "status": "active",
   "responses": [
     {
       "id": "697aad667e1c4c95b03052c267aa2fb7",
@@ -26,6 +26,42 @@
         "provenance": {
           "method": "learner_chat",
           "reference": "Tata message 14 October 2026: Yes, I do"
+        }
+      }
+    },
+    {
+      "id": "a02d18e793d84c549cb0bdf8b91b6191",
+      "at": "2026-10-14T19:17:17+07:00",
+      "stage": "independent",
+      "presentation_context": 2,
+      "payload": {
+        "text": "1. Yes, I do\n2. No, I don't\n3. Yes, she does\n4. No, he doesn't\n5. Yes, It does\n6. No, they don't\n7. Yes, we do\n8. Yes, we do\n9. Yes, they do\n10. No, it doesn't\n11. Yes, they do\n12. No, she doesn't\n13. Yes, he does\n14. No, it doesn't\n15. Yes, they do\n16. No, I don't\n17. Yes, it does\n18. Yes, they do\n19. Yes, she does\n20. Yes, we do",
+        "answers": {
+          "q1": "Yes, I do",
+          "q2": "No, I don't",
+          "q3": "Yes, she does",
+          "q4": "No, he doesn't",
+          "q5": "Yes, It does",
+          "q6": "No, they don't",
+          "q7": "Yes, we do",
+          "q8": "Yes, we do",
+          "q9": "Yes, they do",
+          "q10": "No, it doesn't",
+          "q11": "Yes, they do",
+          "q12": "No, she doesn't",
+          "q13": "Yes, he does",
+          "q14": "No, it doesn't",
+          "q15": "Yes, they do",
+          "q16": "No, I don't",
+          "q17": "Yes, it does",
+          "q18": "Yes, they do",
+          "q19": "Yes, she does",
+          "q20": "Yes, we do"
+        },
+        "submission": "complete",
+        "provenance": {
+          "method": "learner_chat",
+          "reference": "Tata full numbered submission, 14 October 2026; preserved exact spelling and punctuation."
         }
       }
     }
@@ -55,6 +91,60 @@
         "provenance": {
           "method": "main_coach_chat_review",
           "reference": "14 October 2026 guided answer checked against tata-short-answers-v1; independent list delivered in next coach message."
+        }
+      }
+    },
+    {
+      "at": "2026-10-14T19:17:43+07:00",
+      "payload": {
+        "response_id": "a02d18e793d84c549cb0bdf8b91b6191",
+        "item_ids": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20"
+        ],
+        "feedback": {
+          "strength": "All 20 answers use the correct pronoun and do/does structure. 18/20 match the given facts.",
+          "patterns": [
+            "Q8 and Q18 use Yes although the facts say does not/do not.",
+            "Written conventions: use lowercase it in Q5 and a final full stop for each answer."
+          ],
+          "action": "Check whether each fact is positive or negative before choosing Yes or No. Rewrite Q8 and Q18.",
+          "next_task": "Correct Q8 and Q18; next main lesson is Listening form-completion precision, with Reading evidence as backup."
+        },
+        "criteria": {
+          "grammar": {
+            "correct": 20,
+            "total": 20,
+            "notes": "Correct pronoun and auxiliary structure in all items; capitalization recorded separately."
+          },
+          "task_fulfilment": {
+            "correct": 18,
+            "total": 20,
+            "notes": "Q8: No, we don't. Q18: No, they don't. Both facts are negative."
+          },
+          "punctuation": "All final full stops omitted; Q5 It should be lowercase it."
+        },
+        "provenance": {
+          "method": "main_coach_packet_review",
+          "reference": "14 October 2026; saved first submission compared item-by-item with tata-short-answers-v1 fictional facts and coach-only key."
         }
       }
     }
@@ -215,6 +305,18 @@
         "reference": "14 October 2026 guided answer checked against tata-short-answers-v1; independent list delivered in next coach message."
       },
       "at": "2026-10-14T19:07:54+07:00"
+    },
+    {
+      "stage": "review",
+      "item_ids": [],
+      "content": {
+        "instruction": "Review saved learner responses; no automatic band or mastery claim."
+      },
+      "provenance": {
+        "method": "main_coach_packet_review",
+        "reference": "14 October 2026; saved first submission compared item-by-item with tata-short-answers-v1 fictional facts and coach-only key."
+      },
+      "at": "2026-10-14T19:17:44+07:00"
     }
   ],
   "transitions": [
@@ -226,6 +328,16 @@
       "provenance": {
         "method": "main_coach_chat_review",
         "reference": "14 October 2026 guided answer checked against tata-short-answers-v1; independent list delivered in next coach message."
+      }
+    },
+    {
+      "from": "independent",
+      "to": "review",
+      "at": "2026-10-14T19:17:44+07:00",
+      "learner_requested_skip": false,
+      "provenance": {
+        "method": "main_coach_packet_review",
+        "reference": "14 October 2026; saved first submission compared item-by-item with tata-short-answers-v1 fictional facts and coach-only key."
       }
     }
   ],
